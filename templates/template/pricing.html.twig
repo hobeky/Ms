@@ -1,0 +1,151 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Kindergarten - Daycare and Kindergarten Website Template{% endblock %}
+
+
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+{% endblock %}
+
+
+{% block body %}
+
+
+    <section id="price" class="padding-medium">
+        <div class="container">
+
+            <h2 class="display-4 text-center mb-5">Select Your Price Plan</h2>
+
+
+            <div class="row">
+                <div class="col-lg-4 pb-4">
+                    <div class="py-5 px-4 plan-post rounded-4 text-center">
+
+                        <p class="text-uppercase fw-bold mb-3">basic</p>
+
+                        <h3 class="display-2 mb-2">$56.95<span class="fs-6">/m</span></h3>
+
+                        <p class="m-0">Lorem ipsum dolor sit amet consectetur elit. Autem ipsum provident maxime
+                            officia.</p>
+
+                        <hr class="my-5 px-5">
+
+                        <div class="price-option">
+                            <p><span class="price-tick">✓</span> Quisque rhoncus</p>
+                            <p><span class="price-tick">✓</span> Lorem ipsum dolor</p>
+                            <p><span class="price-tick">✓</span> Vivamus velit mir</p>
+                            <p><span class="price-tick">✓</span> Elit mir ivamus</p>
+                        </div>
+
+                        <a href="enrollment.html.twig" class="btn btn-primary mt-3 px-4 py-3 mx-2 ">Select plan</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 pb-4">
+                    <div class="py-5 px-4 plan-post rounded-4 text-center bg-primary">
+
+                        <p class="text-uppercase fw-bold text-white mb-3">standard</p>
+
+                        <h3 class="display-2 text-white mb-2">$79.50<span class="fs-6">/m</span></h3>
+                        <p class="m-0 text-white">Lorem ipsum dolor sit amet consectetur elit. Autem ipsum provident
+                            maxime
+                            officia.</p>
+
+                        <hr class="my-5 text-white px-5">
+                        <div class="price-option">
+                            <p class="text-white"><span class="price-tick text-white">✓</span> Quisque rhoncus</p>
+                            <p class="text-white"><span class="price-tick text-white">✓</span> Lorem ipsum dolor</p>
+                            <p class="text-white"><span class="price-tick text-white">✓</span> Vivamus velit mir</p>
+                            <p class="text-white"><span class="price-tick text-white">✓</span> Velit mir</p>
+                            <p class="text-white"><span class="price-tick text-white">✓</span> Elit mir ivamus</p>
+                        </div>
+
+                        <a href="enrollment.html.twig" class="btn btn-outline-primary text-black mt-3 px-4 py-3 mx-2"
+                           style="background: white;">Select plan</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 pb-4">
+                    <div class="py-5 px-4 plan-post rounded-4 text-center">
+
+                        <p class="text-uppercase fw-bold mb-3">Gold</p>
+
+                        <h3 class="display-2 mb-2">$103.40<span class="fs-6">/m</span></h3>
+                        <p class="m-0">Lorem ipsum dolor sit amet consectetur elit. Autem ipsum provident maxime
+                            officia.</p>
+
+                        <hr class="my-5 px-5">
+                        <div class="price-option">
+                            <p><span class="price-tick">✓</span> Quisque rhoncus</p>
+                            <p><span class="price-tick">✓</span> Lorem ipsum dolor</p>
+                            <p><span class="price-tick">✓</span> Vivamus velit mir</p>
+                            <p><span class="price-tick">✓</span> Elit mir ivamus</p>
+                            <p><span class="price-tick">✓</span> Lorem ipsum dolor</p>
+                            <p><span class="price-tick">✓</span> Ipsum dolor</p>
+                        </div>
+
+                        <a href="enrollment.html.twig" class="btn btn-primary mt-3 px-4 py-3 mx-2 ">Select plan</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="cta" class="jarallax"
+             style="background-image: {{ asset('images/cta.jpg') }}; background-repeat: no-repeat; background-position: center;">
+        <div class="container padding-medium">
+
+            <div class="offset-md-3 col-md-6 text-center ">
+                <div class="section-title">
+                    <h2 class="display-4 mb-3 banner-title">Are you going to enroll your child to a class?</h2>
+                </div>
+
+                <p class="banner-title">Pretium turpis faucibus adipiscing duis. Id quis tristique mi vitae nec. In et
+                    in
+                    praesent pellentesque sit porta ridiculus faucibus. </p>
+                <a class="btn btn-primary mt-3" href="enrollment.html.twig">Read More</a>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <section id="enroll">
+        <div class="container padding-medium">
+
+            <div class="offset-md-3 col-md-6 text-center ">
+
+                <h2 class="display-4 mb-3">How to enroll your child?</h2>
+                <p class="fw-bold">Call: 666 333 9999 or Fill in the form below</p>
+                <p>Pretium turpis faucibus adipiscing duis. Id quis tristique mi vitae nec. In et in praesent
+                    pellentesque.
+                    Porta sit porta ridiculus faucibus.</p>
+
+                <form class="contact-form row mt-5">
+
+                    <div class="col-md-12 col-sm-12 mb-4">
+                        <input type="text" name="Parents" placeholder="Parents name"
+                               class="w-100 border ps-4 py-2 rounded-3">
+                    </div>
+                    <div class="col-md-12 col-sm-12 mb-4">
+                        <input type="number" name="Phone" placeholder="Contact phone"
+                               class="w-100 border ps-4 py-2 rounded-3">
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 mb-4">
+            <textarea type="text" name="message" placeholder="Your message"
+                      class="w-100 border ps-4 py-2 rounded-3"></textarea>
+                    </div>
+                </form>
+
+                <button class="btn btn-primary mt-3" href="#">Submit</button>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+{% endblock %}
