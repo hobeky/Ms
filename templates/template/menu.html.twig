@@ -1,0 +1,333 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Kindergarten - Daycare and Kindergarten Website Template{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+
+{% endblock %}
+
+
+{% block body %}
+    <div class="container padding-medium">
+        <div class="row ">
+            <div class="col-md-6 pe-md-5">
+                <div class="imageblock">
+                    <div class="animated-border">
+                        <img src="https://mssturova.sk/wp-content/uploads/2020/06/ovocie-1024x766.jpeg" alt="img" class="img-fluid rounded-circle "
+                            style="width: 400px;height: 400px;"
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-5 mt-md-0">
+                <h2 class="display-4">V materskej škole dbáme na zdravé stravovanie detí,</h2>
+
+                <p>desiate,obedy a  olovranty v súlade s predpísanými odporúčanými dennými dávkami stavebných látok, vitamínov, minerálov a stopových prvkov, potrebných pre zdravý rast a vývoj dieťaťa.</p>
+                <p>Denné menu pripravuje Spoločenský Pavilón,s.r.o. s licenciou na stravovanie detí v predškolskom zariadení,ktorý nám aj stravu prináša do našej výdajnej školskej kuchyne.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container padding-medium">
+        <div class="row ">
+            <div class="col-md-6 pe-md-5">
+                <h2 class="display-4">Deti majú po celý deň k dispozícii ovocné nesladené čaje, čerstvú pitnú vodu a ovocie.</h2>
+
+                <p>Deťom ponúkame zdravú stravu, prispôsobenú aj deťom s poruchami výživy a neznášanlivosťou niektorých potravín. </p>
+                <p>Detičky nepapajú v triedach,ale v samostatnej  jedálni.</p>
+
+            </div>
+            <div class="col-md-6 mt-5 mt-md-0">
+                <div class="imageblock">
+                    <div class="animated-border">
+                        <img src="https://mssturova.sk/wp-content/uploads/2020/06/mysky.jpg" alt="img" class="img-fluid rounded-circle "
+                             style="width: 400px;height: 400px;"
+                        >
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="container padding-medium">
+            <h2 class="display-4 text-center mb-5">View our Meal Menu</h2>
+
+            <div class="post-content ">
+                <div class="bootstrap-tabs">
+                    <nav>
+                        <div class="nav nav-tabs d-flex flex-wrap justify-content-center" id="nav-tab" role="tablist">
+                            <button class="nav-link mx-2 text-black fw-bold fs-5 active" id="nav-monday-tab"
+                                    data-bs-toggle="tab" data-bs-target="#nav-monday" type="button" role="tab"
+                                    aria-controls="nav-monday" aria-selected="true">Monday</button>
+                            <button class="nav-link mx-2 text-black fw-bold fs-5" id="nav-tuesday-tab"
+                                    data-bs-toggle="tab" data-bs-target="#nav-tuesday" type="button" role="tab"
+                                    aria-controls="nav-tuesday" aria-selected="false" tabindex="-1">Tuesday</button>
+                            <button class="nav-link mx-2 text-black fw-bold fs-5" id="nav-wednesday-tab"
+                                    data-bs-toggle="tab" data-bs-target="#nav-wednesday" type="button" role="tab"
+                                    aria-controls="nav-wednesday" aria-selected="false" tabindex="-1">Wednesday</button>
+                            <button class="nav-link mx-2 text-black fw-bold fs-5" id="nav-thursday-tab"
+                                    data-bs-toggle="tab" data-bs-target="#nav-thursday" type="button" role="tab"
+                                    aria-controls="nav-thursday" aria-selected="false" tabindex="-1">Thursday</button>
+                            <button class="nav-link mx-2 text-black fw-bold fs-5" id="nav-friday-tab"
+                                    data-bs-toggle="tab" data-bs-target="#nav-friday" type="button" role="tab"
+                                    aria-controls="nav-friday" aria-selected="false" tabindex="-1">Friday</button>
+                        </div>
+                    </nav>
+                    <div class="tab-content mt-5" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-monday" role="tabpanel"
+                             aria-labelledby="nav-monday-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>Breakfast</h3>
+                                    <div class="row">
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food1.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Breakfast Cereal Bowl</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food2.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3>Lunch</h3>
+                                    <div class="row">
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food1.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Veggie and Meat Pasta</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food7.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Caramel pie</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-tuesday" role="tabpanel" aria-labelledby="nav-tuesday-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>Breakfast</h3>
+                                    <div class="row">
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food5.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Classic Sandwitch</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food8.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Fruit Pie</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3>Lunch</h3>
+                                    <div class="row">
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food6.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Dexter Style Burger</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food3.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Carbonara Pasta</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-wednesday" role="tabpanel"
+                             aria-labelledby="nav-wednesday-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>Breakfast</h3>
+                                    <div class="row">
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food1.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Breakfast Cereal Bowl</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food2.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3>Lunch</h3>
+                                    <div class="row">
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food6.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Dexter Style Burger</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food3.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Carbonara Pasta</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-thursday" role="tabpanel" aria-labelledby="nav-thursday-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>Breakfast</h3>
+                                    <div class="row">
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food5.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Classic Sandwitch</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food8.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Fruit Pie</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3>Lunch</h3>
+                                    <div class="row">
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food4.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Veggie and Meat Pasta</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food7.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Caramel pie</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-friday" role="tabpanel" aria-labelledby="nav-friday-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>Breakfast</h3>
+                                    <div class="row">
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food2.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food8.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Fruit Pie</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3>Lunch</h3>
+                                    <div class="row">
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food6.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Dexter Style Burger</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                        <div class="col-4 mb-2">
+                                            <img src="{{ asset('images/food7.jpg') }}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <h4 class="lh-sm">Caramel pie</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
+
+
+
+
+
+
+

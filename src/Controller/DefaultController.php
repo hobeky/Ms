@@ -24,7 +24,9 @@ class DefaultController extends AbstractController
 
         $templatePath = 'template/' . $templateName . '.html.twig';
 
-        return  $this->render($templatePath);
+        return  $this->render($templatePath, [
+            'heroName' => $templateName
+        ]);
 
     }
 }
