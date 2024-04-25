@@ -6,9 +6,6 @@
         {% block javascripts %}
             {{ parent() }}
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-                    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-                    crossorigin="anonymous"></script>
         {% endblock %}
 
 
@@ -16,7 +13,7 @@
 
             <section id="time-table">
                 <div class="container padding-medium">
-                    <h2 class="display-4 text-center mb-5">View Time Table</h2>
+                    <h2 class="display-4 text-center mb-5">Rozvrhy</h2>
 
                     <div class="post-content ">
                         <div class="bootstrap-tabs">
@@ -24,85 +21,31 @@
                                 <div class="nav nav-tabs d-flex flex-wrap justify-content-center" id="nav-tab" role="tablist">
                                     <button class="nav-link mx-2 text-black fw-bold fs-5 active" id="nav-grade-1-tab"
                                             data-bs-toggle="tab" data-bs-target="#nav-grade-1" type="button" role="tab"
-                                            aria-controls="nav-grade-1" aria-selected="true">Grade-1</button>
+                                            aria-controls="nav-grade-1" aria-selected="true">Vcelicky</button>
                                     <button class="nav-link mx-2 text-black fw-bold fs-5" id="nav-grade-2-tab"
                                             data-bs-toggle="tab" data-bs-target="#nav-grade-2" type="button" role="tab"
-                                            aria-controls="nav-grade-2" aria-selected="false" tabindex="-1">Grade-2</button>
-                                    <button class="nav-link mx-2 text-black fw-bold fs-5" id="nav-grade-3-tab"
-                                            data-bs-toggle="tab" data-bs-target="#nav-grade-3" type="button" role="tab"
-                                            aria-controls="nav-grade-3" aria-selected="false" tabindex="-1">Grade-3</button>
-                                    <button class="nav-link mx-2 text-black fw-bold fs-5" id="nav-grade-4-tab"
-                                            data-bs-toggle="tab" data-bs-target="#nav-grade-4" type="button" role="tab"
-                                            aria-controls="nav-grade-4" aria-selected="false" tabindex="-1">Grade-4</button>
+                                            aria-controls="nav-grade-2" aria-selected="false" tabindex="-1">Sovicky</button>
                                 </div>
                             </nav>
                             <div class="tab-content mt-5" id="nav-tabContent">
                                 <div class="tab-pane fade show active" id="nav-grade-1" role="tabpanel"
                                      aria-labelledby="nav-grade-1-tab">
-                                    <table class="table table-bordered">
+                                    <table class="table table-bordered text-center">
                                         <thead>
                                         <tr class="bg-primary">
-                                            <th class="text-white" scope="col">Monday</th>
-                                            <th class="text-white" scope="col">Tuesday</th>
-                                            <th class="text-white" scope="col">Wednesday</th>
-                                            <th class="text-white" scope="col">Thursday</th>
-                                            <th class="text-white" scope="col">Friday</th>
+                                            <th class="text-white" scope="col">Denny harmonogram</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-
                                             <td>
                                                 <div>
-                                                    <h4 class="lh-sm">Maths</h4>
+                                                    <h4 class="lh-sm">Prichod dietata, privitanie</h4>
                                                     <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
+                                                        <li class="text-danger">7.00 - 8.00</li>
                                                     </ul>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">History</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">English</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Arts</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-
                                         </tr>
                                         <tr>
                                             <td>
@@ -115,78 +58,13 @@
                                                     </ul>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Maths</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">History</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Arts</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-
-
                                         </tr>
                                         <tr>
-
                                             <td>
                                                 <div class="bg-body-secondary">
                                                     <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-
                                         </tr>
                                         <tr>
                                             <td>
@@ -196,46 +74,6 @@
                                                         <li class="text-danger">11.00am - 12.00am</li>
                                                         <li>Teacher: Milly Taylor</li>
                                                         <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">English</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Maths</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">History</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
                                                     </ul>
                                                 </div>
                                             </td>
@@ -251,75 +89,13 @@
                                                     </ul>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Arts</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">English</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Maths</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
                                         </tr>
                                         <tr>
-
                                             <td>
                                                 <div class="bg-body-secondary">
                                                     <h4 class="lh-sm p-2 m-0">Play-Break</h4>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-
                                         </tr>
                                         <tr>
                                             <td>
@@ -329,46 +105,6 @@
                                                         <li class="text-danger">2.00pm - 3.00pm</li>
                                                         <li>Teacher: Sarah Ken</li>
                                                         <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">History</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Arts</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">English</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Maths</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
                                                     </ul>
                                                 </div>
                                             </td>
@@ -377,70 +113,22 @@
                                     </table>
                                 </div>
                                 <div class="tab-pane fade" id="nav-grade-2" role="tabpanel" aria-labelledby="nav-grade-2-tab">
-                                    <table class="table table-bordered">
+                                    <table class="table table-bordered text-center">
                                         <thead>
                                         <tr class="bg-primary">
-                                            <th class="text-white" scope="col">Monday</th>
-                                            <th class="text-white" scope="col">Tuesday</th>
-                                            <th class="text-white" scope="col">Wednesday</th>
-                                            <th class="text-white" scope="col">Thursday</th>
-                                            <th class="text-white" scope="col">Friday</th>
+                                            <th class="text-white" scope="col">Denny harmonogram</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-
                                             <td>
                                                 <div>
-                                                    <h4 class="lh-sm">Mathematics</h4>
+                                                    <h4 class="lh-sm">Prichod dietata, privitanie</h4>
                                                     <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
+                                                        <li class="text-danger">7.00 - 8.00</li>
                                                     </ul>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Geography</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">English</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Arts</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-
                                         </tr>
                                         <tr>
                                             <td>
@@ -453,78 +141,13 @@
                                                     </ul>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Mathematics</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Geography</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Arts</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-
-
                                         </tr>
                                         <tr>
-
                                             <td>
                                                 <div class="bg-body-secondary">
                                                     <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-
                                         </tr>
                                         <tr>
                                             <td>
@@ -537,41 +160,13 @@
                                                     </ul>
                                                 </div>
                                             </td>
+                                        </tr>
+                                        <tr>
                                             <td>
                                                 <div>
-                                                    <h4 class="lh-sm">English</h4>
+                                                    <h4 class="lh-sm">History</h4>
                                                     <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Mathematics</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Geography</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
+                                                        <li class="text-danger">12.00am - 1.00pm</li>
                                                         <li>Teacher: Alex Smith</li>
                                                         <li>Room: 13B</li>
                                                     </ul>
@@ -580,84 +175,10 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Geography</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Arts</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">English</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Mathematics</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-
-                                            <td>
                                                 <div class="bg-body-secondary">
                                                     <h4 class="lh-sm p-2 m-0">Play-Break</h4>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-
                                         </tr>
                                         <tr>
                                             <td>
@@ -667,46 +188,6 @@
                                                         <li class="text-danger">2.00pm - 3.00pm</li>
                                                         <li>Teacher: Sarah Ken</li>
                                                         <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Geography</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Arts</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">English</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Mathematics</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
                                                     </ul>
                                                 </div>
                                             </td>
@@ -714,723 +195,12 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="tab-pane fade" id="nav-grade-3" role="tabpanel" aria-labelledby="nav-grade-3-tab">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                        <tr class="bg-primary">
-                                            <th class="text-white" scope="col">Monday</th>
-                                            <th class="text-white" scope="col">Tuesday</th>
-                                            <th class="text-white" scope="col">Wednesday</th>
-                                            <th class="text-white" scope="col">Thursday</th>
-                                            <th class="text-white" scope="col">Friday</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Mathematics</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Social Studies</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">French</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Arts</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">French</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Mathematics</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Social Studies</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Arts</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-
-
-                                        </tr>
-                                        <tr>
-
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Arts</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">French</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Mathematics</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Social Studies</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Social Studies</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Arts</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">French</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Mathematics</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Social Studies</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Arts</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">French</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Mathematics</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="tab-pane fade" id="nav-grade-4" role="tabpanel" aria-labelledby="nav-grade-4-tab">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                        <tr class="bg-primary">
-                                            <th class="text-white" scope="col">Monday</th>
-                                            <th class="text-white" scope="col">Tuesday</th>
-                                            <th class="text-white" scope="col">Wednesday</th>
-                                            <th class="text-white" scope="col">Thursday</th>
-                                            <th class="text-white" scope="col">Friday</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Mathematics</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Social Studies</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Spanish</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Piano</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">7.00am - 8.00am</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Spanish</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Mathematics</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Social Studies</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Piano</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">8.00am - 9.00am</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-
-
-                                        </tr>
-                                        <tr>
-
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Lunch-Break</h4>
-                                                </div>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Piano</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Spanish</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Mathematics</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Social Studies</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">11.00am - 12.00am</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Social Studies</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Piano</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Spanish</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Mathematics</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">12.00am - 1.00pm</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="bg-body-secondary">
-                                                    <h4 class="lh-sm p-2 m-0">Play-Break</h4>
-                                                </div>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Sports</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Sarah Ken</li>
-                                                        <li>Room: 20C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Social Studies</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Alex Smith</li>
-                                                        <li>Room: 13B</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Piano</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Milly Taylor</li>
-                                                        <li>Room: 3C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Spanish</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 5A</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <h4 class="lh-sm">Mathematics</h4>
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="text-danger">2.00pm - 3.00pm</li>
-                                                        <li>Teacher: Allena Will</li>
-                                                        <li>Room: 2C</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="enroll">
-                <div class="container padding-medium pt-0">
-
-                    <div class="offset-md-3 col-md-6 text-center ">
-
-                        <h2 class="display-4 mb-3">How to enroll your child?</h2>
-                        <p class="fw-bold">Call: 666 333 9999 or Fill in the form below</p>
-                        <p>Pretium turpis faucibus adipiscing duis. Id quis tristique mi vitae nec. In et in praesent
-                            pellentesque.
-                            Porta sit porta ridiculus faucibus.</p>
-
-                        <form class="contact-form row mt-5">
-
-                            <div class="col-md-12 col-sm-12 mb-4">
-                                <input type="text" name="Parents" placeholder="Parents name"
-                                       class="w-100 border ps-4 py-2 rounded-3">
-                            </div>
-                            <div class="col-md-12 col-sm-12 mb-4">
-                                <input type="number" name="Phone" placeholder="Contact phone"
-                                       class="w-100 border ps-4 py-2 rounded-3">
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 mb-4">
-                                <textarea type="text" name="message" placeholder="Your message"
-                                          class="w-100 border ps-4 py-2 rounded-3"></textarea>
-                            </div>
-                        </form>
-
-                        <button class="btn btn-primary mt-3" href="#">Submit</button>
-                    </div>
-
-                </div>
-                </div>
-            </section>
 
         {% endblock %}
 

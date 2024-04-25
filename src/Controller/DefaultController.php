@@ -19,7 +19,7 @@ class DefaultController extends AbstractController
     public function index(?string $templateName = null): Response
     {
         if (is_null($templateName)){
-            return $this->render('template/index.html.twig');
+            $templateName = 'about';
         }
 
         $templatePath = 'template/' . $templateName . '.html.twig';
