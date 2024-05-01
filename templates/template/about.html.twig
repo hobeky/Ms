@@ -6,37 +6,27 @@
     {{ parent() }}
 {% endblock %}
 
-
 {% block body %}
-    <div class="container padding-medium"    >
-        <div class="row "
-             style="padding-bottom: 4em;"
-        >
+    <div class="container padding-medium">
+        <div class="row" style="padding-bottom: 4em;">
             <div class="col-md-6 pe-md-5">
                 <div class="imageblock">
                     <div class="animated-border">
-                        <img src="{{ asset('images/about-img.jpg') }}" alt="img" class="img-fluid rounded-circle ">
+                        <img src="{{ asset('images/about-img.jpg') }}" alt="img" class="img-fluid rounded-circle">
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mt-5 mt-md-0">
-                <h2 class="display-4">Poskytujeme povinné predprimárne vzdelávanie </h2>
-
-                <p><b>od 1.9.2019  sme Ministerstvom školstva zaradený do siete škôl a školských zariadení.</b> </p>
-                <p>
-                    Sme nová materská škola fungujúca od šk. roku 2018/ 2019 , ktorá sa nachádza v súkromnom areáli v blízkosti
-                    centra Košíc s parkovaním pred materskou školou. Budova materskej školy je dvojpodlažná. Materská škola je
-                    dvojtriedna. Obe triedy sú vybavené interaktívnou tabuľou a s množstvom didaktického materiálu, ktorý neustále dopĺňame
-                </p>
-
+                <h2 class="display-4">{{ 'about.aHeading1' | trans }}</h2>
+                <p><b>{{ 'about.aHeading2' | trans }}</b></p>
+                <p>{{ 'about.aParagraph1' | trans }}</p>
             </div>
         </div>
 
-        {#triedy#}
         <div class="row">
             <div class="col-md-12">
                 <hr>
-                <h2>Trieda Vcielky</h2>
+                <h2>{{ 'about.classBees' | trans }}</h2>
             </div>
         </div>
 
@@ -58,88 +48,48 @@
         <div class="row">
             <div class="col-md-12">
                 <hr>
-                <h2>Trieda Sovicky</h2>
+                <h2>{{ 'about.classOwls' | trans }}</h2>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-6">
-                <figure>
-                    <img src="{{ asset('images/blog1.jpg') }}" alt="Sample Image" class="img-fluid">
-                    {#                <figcaption>Sample Caption</figcaption>#}
-                </figure>
-            </div>
-            <div class="col-md-6">
-                <figure>
-                    <img src="{{ asset('images/blog1.jpg') }}" alt="Sample Image" class="img-fluid">
-                    {#                <figcaption>Sample Caption</figcaption>#}
-                </figure>
-            </div>
-        </div>
-        {# koniec triedy#}
+        <p>{{ 'about.bParagraph1' | trans }}</p>
+        <p>{{ 'about.bParagraph2' | trans }}</p>
+        <p>{{ 'about.bParagraph3' | trans }}</p>
+        <p>{{ 'about.bParagraph4' | trans }}</p>
+        <p>{{ 'about.bParagraph5' | trans }}</p>
 
-        <p>
-            Poskytujeme povinné predprimárne vzdelávanie s osvedčením o vzdelaní,  milujúcu a podnetnú starostlivosť pre deti vo veku od 3 – 6 rokov, vo výnimočných prípadoch vo veku 2 rokov.
-        </p>
+        <h1>{{ 'about.cHeading1' | trans }}</h1>
 
-        <p>
-            Naším cieľom je dosiahnuť optimálny rozvoj osobnosti dieťaťa vo všetkých jeho stránkach vzdelávania a na život v spoločnosti.
-        </p>
-
-        <p>
-            Východiskom je jedinečnosť dieťaťa, aktívne učenie, začlenenie sa do skupiny, kolektívu.
-        </p>
-
-        <p>
-            Súkromná  materská škola créme de la céme ponúka celodennú, poldennú starostlivosť.
-        </p>
-
-        <p>
-            Rodičia, ktorí ešte nemajú svoje dieťa nikde umiestnené, môžu sa prísť pozrieť na priestory škôlky a získať všetky potrebné informácie, ktoré ich budú zaujímať.
-        </p>
-
-        <h1>Možnosť zápisu deti do našej materskej školy je počas celého roka</h1>
-
-        <h1>Na čo sa zameriavame :</h1>
         <ul>
-            <li>tréning fonematického uvedomovania u deti v predškolskom veku prostredníctvom stimulačného programu</li>
-            <li>uplatňovanie kvalitnej povinnej predškolskej výchovy, založenej na vzťahu učiteľ – dieťa</li>
-            <li>dosiahnutie optimálnej úrovne ako základu pre školské vzdelávanie a pre život v spoločnosti, rešpektujúc osobnosť dieťaťa, jeho potreby a záujmy, Podporujúc individualitu a jedinečnosť každého dieťaťa</li>
-            <li>rozvíjanie prírodovedeckej gramotnosti – vštepovanie pozitívneho vzťahu k prírode, k životnému prostrediu, rozvoju enviromentálného cítenia, zvýšený záujem venujeme starostlivosti o zdravie, zdravému životnému štýlu</li>
-            <li>denne športové aktivity – pobyt vonku –</li>
-            <li>využitie lezeckej steny v areáli</li>
-            <li>zdravotné cvičenia</li>
-            <li>súčasťou škôlky je detské zatrávnené oplotené ihrisko s preliezkami, raz týždenne sa koná športový deň</li>
-            <li>Okolie našej škôlky je tiež vhodné na tematické prechádzky a poloha našej škôlky nám umožňuje navštevovať rôzne kultúrno – spoločenské zariadenia, Štátne divadlo, chodiť na rôzne exkurzie, letecká škola, navštevovať bábkové divadlo, knižnicu, spoznávať naše krásne mesto Košice</li>
-            <li>dopravná výchova – dopravné ihrisko v blízkosti škôlky</li>
-            <li>rôzne krúžky – angličtina s lektorkami, keramický krúžok, šikovné rúčky, tanec a spev, pohybové hry, tréning fonematického uvedomovania ………..</li>
-            <li>športové výcviky– lyžiarsky výcvik, plavecký výcvik, korčuľovanie, futbalový projekt ,,Dajme spolu gól“</li>
-
+            <li>{{ 'about.cLi1' | trans }}</li>
+            <li>{{ 'about.cLi2' | trans }}</li>
+            <li>{{ 'about.cLi3' | trans }}</li>
+            <li>{{ 'about.cLi4' | trans }}</li>
+            <li>{{ 'about.cLi5' | trans }}</li>
+            <li>{{ 'about.cLi6' | trans }}</li>
+            <li>{{ 'about.cLi7' | trans }}</li>
+            <li>{{ 'about.cLi8' | trans }}</li>
+            <li>{{ 'about.cLi9' | trans }}</li>
+            <li>{{ 'about.cLi10' | trans }}</li>
+            <li>{{ 'about.cLi11' | trans }}</li>
+            <li>{{ 'about.cLi12' | trans }}</li>
         </ul>
 
-        <h1>KRÚŽKY v našej materskej škole</h1>
+        <h1>{{ 'about.dHeading1' | trans }}</h1>
         <ul>
-            <li>tréning fonematického uvedomovania podľa Eľkonina u deti vo veku 5 – 6 rokov s certifikovanou pedagogičkou</li>
-            <li>krúžok anglického jazyka s certifikovanou anglickou lektorkou jazykovej školy</li>
-            <li>pohybovo – tanečná príprava s certifikovanou lektorkou Romankou – Tanečná skupina SHOW DS Košice</li>
-            <li>futbalový projekt ,,Dajme spolu gól“</li>
-            <li>Krúžok keramiky s keramičkou Juditkou</li>
-            <li>Lezecká stena vo dvore</li>
-            <li>Lyžiarsky kurz</li>
-            <li>Korčuliarsky kurz</li>
-            <li>Plavecký kurz</li>
+            <li>{{ 'about.dLi1' | trans }}</li>
+            <li>{{ 'about.dLi2' | trans }}</li>
+            <li>{{ 'about.dLi3' | trans }}</li>
+            <li>{{ 'about.dLi4' | trans }}</li>
+            <li>{{ 'about.dLi5' | trans }}</li>
+            <li>{{ 'about.dLi6' | trans }}</li>
+            <li>{{ 'about.dLi7' | trans }}</li>
+            <li>{{ 'about.dLi8' | trans }}</li>
+            <li>{{ 'about.dLi9' | trans }}</li>
         </ul>
-        <h2>Čo je tréning fonematického uvedomovania?</h2>
-        <p>Fonematické uvedomovanie je schopnosť uvedomovať si zvukovú štruktúru slov, uskutočňovať hláskovú analýzu a syntézu slov, odobrať a zmeniť poradie hlásky.</p>
-        <p>Použitím tejto metódy sa znižuje riziko zlyhávania v učení, a to v čítaní a písaní, keď prídu do školy.</p>
-        <p>Za naše hlavné výhody považujeme interaktívny program zameraný na učenie hrou, funkčné usporiadanie herne ,tréning fonematického uvedomovania u deti v predškolskom veku prostredníctvom stimulačného programu, výučbu angličtiny, vysoký štandard  primárnej starostlivosti a hygieny, celoročnú prevádzku (zatvorené je iba počas štátnych sviatkov a víkendov), kvalitné priestory s moderným vybavením a bezpečnú lokalitu s dobrou dostupnosťou.</p>
+
+        <h2>{{ 'about.eHeading1' | trans }}</h2>
+        <p>{{ 'about.eParagraf1' | trans }}</p>
     </div>
 
 {% endblock %}
-
-
-
-
-
-
-

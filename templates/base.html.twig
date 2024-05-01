@@ -208,57 +208,56 @@
                             <ul class="navbar-nav mb-2 mb-lg-0">
                                 <li class="nav-item px-3 py-2 py-lg-0 dropdown">
                                     <a class="nav-link p-0 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                                       aria-expanded="false"><b>O nas</b></a>
+                                       aria-expanded="false"><b>{{ 'main.about'|trans }}</b></a>
                                     <ul class="dropdown-menu dropdown-menu-end animate slide mt-3 border-0 shadow">
                                         <li class="nav-item px-3 py-2 py-lg-0">
-                                            <a class="nav-link active p-0" aria-current="page" href="{{ path('app_default', {'templateName' : 'about'}) }}"><b>O nas</b></a>
+                                            <a class="nav-link active p-0" aria-current="page" href="{{ path('app_default', {'templateName' : 'about'}) }}"><b>{{ 'main.about'|trans }}</b></a>
                                         </li>
 
                                         <li class="nav-item px-3 py-2 py-lg-0">
-                                            <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'review'}) }}"><b>Recenzie</b></a>
+                                            <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'review'}) }}"><b>{{ 'main.revies'|trans }}</b></a>
                                         </li>
 
                                         <li class="nav-item px-3 py-2 py-lg-0">
-                                            <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'contact'}) }}"><b>Kontakt</b></a>
+                                            <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'contact'}) }}"><b>{{ 'main.contact'|trans }}</b></a>
                                         </li>
                                     </ul>
                                 </li>
 
                                 <li class="nav-item px-3 py-2 py-lg-0">
-                                    <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'for-parents'}) }}"><b>Pre rodicov</b> </a>
+                                    <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'for-parents'}) }}"><b>{{ 'main.forParents'|trans }}</b> </a>
                                 </li>
                                 <li class="nav-item px-3 py-2 py-lg-0">
-                                    <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'teachers'}) }}"><b>Nas tim</b></a>
+                                    <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'teachers'}) }}"><b>{{ 'main.ourTeam'|trans }}</b></a>
                                 </li>
                                 <li class="nav-item px-3 py-2 py-lg-0">
-                                    <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'gallery'}) }}"><b>Galeria</b></a>
+                                    <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'gallery'}) }}"><b>{{ 'main.gallery'|trans }}</b></a>
                                 </li>
                                 <li class="nav-item px-3 py-2 py-lg-0">
-                                    <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'menu'}) }}"><b>Jedalny listok</b></a>
+                                    <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'menu'}) }}"><b>{{ 'main.menuList'|trans }}</b></a>
                                 </li>
 
                                 <li class="nav-item px-3 py-2 py-lg-0 dropdown">
                                     <a class="nav-link p-0 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                                       aria-expanded="false"><b>Organizacia</b></a>
+                                       aria-expanded="false"><b>{{ 'main.organisation'|trans }}</b></a>
                                     <ul class="dropdown-menu dropdown-menu-end animate slide mt-3 border-0 shadow">
                                         <li class="nav-item px-3 py-2 py-lg-0">
-                                            <a class="nav-link active p-0" aria-current="page" href="{{ path('app_default', {'templateName' : 'menu-short'}) }}"><b>Menu</b></a>
+                                            <a class="nav-link active p-0" aria-current="page" href="{{ path('app_default', {'templateName' : 'menu-short'}) }}"><b>{{ 'main.menu'|trans }}</b></a>
                                         </li>
 
                                         <li class="nav-item px-3 py-2 py-lg-0">
-                                            <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'time-table'}) }}"><b>Rozvrhy</b></a>
+                                            <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'time-table'}) }}"><b>{{ 'main.schedule'|trans }}</b></a>
                                         </li>
                                     </ul>
                                 </li>
 
-
                                 <li class="nav-item px-3 py-2 py-lg-0">
-                                    <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'kid-security'}) }}"><b>Bezpecnost deti</b></a>
+                                    <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'kid-security'}) }}"><b>{{ 'main.kidSafety'|trans }}</b></a>
                                 </li>
-
                             </ul>
-
                         </div>
+
+
                     </div>
                 </div>
             </nav>

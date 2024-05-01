@@ -20,20 +20,16 @@
 
 
 {% block body %}
-
-
-
-
     <section class="contact-us">
         <div class="container padding-medium">
             <div class="row">
                 <div class="contact-info col-lg-6">
-                    <h2>Kontaktne informacie</h2>
-                    <p>Zavolajte nam, napiste, alebo sa pridte pozriet.</p>
+                    <h2>{{ 'contact.heading1'|trans }}</h2>
+                    <p>{{ 'contact.subheading1'|trans }}</p>
                     <div class="page-content d-flex flex-wrap">
                         <div class="col-lg-12 col-sm-12">
                             <div class="content-box text-dark pe-4">
-                                <h4 class="mb-2">Adresa</h4>
+                                <h4 class="mb-2">{{ 'contact.adress'|trans }}</h4>
                                 <p><iconify-icon class="text-primary fs-5 me-2" icon="mdi:location"
                                                  style="vertical-align:text-bottom"></iconify-icon>Créme de la Créme</p>
                                 <p><iconify-icon class="text-primary fs-5 me-2" icon="mdi:location"
@@ -48,25 +44,25 @@
                 </div>
                 <div class="inquiry-item col-lg-6 mt-5 mt-md-0">
                     <div class="rounded-5">
-                        <h2>Napiste nam email</h2>
+                        <h2>{{ 'contact.formHeading'|trans }}</h2>
                         <form id="form" class="form-group flex-wrap mt-4">
                             <div class="form-input col-lg-12 d-flex mb-3">
-                                <input type="text" name="email" placeholder="Meno" class="form-control ps-3 me-3">
-                                <input type="text" name="email" placeholder="Vas e-mail" class="form-control ps-3">
+                                <input type="text" name="email" placeholder="{{ 'contact.formPlaceHolderName'|trans }}" class="form-control ps-3 me-3">
+                                <input type="text" name="email" placeholder="{{ 'contact.formPlaceHolderEmail'|trans }}" class="form-control ps-3">
                             </div>
                             <div class="col-lg-12 mb-3">
-                                <input type="text" name="email" placeholder="telefonne cislo" class="form-control ps-3">
+                                <input type="text" name="email" placeholder="{{ 'contact.formPlaceHolderTel'|trans }}" class="form-control ps-3">
                             </div>
                             <div class="col-lg-12 mb-3">
-                                <input type="text" name="email" placeholder="Vec" class="form-control ps-3">
+                                <input type="text" name="email" placeholder="{{ 'contact.formPlaceHolderTopic'|trans }}" class="form-control ps-3">
                             </div>
                             <div class="col-lg-12 mb-3">
-                <textarea placeholder="text" class="form-control ps-3"
-                          style="height:150px;"></textarea>
+                                <textarea placeholder="{{ 'contact.formPlaceHolderText'|trans }}" class="form-control ps-3"
+                                          style="height:150px;"></textarea>
                             </div>
                         </form>
                         <div class="d-grid">
-                            <button class="btn btn-primary px-5 py-3 ">Odoslat</button>
+                            <button class="btn btn-primary px-5 py-3 ">{{ 'contact.formButton'|trans }}</button>
                         </div>
                     </div>
                 </div>
@@ -83,7 +79,7 @@
                 <style>
                     .mapouter {
                         position: relative;
-                        text-align: right;
+                        text-align:right;
                         height: 500px;
                         width: 100%;
                     }
@@ -101,4 +97,3 @@
     </section>
 
 {% endblock %}
-

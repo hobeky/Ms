@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Kindergarten - Daycare and Kindergarten Website Template{% endblock %}
-
+{% block title %}{{ 'about.title'|trans }}{% endblock %}
 
 {% block body %}
     <div class="container">
@@ -13,17 +12,17 @@
                             <button class="accordion-button bg-transparent focus-transparent text-capitalize shadow-none"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                                     aria-controls="collapseOne">
-                                O čo sa nemusíte starať
+                                {{ 'forParents.aHeading1'|trans }}
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
                             <div class="accordion-body">
                                 <ul>
-                                    <li>anti alergické matrace</li>
-                                    <li>anti alergické paplóny a vankúše</li>
-                                    <li>posteľné prádlo</li>
-                                    <li>uteráky</li>
-                                    <li>pohárik</li>
+                                    <li>{{ 'forParents.aLi1'|trans }}</li>
+                                    <li>{{ 'forParents.aLi2'|trans }}</li>
+                                    <li>{{ 'forParents.aLi3'|trans }}</li>
+                                    <li>{{ 'forParents.aLi4'|trans }}</li>
+                                    <li>{{ 'forParents.aLi5'|trans }}</li>
                                 </ul>
                             </div>
                         </div>
@@ -33,15 +32,17 @@
                             <button class="accordion-button bg-transparent focus-transparent text-capitalize shadow-none collapsed"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
                                     aria-controls="collapseTwo">
-                                Čo si priniesť do škôlky
+                                {{ 'forParents.bHeading1'|trans }}
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
                             <div class="accordion-body">
-                                <li>pyžamko</li>
-                                <li>papučky</li>
-                                <li>zubnú kefku a pastu</li>
-                                <li>náhradné oblečenie</li>
+                                <ul>
+                                    <li>{{ 'forParents.bLi1'|trans }}</li>
+                                    <li>{{ 'forParents.bLi2'|trans }}</li>
+                                    <li>{{ 'forParents.bLi3'|trans }}</li>
+                                    <li>{{ 'forParents.bLi4'|trans }}</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -50,28 +51,28 @@
                             <button class="accordion-button bg-transparent focus-transparent text-capitalize shadow-none collapsed"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
                                     aria-controls="collapseThree">
-                                Čo si priniesť na :
+                                {{ 'forParents.cHeading1'|trans }}
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
                             <div class="accordion-body">
-                                <h4>Keramický krúžok</h4>
+                                <h4>{{ 'forParents.cUl1'|trans }}</h4>
                                 <ul>
-                                    <li>pláštenku</li>
-                                    <li>starú košeľu</li>
+                                    <li>{{ 'forParents.cUl1Li1'|trans }}</li>
+                                    <li>{{ 'forParents.cUl1Li2'|trans }}</li>
                                 </ul>
 
-                                <h4>Tanečný krúžok</h4>
+                                <h4>{{ 'forParents.cUl2'|trans }}</h4>
                                 <ul>
-                                    <li>Dievčatá: cvičky alebo baletky, sukňu a tričko</li>
-                                    <li>Chlapci: cvičky (nie botasky), tepláky a tričko</li>
+                                    <li>{{ 'forParents.cUl2Li1'|trans }}</li>
+                                    <li>{{ 'forParents.cUl2Li2'|trans }}</li>
                                 </ul>
 
-                                <h3>Tréning fonematického uvedomovania podľa Eľkonina pre 5-6 ročných</h3>
-                                <p>Šlabikár – zakúpený v SMŠ</p>
+                                <h3>{{ 'forParents.eHeading1'|trans }}</h3>
+                                <p>{{ 'forParents.eParagraf1'|trans }}</p>
 
-                                <h3>Angličtina s lektorkou</h3>
-                                <p>Dobrú náladu 🙂</p>
+                                <h3>{{ 'forParents.eHeading2'|trans }}</h3>
+                                <p>{{ 'forParents.eParagraf2'|trans }}</p>
                             </div>
                         </div>
                     </div>
@@ -80,4 +81,3 @@
         </div>
     </div>
 {% endblock %}
-
