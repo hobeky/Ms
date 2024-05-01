@@ -30,6 +30,7 @@ RUN set -eux; \
 		opcache \
 		zip \
     	pdo_pgsql \
+    	gd \
 	;
 
 # https://getcomposer.org/doc/03-cli.md#composer-allow-superuser

@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\TeacherRepository;
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: TeacherRepository::class)]
@@ -17,11 +16,17 @@ class Teacher
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $position = null;
+    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Translation $position = null;
 
-    #[ORM\Column(type: Types::TEXT)]
-    private ?string $description = null;
+    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Translation $description = null;
+
+    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Image $image = null;
 
     public function getId(): ?int
     {
@@ -40,26 +45,38 @@ class Teacher
         return $this;
     }
 
-    public function getPosition(): ?string
+    public function getPosition(): ?Translation
     {
         return $this->position;
     }
 
-    public function setPosition(string $position): static
+    public function setPosition(Translation $position): static
     {
         $this->position = $position;
 
         return $this;
     }
 
-    public function getDescription(): ?string
+    public function getDescription(): ?Translation
     {
         return $this->description;
     }
 
-    public function setDescription(string $description): static
+    public function setDescription(Translation $description): static
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getImage(): ?Image
+    {
+        return $this->image;
+    }
+
+    public function setImage(Image $image): static
+    {
+        $this->image = $image;
 
         return $this;
     }
