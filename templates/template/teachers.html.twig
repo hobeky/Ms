@@ -20,6 +20,7 @@
 
 {% block body %}
 
+
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2 col-sm-12">
@@ -45,264 +46,294 @@
             <h2 class="display-4 text-center mb-5">{{ 'teachers.ourTeam'|trans }}</h2>
 
             <div class="row">
-                <div class="col-md-4 mt-5 ">
-                    <div class="team-member position-relative">
-                        <div class="image-holder zoom-effect">
-                            <img src="https://mssturova.sk/wp-content/uploads/2022/01/Ivana-foto-22-214x300.jpg" alt="team member" class="img-fluid"
-                                 style="width: 356px; height: 500px; object-fit: fill;"
-                            >
-                        </div>
-                        <div class="member-info pt-4 ">
-                            <h2 class="lh-sm m-0 ">Ivana Pečeňáková Pavlovičová </h2>
-                            <span class="text-primary fs-6">Zriaďovateľ a konateľ materskej školy</span>
-                            <p class="mt-2">
-                                Materská škola créme de la créme  je pre ňu splnený celoživotný sen a srdcová záležitosť.
 
-                                Deti v škôlke a celý tím berie ako svoju „druhú rodinu“ .
+                {% for teacher in teachers %}
+                    <div class="col-md-4 mt-5 ">
+                        <div class="team-member position-relative">
+                            <div class="image-holder zoom-effect">
+                                <img src="{{ '/image/medium/bozenka.jpg' }}" alt="team member" class="img-fluid"
+                                     style="width: 356px; height: 500px; object-fit: fill;"
+                                >
+                            </div>
+                            <div class="member-info pt-4 ">
+                                <h2 class="lh-sm m-0 ">Ivana Pečeňáková Pavlovičová </h2>
+                                <span class="text-primary fs-6">Zriaďovateľ a konateľ materskej školy</span>
+                                <p class="mt-2">
+                                    Materská škola créme de la créme  je pre ňu splnený celoživotný sen a srdcová záležitosť.
 
-                                <br>
-                                <br>
-                                ,, Deti milujú toho, kto ich miluje;
-                                a kto nemôže milovať
+                                    Deti v škôlke a celý tím berie ako svoju „druhú rodinu“ .
 
-                                len veľmi málo dosiahne pri ich výchove.“
-                                <br>
-                                J.W.Goethe
-                            </p>
+                                    <br>
+                                    <br>
+                                    ,, Deti milujú toho, kto ich miluje;
+                                    a kto nemôže milovať
+
+                                    len veľmi málo dosiahne pri ich výchove.“
+                                    <br>
+                                    J.W.Goethe
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mt-5 ">
-                    <div class="team-member position-relative">
-                        <div class="image-holder zoom-effect">
-                            <img src="https://mssturova.sk/wp-content/uploads/2022/01/Domi-B.foto-22-731x1024.jpg" alt="team member" class="img-fluid"
-                                 style="width: 356px; height: 500px; object-fit: fill;"
-                            >
-                            <ul class="social-links list-unstyled position-absolute">
-                                <li>
-                                    <a href="#">
-                                        <svg class="facebook text-white ms-1 mt-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#facebook"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <svg class="twitter text-white ms-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#twitter"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <svg class="instagram text-white ms-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#instagram"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <svg class="linkedin text-white ms-1 mb-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="member-info pt-4 ">
-                            <h2 class="lh-sm m-0 ">Dominika Molnárová</h2>
-                            <span class="text-primary fs-6">učiteľka Sovičiek,  riaditeľka SMŠ</span>
-                            <p class="mt-2">
-                                Dominika ukončila strednú Katolícku pedagogickú školu sv. Cyrila a Metóda odbor učiteľstvo v materskej škole  a následne na Pedagogickej fakulte Prešovskej univerzity v Prešove absolvovala vzdelanie I. stupňa v odbore Predškolská a elementárna pedagogika. Cenné skúsenosti nadobudla počas štúdia  v predškolských zariadeniach a pri práci s detičkami.
-                                Zameriava sa na rozvíjanie ich osobností po sociálno-emocionálnej stránke s využitím vhodných výchovno-vzdelávacích aktivít primeraných veku a individuálnym osobnostiam detí. Ovláda hru na klavír, flautu, využíva spevácke skúsenosti zo zboru. Je veselá, spoľahlivá, empatická, kreatívna, deti si ju hneď obľúbia. Svoje povolanie berie ako poslanie a koníček, práca ju napĺňa a baví.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-5 ">
-                    <div class="team-member position-relative">
-                        <div class="image-holder zoom-effect">
-                            <img src="https://mssturova.sk/wp-content/uploads/2022/10/Dianka-foto-774x1024.jpeg" alt="team member" class="img-fluid"
-                                 style="width: 356px; height: 500px; object-fit: fill;"
-                            >
-                            <ul class="social-links list-unstyled position-absolute">
-                                <li>
-                                    <a href="#">
-                                        <svg class="facebook text-white ms-1 mt-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#facebook"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <svg class="twitter text-white ms-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#twitter"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <svg class="instagram text-white ms-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#instagram"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <svg class="linkedin text-white ms-1 mb-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="member-info pt-4 ">
-                            <h2 class="lh-sm m-0 ">Diana Bilá </h2>
-                            <span class="text-primary fs-6">Tr.učiteľka Sovičiek</span>
-                            <p class="mt-2">
-                                Dianka má úspešne ukončené  štúdium na Pedagogickej fakulte Prešovskej univerzity v Prešove – predškolská a elementárna pedagogika odbor učiteľstvo v materskej škole. Má niekoľkoročnú prax s prácou s deťmi.  Medzi jej najsilnejšie stránky patrí hra na flautu, gitaru a spev, obľubuje maľovanie a kreslenie a šport. Je kreatívna, veselá, empatická, komunikatívna a flexibilná a deti si ju hneď obľúbia.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-5 ">
-                    <div class="team-member position-relative">
-                        <div class="image-holder zoom-effect">
-                            <img src="https://mssturova.sk/wp-content/uploads/2022/01/Viki-F.foto22-731x1024.jpg" alt="team member" class="img-fluid"
-                                 style="width: 356px; height: 500px; object-fit: fill;"
-                            >
-                            <ul class="social-links list-unstyled position-absolute">
-                                <li>
-                                    <a href="#">
-                                        <svg class="facebook text-white ms-1 mt-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#facebook"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <svg class="twitter text-white ms-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#twitter"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <svg class="instagram text-white ms-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#instagram"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <svg class="linkedin text-white ms-1 mb-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="member-info pt-4 ">
-                            <h2 class="lh-sm m-0 ">Viktória Fafráková</h2>
-                            <span class="text-primary fs-6">Tr.učiteľka Včeličiek</span>
-                            <p class="mt-2">
-                                Viki študuje na Pedagogickej fakulte Prešovskej univerzity v Prešove – predškolská a elementárna pedagogika. Je veselá, komunikatívna, empatická, spoľahlivá a  veľmi tvorivá. Deti si ju ihneď obľúbia. Práca s deťmi ju napĺňa, má k nim citlivý, pokojný a kamarátsky prístup. Rada sa vzdeláva a nové poznatky aplikuje v praxi. Prácu v materskej škole vníma ako poslanie. Za veľmi dôležité považuje spoluprácu rodičov hlavne pri výchovných a vzdelávacích problémoch.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-5 ">
-                    <div class="team-member position-relative">
-                        <div class="image-holder zoom-effect">
-                            <img src="https://mssturova.sk/wp-content/uploads/2024/02/LUCKA-768x1024.jpg" alt="team member" class="img-fluid"
-                                 style="width: 356px; height: 500px; object-fit: fill;"
-                            >
-                            <ul class="social-links list-unstyled position-absolute">
-                                <li>
-                                    <a href="#">
-                                        <svg class="facebook text-white ms-1 mt-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#facebook"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <svg class="twitter text-white ms-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#twitter"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <svg class="instagram text-white ms-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#instagram"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <svg class="linkedin text-white ms-1 mb-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="member-info pt-4 ">
-                            <h2 class="lh-sm m-0 ">Lucia Ondrejová</h2>
-                            <span class="text-primary fs-6">učiteľka Včeličiek</span>
-                            <p class="mt-2">
-                                Lucka je pani učiteľka s dlhoročnou praxou. Prácu s detičkami miluje. Venuje sa spevu a hrá na klavír. Rada sa vzdeláva, v predškolskej pedagogike sa zlepšuje  samoštúdiom literatúry pre MŠ. Je veľmi pokojná, empatická, zodpovedná, kreatívna a vie detičky zaujať po každej stránke. Prácu v materskej škole vníma ako poslanie.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-5 ">
-                    <div class="team-member position-relative">
-                        <div class="image-holder zoom-effect">
-                            <img src="https://mssturova.sk/wp-content/uploads/2023/09/ADKA-FOTO.jpg" alt="team member" class="img-fluid"
-                                 style="width: 356px; height: 500px; object-fit: fill;"
-                            >
-                            <ul class="social-links list-unstyled position-absolute">
-                                <li>
-                                    <a href="#">
-                                        <svg class="facebook text-white ms-1 mt-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#facebook"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <svg class="twitter text-white ms-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#twitter"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <svg class="instagram text-white ms-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#instagram"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <svg class="linkedin text-white ms-1 mb-1" width="30" height="30" aria-hidden="true">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="member-info pt-4 ">
-                            <h2 class="lh-sm m-0 ">Adriána Taišová </h2>
-                            <span class="text-primary fs-6">kuchárka</span>
-                            <p class="mt-2">
-                                Spokojné brušká sa rovná spokojné detičky. Pani kuchárka Aďka,je veľmi kreatívna  a nikdy neobsedí. Deti ju zbožňujú ,dokáže ich motivovať k zjedeniu aj toho čo „nemajú radi“. Je empatická,spoľahlivá a veselá.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
+{#                <div class="col-md-4 mt-5 ">#}
+{#                    <div class="team-member position-relative">#}
+{#                        <div class="image-holder zoom-effect">#}
+{#                            <img src="https://mssturova.sk/wp-content/uploads/2022/01/Ivana-foto-22-214x300.jpg" alt="team member" class="img-fluid"#}
+{#                                 style="width: 356px; height: 500px; object-fit: fill;"#}
+{#                            >#}
+{#                        </div>#}
+{#                        <div class="member-info pt-4 ">#}
+{#                            <h2 class="lh-sm m-0 ">Ivana Pečeňáková Pavlovičová </h2>#}
+{#                            <span class="text-primary fs-6">Zriaďovateľ a konateľ materskej školy</span>#}
+{#                            <p class="mt-2">#}
+{#                                Materská škola créme de la créme  je pre ňu splnený celoživotný sen a srdcová záležitosť.#}
+
+{#                                Deti v škôlke a celý tím berie ako svoju „druhú rodinu“ .#}
+
+{#                                <br>#}
+{#                                <br>#}
+{#                                ,, Deti milujú toho, kto ich miluje;#}
+{#                                a kto nemôže milovať#}
+
+{#                                len veľmi málo dosiahne pri ich výchove.“#}
+{#                                <br>#}
+{#                                J.W.Goethe#}
+{#                            </p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-4 mt-5 ">#}
+{#                    <div class="team-member position-relative">#}
+{#                        <div class="image-holder zoom-effect">#}
+{#                            <img src="https://mssturova.sk/wp-content/uploads/2022/01/Domi-B.foto-22-731x1024.jpg" alt="team member" class="img-fluid"#}
+{#                                 style="width: 356px; height: 500px; object-fit: fill;"#}
+{#                            >#}
+{#                            <ul class="social-links list-unstyled position-absolute">#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="facebook text-white ms-1 mt-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#facebook"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="twitter text-white ms-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#twitter"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="instagram text-white ms-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#instagram"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="linkedin text-white ms-1 mb-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#linkedin"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                            </ul>#}
+{#                        </div>#}
+{#                        <div class="member-info pt-4 ">#}
+{#                            <h2 class="lh-sm m-0 ">Dominika Molnárová</h2>#}
+{#                            <span class="text-primary fs-6">učiteľka Sovičiek,  riaditeľka SMŠ</span>#}
+{#                            <p class="mt-2">#}
+{#                                Dominika ukončila strednú Katolícku pedagogickú školu sv. Cyrila a Metóda odbor učiteľstvo v materskej škole  a následne na Pedagogickej fakulte Prešovskej univerzity v Prešove absolvovala vzdelanie I. stupňa v odbore Predškolská a elementárna pedagogika. Cenné skúsenosti nadobudla počas štúdia  v predškolských zariadeniach a pri práci s detičkami.#}
+{#                                Zameriava sa na rozvíjanie ich osobností po sociálno-emocionálnej stránke s využitím vhodných výchovno-vzdelávacích aktivít primeraných veku a individuálnym osobnostiam detí. Ovláda hru na klavír, flautu, využíva spevácke skúsenosti zo zboru. Je veselá, spoľahlivá, empatická, kreatívna, deti si ju hneď obľúbia. Svoje povolanie berie ako poslanie a koníček, práca ju napĺňa a baví.#}
+{#                            </p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-4 mt-5 ">#}
+{#                    <div class="team-member position-relative">#}
+{#                        <div class="image-holder zoom-effect">#}
+{#                            <img src="https://mssturova.sk/wp-content/uploads/2022/10/Dianka-foto-774x1024.jpeg" alt="team member" class="img-fluid"#}
+{#                                 style="width: 356px; height: 500px; object-fit: fill;"#}
+{#                            >#}
+{#                            <ul class="social-links list-unstyled position-absolute">#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="facebook text-white ms-1 mt-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#facebook"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="twitter text-white ms-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#twitter"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="instagram text-white ms-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#instagram"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="linkedin text-white ms-1 mb-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#linkedin"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                            </ul>#}
+{#                        </div>#}
+{#                        <div class="member-info pt-4 ">#}
+{#                            <h2 class="lh-sm m-0 ">Diana Bilá </h2>#}
+{#                            <span class="text-primary fs-6">Tr.učiteľka Sovičiek</span>#}
+{#                            <p class="mt-2">#}
+{#                                Dianka má úspešne ukončené  štúdium na Pedagogickej fakulte Prešovskej univerzity v Prešove – predškolská a elementárna pedagogika odbor učiteľstvo v materskej škole. Má niekoľkoročnú prax s prácou s deťmi.  Medzi jej najsilnejšie stránky patrí hra na flautu, gitaru a spev, obľubuje maľovanie a kreslenie a šport. Je kreatívna, veselá, empatická, komunikatívna a flexibilná a deti si ju hneď obľúbia.#}
+{#                            </p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-4 mt-5 ">#}
+{#                    <div class="team-member position-relative">#}
+{#                        <div class="image-holder zoom-effect">#}
+{#                            <img src="https://mssturova.sk/wp-content/uploads/2022/01/Viki-F.foto22-731x1024.jpg" alt="team member" class="img-fluid"#}
+{#                                 style="width: 356px; height: 500px; object-fit: fill;"#}
+{#                            >#}
+{#                            <ul class="social-links list-unstyled position-absolute">#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="facebook text-white ms-1 mt-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#facebook"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="twitter text-white ms-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#twitter"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="instagram text-white ms-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#instagram"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="linkedin text-white ms-1 mb-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#linkedin"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                            </ul>#}
+{#                        </div>#}
+{#                        <div class="member-info pt-4 ">#}
+{#                            <h2 class="lh-sm m-0 ">Viktória Fafráková</h2>#}
+{#                            <span class="text-primary fs-6">Tr.učiteľka Včeličiek</span>#}
+{#                            <p class="mt-2">#}
+{#                                Viki študuje na Pedagogickej fakulte Prešovskej univerzity v Prešove – predškolská a elementárna pedagogika. Je veselá, komunikatívna, empatická, spoľahlivá a  veľmi tvorivá. Deti si ju ihneď obľúbia. Práca s deťmi ju napĺňa, má k nim citlivý, pokojný a kamarátsky prístup. Rada sa vzdeláva a nové poznatky aplikuje v praxi. Prácu v materskej škole vníma ako poslanie. Za veľmi dôležité považuje spoluprácu rodičov hlavne pri výchovných a vzdelávacích problémoch.#}
+{#                            </p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-4 mt-5 ">#}
+{#                    <div class="team-member position-relative">#}
+{#                        <div class="image-holder zoom-effect">#}
+{#                            <img src="https://mssturova.sk/wp-content/uploads/2024/02/LUCKA-768x1024.jpg" alt="team member" class="img-fluid"#}
+{#                                 style="width: 356px; height: 500px; object-fit: fill;"#}
+{#                            >#}
+{#                            <ul class="social-links list-unstyled position-absolute">#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="facebook text-white ms-1 mt-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#facebook"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="twitter text-white ms-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#twitter"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="instagram text-white ms-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#instagram"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="linkedin text-white ms-1 mb-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#linkedin"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                            </ul>#}
+{#                        </div>#}
+{#                        <div class="member-info pt-4 ">#}
+{#                            <h2 class="lh-sm m-0 ">Lucia Ondrejová</h2>#}
+{#                            <span class="text-primary fs-6">učiteľka Včeličiek</span>#}
+{#                            <p class="mt-2">#}
+{#                                Lucka je pani učiteľka s dlhoročnou praxou. Prácu s detičkami miluje. Venuje sa spevu a hrá na klavír. Rada sa vzdeláva, v predškolskej pedagogike sa zlepšuje  samoštúdiom literatúry pre MŠ. Je veľmi pokojná, empatická, zodpovedná, kreatívna a vie detičky zaujať po každej stránke. Prácu v materskej škole vníma ako poslanie.#}
+{#                            </p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-4 mt-5 ">#}
+{#                    <div class="team-member position-relative">#}
+{#                        <div class="image-holder zoom-effect">#}
+{#                            <img src="https://mssturova.sk/wp-content/uploads/2023/09/ADKA-FOTO.jpg" alt="team member" class="img-fluid"#}
+{#                                 style="width: 356px; height: 500px; object-fit: fill;"#}
+{#                            >#}
+{#                            <ul class="social-links list-unstyled position-absolute">#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="facebook text-white ms-1 mt-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#facebook"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="twitter text-white ms-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#twitter"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="instagram text-white ms-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#instagram"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#">#}
+{#                                        <svg class="linkedin text-white ms-1 mb-1" width="30" height="30" aria-hidden="true">#}
+{#                                            <use xlink:href="#linkedin"></use>#}
+{#                                        </svg>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                            </ul>#}
+{#                        </div>#}
+{#                        <div class="member-info pt-4 ">#}
+{#                            <h2 class="lh-sm m-0 ">Adriána Taišová </h2>#}
+{#                            <span class="text-primary fs-6">kuchárka</span>#}
+{#                            <p class="mt-2">#}
+{#                                Spokojné brušká sa rovná spokojné detičky. Pani kuchárka Aďka,je veľmi kreatívna  a nikdy neobsedí. Deti ju zbožňujú ,dokáže ich motivovať k zjedeniu aj toho čo „nemajú radi“. Je empatická,spoľahlivá a veselá.#}
+{#                            </p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
             </div>
         </div>
     </section>

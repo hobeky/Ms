@@ -22,7 +22,7 @@ class Translation
 
     public function __toString(): string
     {
-        $locale = $GLOBALS['request']->getLocale();
+        $locale = $GLOBALS['currentLocale'];
         return $this->$locale;
     }
 

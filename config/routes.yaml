@@ -6,3 +6,7 @@ controllers:
     prefix:
         en: '/en'
         sk: '/'
+
+image_controller:
+    resource: ../src/Controller/ImageController.php
+    type: attribute

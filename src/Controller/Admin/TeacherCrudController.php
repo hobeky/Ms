@@ -9,9 +9,16 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
 class TeacherCrudController extends AbstractCrudController
 {
+    public function __construct(
+        private readonly ParameterBagInterface $parameterBag
+    )
+    {
+
+    }
     public static function getEntityFqcn(): string
     {
         return Teacher::class;
@@ -24,7 +31,7 @@ class TeacherCrudController extends AbstractCrudController
             TextField::new('name'),
             AssociationField::new('position')->renderAsEmbeddedForm(TranslationCrudController::class),
             AssociationField::new('description')->renderAsEmbeddedForm(TranslationCrudController::class),
-            AssociationField::new('image')->renderAsEmbeddedForm(ImageCrudController::class)
+            ImageField::new('image')->setBasePath('/images/')->setUploadDir($this->parameterBag->get('img_dir') . 'original'),
         ];
     }
 

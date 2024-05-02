@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Teacher;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Psr\Log\LoggerInterface;
@@ -10,7 +12,8 @@ use Symfony\Component\Routing\Attribute\Route;
 class DefaultController extends AbstractController
 {
     public function __construct(
-        private readonly LoggerInterface $logger
+        private readonly LoggerInterface $logger,
+        private readonly EntityManagerInterface $entityManager,
     )
     {
 
@@ -22,10 +25,15 @@ class DefaultController extends AbstractController
             $templateName = 'about';
         }
 
+        $teacherRepo = $this->entityManager->getRepository(Teacher::class);
+        $teachers = $teacherRepo->findAll();
+
         $templatePath = 'template/' . $templateName . '.html.twig';
 
+
         return  $this->render($templatePath, [
-            'heroName' => $templateName
+            'heroName' => $templateName,
+            'teachers' => $teachers
         ]);
 
     }

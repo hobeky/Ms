@@ -69,14 +69,17 @@ class Teacher
         return $this;
     }
 
-    public function getImage(): ?Image
+    public function getImage(): ?string
     {
-        return $this->image;
+        if (!$this->image){
+            return null;
+        }
+        return '/image/medium/'. $this->image->getFileName();
     }
 
-    public function setImage(Image $image): static
+    public function setImage(string $imageName): static
     {
-        $this->image = $image;
+        $this->image = (new Image())->setFileName($imageName);
 
         return $this;
     }

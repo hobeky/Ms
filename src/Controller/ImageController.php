@@ -28,7 +28,7 @@ class ImageController extends AbstractController
         assert(is_string($this->parameterBag->get('kernel.project_dir')));
         assert(is_string($this->parameterBag->get('img_dir')));
         $originalImagePath = sprintf(
-            '%s%s/ORIGINAL/%s',
+            '%s%s/original/%s',
             $this->parameterBag->get('kernel.project_dir'),
             $this->parameterBag->get('img_dir'),
             $imageName
@@ -37,7 +37,7 @@ class ImageController extends AbstractController
             '%s%s/%s/%s',
             $this->parameterBag->get('kernel.project_dir'),
             $this->parameterBag->get('img_dir'),
-            strtoupper($size),
+            strtolower($size),
             $imageName
         );
         $host = $request->server->get('REQUEST_SCHEME') . '://' . $request->getHttpHost();
