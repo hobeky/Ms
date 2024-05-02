@@ -6,27 +6,22 @@
     {{ parent() }}
 {% endblock %}
 
-
 {% block body %}
-
-
     <div class="container padding-medium">
         <div class="row ">
             <div class="col-md-6 pe-md-5">
                 <div class="imageblock">
                     <div class="animated-border">
-                        <img src="https://mssturova.sk/wp-content/uploads/2020/06/ovocie-1024x766.jpeg" alt="img" class="img-fluid rounded-circle "
-                            style="width: 400px;height: 400px;"
+                        <img src="https://mssturova.sk/wp-content/uploads/2020/06/ovocie-1024x766.jpeg" alt="img" class="img-fluid rounded-circle"
+                             style="width: 400px;height: 400px;"
                         >
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mt-5 mt-md-0">
-                <h2 class="display-4">V materskej škole dbáme na zdravé stravovanie detí,</h2>
-
-                <p>desiate,obedy a  olovranty v súlade s predpísanými odporúčanými dennými dávkami stavebných látok, vitamínov, minerálov a stopových prvkov, potrebných pre zdravý rast a vývoj dieťaťa.</p>
-                <p>Denné menu pripravuje Spoločenský Pavilón,s.r.o. s licenciou na stravovanie detí v predškolskom zariadení,ktorý nám aj stravu prináša do našej výdajnej školskej kuchyne.</p>
-
+                <h2 class="display-4">{{ 'menu.heading1'|trans }}</h2>
+                <p>{{ 'menu.paragraph1'|trans }}</p>
+                <p>{{ 'menu.paragraph2'|trans }}</p>
             </div>
         </div>
     </div>
@@ -34,230 +29,60 @@
     <div class="container padding-medium">
         <div class="row ">
             <div class="col-md-6 pe-md-5">
-                <h2 class="display-4">Deti majú po celý deň k dispozícii ovocné nesladené čaje, čerstvú pitnú vodu a ovocie.</h2>
-
-                <p>Deťom ponúkame zdravú stravu, prispôsobenú aj deťom s poruchami výživy a neznášanlivosťou niektorých potravín. </p>
-                <p>Detičky nepapajú v triedach,ale v samostatnej  jedálni.</p>
-
+                <h2 class="display-4">{{ 'menu.heading2'|trans }}</h2>
+                <p>{{ 'menu.paragraph3'|trans }}</p>
+                <p>{{ 'menu.paragraph4'|trans }}</p>
             </div>
             <div class="col-md-6 mt-5 mt-md-0">
                 <div class="imageblock">
                     <div class="animated-border">
-                        <img src="https://mssturova.sk/wp-content/uploads/2020/06/mysky.jpg" alt="img" class="img-fluid rounded-circle "
+                        <img src="https://mssturova.sk/wp-content/uploads/2020/06/mysky.jpg" alt="img" class="img-fluid rounded-circle"
                              style="width: 400px;height: 400px;"
                         >
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 
     <section>
         <div class="container padding-medium">
-            <h2 class="display-4 text-center mb-5">Tyzdenne menu </h2>
+            <h2 class="display-4 text-center mb-5">{{ 'menu.menuHeading'|trans }}</h2>
 
             <div class="post-content ">
                 <div class="bootstrap-tabs">
                     <nav>
                         <div class="nav nav-tabs d-flex flex-wrap justify-content-center" id="nav-tab" role="tablist">
-                            <button class="nav-link mx-2 text-black fw-bold fs-5 active" id="nav-monday-tab"
-                                    data-bs-toggle="tab" data-bs-target="#nav-monday" type="button" role="tab"
-                                    aria-controls="nav-monday" aria-selected="true">Monday</button>
-                            <button class="nav-link mx-2 text-black fw-bold fs-5" id="nav-tuesday-tab"
-                                    data-bs-toggle="tab" data-bs-target="#nav-tuesday" type="button" role="tab"
-                                    aria-controls="nav-tuesday" aria-selected="false" tabindex="-1">Tuesday</button>
-                            <button class="nav-link mx-2 text-black fw-bold fs-5" id="nav-wednesday-tab"
-                                    data-bs-toggle="tab" data-bs-target="#nav-wednesday" type="button" role="tab"
-                                    aria-controls="nav-wednesday" aria-selected="false" tabindex="-1">Wednesday</button>
-                            <button class="nav-link mx-2 text-black fw-bold fs-5" id="nav-thursday-tab"
-                                    data-bs-toggle="tab" data-bs-target="#nav-thursday" type="button" role="tab"
-                                    aria-controls="nav-thursday" aria-selected="false" tabindex="-1">Thursday</button>
-                            <button class="nav-link mx-2 text-black fw-bold fs-5" id="nav-friday-tab"
-                                    data-bs-toggle="tab" data-bs-target="#nav-friday" type="button" role="tab"
-                                    aria-controls="nav-friday" aria-selected="false" tabindex="-1">Friday</button>
+                            {% for day in ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'] %}
+                                <button class="nav-link mx-2 text-black fw-bold fs-5 {% if loop.first %}active{% endif %}" id="nav-{{ day|lower }}-tab"
+                                        data-bs-toggle="tab" data-bs-target="#nav-{{ day|lower }}" type="button" role="tab"
+                                        aria-controls="nav-{{ day|lower }}" aria-selected="{{ loop.first ? 'true' : 'false' }}">{{ 'menu.menu' ~ day|capitalize|trans }}</button>
+                            {% endfor %}
                         </div>
                     </nav>
                     <div class="tab-content mt-5" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="nav-monday" role="tabpanel"
-                             aria-labelledby="nav-monday-tab">
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <h3>Ranajky</h3>
-                                    <div class="row">
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Breakfast Cereal Bowl</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                        <h3>Desiata</h3>
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                        <h3>Obed</h3>
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                        <h3>Olovrant</h3>
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
+                        {% for day in ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'] %}
+                            <div class="tab-pane fade {% if loop.first %}show active{% endif %}" id="nav-{{ day|lower }}" role="tabpanel"
+                                 aria-labelledby="nav-{{ day|lower }}-tab">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        {% for meal in ['Breakfast', 'Brunch', 'Lunch', 'Snack'] %}
+                                            <h3>{{ 'menu.menu' ~ meal|capitalize|trans }}</h3>
+                                            <div class="row">
+                                                <div class="col-12 mb-2">
+                                                    <h4 class="lh-sm">Avocado Sandwich with eggs</h4>
+                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                                        perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="tab-pane fade" id="nav-tuesday" role="tabpanel" aria-labelledby="nav-tuesday-tab">
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <h3>Ranajky</h3>
-                                    <div class="row">
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Breakfast Cereal Bowl</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                        <h3>Desiata</h3>
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                        <h3>Obed</h3>
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                        <h3>Olovrant</h3>
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="nav-wednesday" role="tabpanel"
-                             aria-labelledby="nav-wednesday-tab">
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <h3>Ranajky</h3>
-                                    <div class="row">
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Breakfast Cereal Bowl</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                        <h3>Desiata</h3>
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                        <h3>Obed</h3>
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                        <h3>Olovrant</h3>
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="nav-thursday" role="tabpanel" aria-labelledby="nav-thursday-tab">
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <h3>Ranajky</h3>
-                                    <div class="row">
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Breakfast Cereal Bowl</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                        <h3>Desiata</h3>
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                        <h3>Obed</h3>
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                        <h3>Olovrant</h3>
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="nav-friday" role="tabpanel" aria-labelledby="nav-friday-tab">
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <h3>Ranajky</h3>
-                                    <div class="row">
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Breakfast Cereal Bowl</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                        <h3>Desiata</h3>
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                        <h3>Obed</h3>
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                        <h3>Olovrant</h3>
-                                        <div class="col-12 mb-2">
-                                            <h4 class="lh-sm">Avocado Sandwitch with eggs</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-
-
 {% endblock %}
-
-
-
-
-
-
-

@@ -234,7 +234,7 @@
                                     <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'gallery'}) }}"><b>{{ 'main.gallery'|trans }}</b></a>
                                 </li>
                                 <li class="nav-item px-3 py-2 py-lg-0">
-                                    <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'menu'}) }}"><b>{{ 'main.menuList'|trans }}</b></a>
+                                    <a class="nav-link p-0" aria-current="page" href="{{ path('app_default', {'templateName': 'menu'}) }}"><b>{{ 'main.menu'|trans }}</b></a>
                                 </li>
 
                                 <li class="nav-item px-3 py-2 py-lg-0 dropdown">
@@ -242,7 +242,7 @@
                                        aria-expanded="false"><b>{{ 'main.organisation'|trans }}</b></a>
                                     <ul class="dropdown-menu dropdown-menu-end animate slide mt-3 border-0 shadow">
                                         <li class="nav-item px-3 py-2 py-lg-0">
-                                            <a class="nav-link active p-0" aria-current="page" href="{{ path('app_default', {'templateName' : 'menu-short'}) }}"><b>{{ 'main.menu'|trans }}</b></a>
+                                            <a class="nav-link active p-0" aria-current="page" href="{{ path('app_default', {'templateName' : 'menu-short'}) }}"><b>{{ 'main.shortMenu'|trans }}</b></a>
                                         </li>
 
                                         <li class="nav-item px-3 py-2 py-lg-0">
@@ -314,7 +314,7 @@
                     <li class="clock text-capitalize mb-2 d-flex justify-content-center align-items-center">
                         <svg class="text-primary me-1" width="18" height="18">
                             <use xlink:href="#clock"></use>
-                        </svg>Pracovne dni 8:00-16:00,
+                        </svg>{{ 'main.workDays'| trans }} 8:00-16:00,
                     </li>
                 </ul>
             </div>
