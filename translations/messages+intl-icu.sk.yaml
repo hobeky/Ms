@@ -1,133 +1,143 @@
 main:
-    about: __main.about
-    revies: __main.revies
-    contact: __main.contact
-    forParents: __main.forParents
-    ourTeam: __main.ourTeam
-    gallery: __main.gallery
-    menu: __main.menu
-    organisation: __main.organisation
-    shortMenu: __main.shortMenu
-    schedule: __main.schedule
-    kidSafety: __main.kidSafety
-    workDays: __main.workDays
-menu:
-    menuHeading: __menu.menuHeading
-    menuMonday: __menu.menuMonday
-    menuTuesday: __menu.menuTuesday
-    menuWednesday: __menu.menuWednesday
-    menuThursday: __menu.menuThursday
-    menuFriday: __menu.menuFriday
-    menuBreakfast: __menu.menuBreakfast
-    menuBrunch: __menu.menuBrunch
-    menuLunch: __menu.menuLunch
-    menuSnack: __menu.menuSnack
-    heading1: __menu.heading1
-    paragraph1: __menu.paragraph1
-    paragraph2: __menu.paragraph2
-    heading2: __menu.heading2
-    paragraph3: __menu.paragraph3
-    paragraph4: __menu.paragraph4
-kidSafety:
-    heading: __kidSafety.heading
-    LDD: __kidSafety.LDD
-    LDN: __kidSafety.LDN
-    LDI: __kidSafety.LDI
+    about: 'O nás'
+    revies: 'Recenzie'
+    contact: 'Kontakt'
+    forParents: 'Pre Rodičov'
+    ourTeam: 'Náš tím'
+    gallery: 'Galéria'
+    menu: 'Jedálny lístok'
+    organisation: 'Organizácia'
+    shortMenu: 'Menu'
+    schedule: 'Rozvrhy'
+    kidSafety: 'Bezpečnosť detí'
+    workDays: 'Pracovné dni'
+
 about:
-    title: __about.title
-    aHeading1: __about.aHeading1
-    aHeading2: __about.aHeading2
-    aParagraph1: __about.aParagraph1
-    classBees: __about.classBees
-    classOwls: __about.classOwls
-    bParagraph1: __about.bParagraph1
-    bParagraph2: __about.bParagraph2
-    bParagraph3: __about.bParagraph3
-    bParagraph4: __about.bParagraph4
-    bParagraph5: __about.bParagraph5
-    cHeading1: __about.cHeading1
-    cLi1: __about.cLi1
-    cLi2: __about.cLi2
-    cLi3: __about.cLi3
-    cLi4: __about.cLi4
-    cLi5: __about.cLi5
-    cLi6: __about.cLi6
-    cLi7: __about.cLi7
-    cLi8: __about.cLi8
-    cLi9: __about.cLi9
-    cLi10: __about.cLi10
-    cLi11: __about.cLi11
-    cLi12: __about.cLi12
-    dHeading1: __about.dHeading1
-    dLi1: __about.dLi1
-    dLi2: __about.dLi2
-    dLi3: __about.dLi3
-    dLi4: __about.dLi4
-    dLi5: __about.dLi5
-    dLi6: __about.dLi6
-    dLi7: __about.dLi7
-    dLi8: __about.dLi8
-    dLi9: __about.dLi9
-    eHeading1: __about.eHeading1
-    eParagraf1: __about.eParagraf1
-forParents:
-    aHeading1: __forParents.aHeading1
-    aLi1: __forParents.aLi1
-    aLi2: __forParents.aLi2
-    aLi3: __forParents.aLi3
-    aLi4: __forParents.aLi4
-    aLi5: __forParents.aLi5
-    bHeading1: __forParents.bHeading1
-    bLi1: __forParents.bLi1
-    bLi2: __forParents.bLi2
-    bLi3: __forParents.bLi3
-    bLi4: __forParents.bLi4
-    cHeading1: __forParents.cHeading1
-    cUl1: __forParents.cUl1
-    cUl1Li1: __forParents.cUl1Li1
-    cUl1Li2: __forParents.cUl1Li2
-    cUl2: __forParents.cUl2
-    cUl2Li1: __forParents.cUl2Li1
-    cUl2Li2: __forParents.cUl2Li2
-    eHeading1: __forParents.eHeading1
-    eParagraf1: __forParents.eParagraf1
-    eHeading2: __forParents.eHeading2
-    eParagraf2: __forParents.eParagraf2
+    aHeading1: 'Poskytujeme Povinné Predprimárne Vzdelávanie'
+    aHeading2: 'od 1.9.2019 sme Ministerstvom školstva zaradený do siete škôl a školských zariadení.'
+    aParagraph1: 'Sme nová materská škola fungujúca od šk. roku 2018/ 2019 , ktorá sa nachádza v súkromnom areáli v blízkosti centra Košíc s parkovaním pred materskou školou. Budova materskej školy je dvojpodlažná. Materská škola je dvojtriedna. Obe triedy sú vybavené interaktívnou tabuľou a s množstvom didaktického materiálu, ktorý neustále dopĺňame'
+    classBees: 'Trieda včielky'
+    classOwls: 'Trieda sovičky'
+    bParagraph1: 'Poskytujeme povinné predprimárne vzdelávanie s osvedčením o vzdelaní, milujúcu a podnetnú starostlivosť pre deti vo veku od 3 – 6 rokov, vo výnimočných prípadoch vo veku 2 rokov.'
+    bParagraph2: 'Naším cieľom je dosiahnuť optimálny rozvoj osobnosti dieťaťa vo všetkých jeho stránkach vzdelávania a na život v spoločnosti.'
+    bParagraph3: 'Východiskom je jedinečnosť dieťaťa, aktívne učenie, začlenenie sa do skupiny, kolektívu.'
+    bParagraph4: 'Súkromná materská škola créme de la céme ponúka celodennú, poldennú starostlivosť.'
+    bParagraph5: 'Rodičia, ktorí ešte nemajú svoje dieťa nikde umiestnené, môžu sa prísť pozrieť na priestory škôlky a získať všetky potrebné informácie, ktoré ich budú zaujímať.'
+    cHeading1: 'Možnosť Zápisu Deti Do Našej Materskej Školy Je Počas Celého RokaNa Čo Sa Zameriavame :'
+    cLi1: 'tréning fonematického uvedomovania u deti v predškolskom veku prostredníctvom stimulačného programu'
+    cLi2: 'uplatňovanie kvalitnej povinnej predškolskej výchovy, založenej na vzťahu učiteľ – dieťa'
+    cLi3: 'dosiahnutie optimálnej úrovne ako základu pre školské vzdelávanie a pre život v spoločnosti, rešpektujúc osobnosť dieťaťa, jeho potreby a záujmy, Podporujúc individualitu a jedinečnosť každého dieťaťa'
+    cLi4: 'rozvíjanie prírodovedeckej gramotnosti – vštepovanie pozitívneho vzťahu k prírode, k životnému prostrediu, rozvoju enviromentálného cítenia, zvýšený záujem venujeme starostlivosti o zdravie, zdravému životnému štýlu'
+    cLi5: 'denne športové aktivity – pobyt vonku –'
+    cLi6: 'využitie lezeckej steny v areáli'
+    cLi7: 'zdravotné cvičenia'
+    cLi8: 'súčasťou škôlky je detské zatrávnené oplotené ihrisko s preliezkami, raz týždenne sa koná športový deň'
+    cLi9: 'Okolie našej škôlky je tiež vhodné na tematické prechádzky a poloha našej škôlky nám umožňuje navštevovať rôzne kultúrno – spoločenské zariadenia, Štátne divadlo, chodiť na rôzne exkurzie, letecká škola, navštevovať bábkové divadlo, knižnicu, spoznávať naše krásne mesto Košice'
+    cLi10: 'dopravná výchova – dopravné ihrisko v blízkosti škôlky'
+    cLi11: 'rôzne krúžky – angličtina s lektorkami, keramický krúžok, šikovné rúčky, tanec a spev, pohybové hry, tréning fonematického uvedomovania ………..'
+    cLi12: 'športové výcviky– lyžiarsky výcvik, plavecký výcvik, korčuľovanie, futbalový projekt ,,Dajme spolu gól“'
+    dHeading1: 'KRÚŽKY V Našej Materskej Škole'
+    dLi1: 'tréning fonematického uvedomovania podľa Eľkonina u deti vo veku 5 – 6 rokov s certifikovanou pedagogičkou'
+    dLi2: 'krúžok anglického jazyka s certifikovanou anglickou lektorkou jazykovej školy'
+    dLi3: 'pohybovo – tanečná príprava s certifikovanou lektorkou Romankou – Tanečná skupina SHOW DS Košice'
+    dLi4: 'futbalový projekt ,,Dajme spolu gól“'
+    dLi5: 'Krúžok keramiky s keramičkou Juditkou'
+    dLi6: 'Lezecká stena vo dvore'
+    dLi7: 'Lyžiarsky kurz'
+    dLi8: 'Korčuliarsky kurz'
+    dLi9: 'Plavecký kurz'
+    eHeading1: 'Čo Je Tréning Fonematického Uvedomovania?'
+    eParagraf1: 'Fonematické uvedomovanie je schopnosť uvedomovať si zvukovú štruktúru slov, uskutočňovať hláskovú analýzu a syntézu slov, odobrať a zmeniť poradie hlásky.'
+    eParagraf2: 'Použitím tejto metódy sa znižuje riziko zlyhávania v učení, a to v čítaní a písaní, keď prídu do školy.'
+    eParagraf3: 'Za naše hlavné výhody považujeme interaktívny program zameraný na učenie hrou, funkčné usporiadanie herne ,tréning fonematického uvedomovania u deti v predškolskom veku prostredníctvom stimulačného programu, výučbu angličtiny, vysoký štandard primárnej starostlivosti a hygieny, celoročnú prevádzku (zatvorené je iba počas štátnych sviatkov a víkendov), kvalitné priestory s moderným vybavením a bezpečnú lokalitu s dobrou dostupnosťou.'
+
 review:
-    reviewsFromParents: __review.reviewsFromParents
-    formHeading: __review.formHeading
-    formSubHeading: __review.formSubHeading
-    formPlaceholderName: __review.formPlaceholderName
-    formPlaceholderStars: __review.formPlaceholderStars
-    formPlaceholderReview: __review.formPlaceholderReview
-    formButton: __review.formButton
+    reviewsFromParents: 'Recenzie Od Rodičov'
+    formHeading: 'Akú máte s nami skúsenosť?'
+    formSubHeading: 'Podeľte sa s ostatními'
+    formPlaceholderName: 'Meno'
+    formPlaceholderStars: 'Počet hviezdičiek'
+    formPlaceholderReview: 'Recenzia'
+    formButton: 'Pridať'
+
 contact:
-    heading1: __contact.heading1
-    subheading1: __contact.subheading1
-    adress: __contact.adress
-    formHeading: __contact.formHeading
-    formPlaceHolderName: __contact.formPlaceHolderName
-    formPlaceHolderEmail: __contact.formPlaceHolderEmail
-    formPlaceHolderTel: __contact.formPlaceHolderTel
-    formPlaceHolderTopic: __contact.formPlaceHolderTopic
-    formPlaceHolderText: __contact.formPlaceHolderText
-    formButton: __contact.formButton
+    heading1: 'Kontaktné informácie'
+    subheading1: 'Zavolajte nám, napíšte, alebo sa prídťe pozrieť.'
+    adress: 'Adresa'
+    formHeading: 'Napíšte nám e-mail'
+    formPlaceHolderName: 'Meno'
+    formPlaceHolderEmail: 'Email'
+    formPlaceHolderTel: 'Tel. číslo'
+    formPlaceHolderTopic: 'Predmet'
+    formPlaceHolderText: 'Text správy'
+    formButton: 'Odoslať'
+
+forParents:
+    aHeading1: 'O čo sa nemusíte starať'
+    aLi1: 'anti alergické matrace'
+    aLi2: 'anti alergické paplóny a vankúše'
+    aLi3: 'posteľné prádlo'
+    aLi4: 'uteráky'
+    aLi5: 'pohárik'
+    bHeading1: 'Čo si priniesť do škôlky'
+    bLi1: 'pyžamko'
+    bLi2: 'papučky'
+    bLi3: 'zubnú kefku a pastu'
+    bLi4: 'náhradné oblečenie'
+    cHeading1: 'Čo si priniesť na:'
+    cUl1: 'Keramický Krúžok'
+    cUl1Li1: 'pláštenku'
+    cUl1Li2: 'starú košeľu'
+    cUl2: 'Tanečný Krúžok'
+    cUl2Li1: 'Dievčatá: cvičky alebo baletky, sukňu a tričko'
+    cUl2Li2: 'Chlapci: cvičky (nie botasky), tepláky a tričko'
+    eHeading1: 'Tréning Fonematického Uvedomovania Podľa Eľkonina Pre 5-6 Ročných'
+    eParagraf1: 'Šlabikár – zakúpený v SMŠ'
+    eHeading2: 'Angličtina S Lektorkou'
+    eParagraf2: 'Dobrú náladu 🙂'
+
 teachers:
-    heading1: __teachers.heading1
-    paragraph1: __teachers.paragraph1
-    heading2: __teachers.heading2
-    paragraph2: __teachers.paragraph2
-    paragraph3: __teachers.paragraph3
-    ourTeam: __teachers.ourTeam
+    heading1: 'Vážení rodičia'
+    paragraph1: 'radi by sme Vám predstavili pani učiteľky, ktoré sa s láskou starajú o všetky potreby našich detičiek.'
+    heading2: 'Výberu A Kvalite Našich Pani Učiteliek, Sme Venovali Najväčšiu Pozornosť.'
+    paragraph2: 'Nakoľko si veľmi dobre uvedomujeme, ako veľmi môže uškodiť nesprávny prístup k dieťaťu v jeho terajšom ale i v budúcom rozvoji.Vieme, že krátky text a fotografia ani zďaleka neodzrkadľujú skutočné schopnosti a osobnosť človeka.'
+    paragraph3: 'Naši pedagógovia sú plne kvalifikovaní, tvoriví, trpezliví, milujúci a láskaví, dokážu si pre úsmev a šťastie Vašich detičiek urobiť zo seba srandu, ale ich aj plnohodnotne vzdelávať vo všetkých oblastiach potrebných pre ich rozvoj.'
+    ourTeam: 'Náš tím'
+
+menu:
+    heading1: 'V Materskej Škole Dbáme Na Zdravé Stravovanie Detí,'
+    paragraph1: 'desiate,obedy a  olovranty v súlade s predpísanými odporúčanými dennými dávkami stavebných látok, vitamínov, minerálov a stopových prvkov, potrebných pre zdravý rast a vývoj dieťaťa.'
+    paragraph2: 'Denné menu pripravuje Spoločenský Pavilón,s.r.o. s licenciou na stravovanie detí v predškolskom zariadení,ktorý nám aj stravu prináša do našej výdajnej školskej kuchyne.'
+    heading2: 'Deti majú po celý deň k dispozícii ovocné nesladené čaje, čerstvú pitnú vodu a ovocie.'
+    paragraph3: 'Deťom ponúkame zdravú stravu, prispôsobenú aj deťom s poruchami výživy a neznášanlivosťou niektorých potravín.'
+    paragraph4: 'Detičky nepapajú v triedach,ale v samostatnej  jedálni.'
+    menuHeading: 'Týždenné menu'
+    menuMonday: 'Pondelok'
+    menuTuesday: 'Utorok'
+    menuWednesday: 'Streda'
+    menuThursday: 'Štvrtok'
+    menuFriday: 'Piatok'
+    menuBreakfast: 'Raňajky'
+    menuBrunch: 'Desiata'
+    menuLunch: 'Obed'
+    menuSnack: 'Olovrant'
+
+
 schedule:
-    heading: __schedule.heading
-    harmonogram: __schedule.harmonogram
-    activity1: __schedule.activity1
-    activity2: __schedule.activity2
-    activity3: __schedule.activity3
-    activity4: __schedule.activity4
-    activity5: __schedule.activity5
-    activity6: __schedule.activity6
-    activity7: __schedule.activity7
-    activity8: __schedule.activity8
-    activity9: __schedule.activity9
+    heading: 'Rozvrhy'
+    harmonogram: 'Denný harmonogram'
+    activity1: 'Príchod dieťaťa, privítanie'
+    activity2: 'Ranné hranie a ranne pohybové aktivity - zdravotné cvičenie'
+    activity3: 'Hygiena, desiata'
+    activity4: 'Vzdelávací program formou hier a aktivít'
+    activity5: 'Pobyt vonku'
+    activity6: 'Osobná hygiena, obed'
+    activity7: 'Spánok, popoludňajšia relaxácia'
+    activity8: 'Osobná hygiena, olovrant'
+    activity9: 'Pobyt vonku, voľné hranie, záujmové činnosti, krúžky, obchod detí domov'
+
+kidSafety:
+    heading: 'Dôležité linky'
+    LDD: 'Linka detskej dôvery'
+    LDN: 'Linka dôvery nezábudka'
+    LDI: 'Linka detskej istoty'
