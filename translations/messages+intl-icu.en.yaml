@@ -1,75 +1,73 @@
 main:
-    about: __main.about
-    revies: __main.revies
-    contact: __main.contact
-    forParents: __main.forParents
-    ourTeam: __main.ourTeam
-    gallery: __main.gallery
-    menu: __main.menu
-    organisation: __main.organisation
-    shortMenu: __main.shortMenu
-    schedule: __main.schedule
-    kidSafety: __main.kidSafety
-    workDays: __main.workDays
+    about: 'About Us'
+    revies: 'Reviews'
+    contact: 'Contact'
+    forParents: 'For Parents'
+    ourTeam: 'Our Team'
+    gallery: 'Gallery'
+    menu: 'Menu'
+    organisation: 'Organization'
+    shortMenu: 'Menu'
+    schedule: 'Schedules'
+    kidSafety: 'Child Safety'
+    workDays: 'Working Days'
 menu:
-    menuHeading: __menu.menuHeading
-    menuMonday: __menu.menuMonday
-    menuTuesday: __menu.menuTuesday
-    menuWednesday: __menu.menuWednesday
-    menuThursday: __menu.menuThursday
-    menuFriday: __menu.menuFriday
-    menuBreakfast: __menu.menuBreakfast
-    menuBrunch: __menu.menuBrunch
-    menuLunch: __menu.menuLunch
-    menuSnack: __menu.menuSnack
-    heading1: __menu.heading1
-    paragraph1: __menu.paragraph1
-    paragraph2: __menu.paragraph2
-    heading2: __menu.heading2
-    paragraph3: __menu.paragraph3
-    paragraph4: __menu.paragraph4
+    heading1: 'In the Kindergarten, We Ensure Healthy Nutrition for Children,'
+    paragraph1: 'snacks, lunches, and snacks in accordance with prescribed recommended daily doses of nutrients, vitamins, minerals, and trace elements necessary for the healthy growth and development of the child.'
+    paragraph2: 'Daily menus are prepared by Social Pavilion Ltd. with a license to provide meals for children in preschool facilities, which also delivers food to our dispensing school kitchen.'
+    heading2: 'Children have access to unsweetened fruit teas, fresh drinking water, and fruit throughout the day.'
+    paragraph3: 'We offer healthy food to children, tailored to those with eating disorders and intolerance to certain foods.'
+    paragraph4: 'Children do not eat in the classrooms but in a separate dining room.'
+    menuHeading: 'Weekly Menu'
+    menuMonday: 'Monday'
+    menuTuesday: 'Tuesday'
+    menuWednesday: 'Wednesday'
+    menuThursday: 'Thursday'
+    menuFriday: 'Friday'
+    menuBreakfast: 'Breakfast'
+    menuBrunch: 'Morning Snack'
+    menuLunch: 'Lunch'
+    menuSnack: 'Afternoon Snack'
+
 kidSafety:
-    heading: __kidSafety.heading
-    LDD: __kidSafety.LDD
-    LDN: __kidSafety.LDN
-    LDI: __kidSafety.LDI
+    heading: 'Important Links'
 about:
-    title: __about.title
-    aHeading1: __about.aHeading1
-    aHeading2: __about.aHeading2
-    aParagraph1: __about.aParagraph1
-    classBees: __about.classBees
-    classOwls: __about.classOwls
-    bParagraph1: __about.bParagraph1
-    bParagraph2: __about.bParagraph2
-    bParagraph3: __about.bParagraph3
-    bParagraph4: __about.bParagraph4
-    bParagraph5: __about.bParagraph5
-    cHeading1: __about.cHeading1
-    cLi1: __about.cLi1
-    cLi2: __about.cLi2
-    cLi3: __about.cLi3
-    cLi4: __about.cLi4
-    cLi5: __about.cLi5
-    cLi6: __about.cLi6
-    cLi7: __about.cLi7
-    cLi8: __about.cLi8
-    cLi9: __about.cLi9
-    cLi10: __about.cLi10
-    cLi11: __about.cLi11
-    cLi12: __about.cLi12
-    dHeading1: __about.dHeading1
-    dLi1: __about.dLi1
-    dLi2: __about.dLi2
-    dLi3: __about.dLi3
-    dLi4: __about.dLi4
-    dLi5: __about.dLi5
-    dLi6: __about.dLi6
-    dLi7: __about.dLi7
-    dLi8: __about.dLi8
-    dLi9: __about.dLi9
-    eHeading1: __about.eHeading1
-    eParagraf1: __about.eParagraf1
+    aHeading1: 'We provide compulsory pre-school education'
+    aHeading2: 'Since September 1st, 2019, we have been incorporated into the system of schools and school facilities'
+    aParagraph1: 'We are a new kindergarten operating since the school year 2018/2019, located in a private area near the center of Košice with parking available in front of the kindergarten. Our kindergarten is in a two-story building, and it consists of two classes. Both classrooms are equipped with interactive whiteboards and a variety of didactic materials and Montessori toys, which we constantly replenish.'
+    classBees: 'Class Bees'
+    classOwls: 'Class Owls'
+    bParagraph1: 'We provide compulsory pre-school education with certification, loving and stimulating environment for children between the ages of 3 to 6, and in exceptional cases, for children at age 2. Our goal is to achieve the optimal development of children in all aspects and prepare them to be part of the society. Our approach is based on the uniqueness of each child, active learning, and integration into groups and collectives.'
+    bParagraph2: 'Our private kindergarten, créme de la créme, offers full-day and half-day care. Parents who have not yet chosen the right place for their child can come and see the kindergarten premises and get all the necessary information they are interested in.'
+    cHeading1: 'Enrolling children in our kindergarten is possible throughout the whole year. Our focus relies on:'
+    cLi1: 'Implementing high-quality compulsory pre-school education based on experiential learning and teacher-child relationship'
+    cLi2: 'Daily sports activities – outdoor time'
+    cLi3: 'Culture and events – St. Nicholas Day, Children`s Day, Astro Show planetarium, visits from paramedics, police officers, firefighters, medics, horseback riding; the surroundings of our kindergarten are suitable for walks, and our location also enables us to visit various cultural and social facilities, go on excursions, visit the State Theater, puppet theater, music therapy, drumming, beekeepers, falconer Horus, uncle Ľubo, train at Alpinka, Manitou valley, flight school, library, explore our beautiful city of Košice, inflatable castle, and in summer we have water slides and pools'
+    cLi4: 'Training in phonemic awareness through stimulation program'
+    cLi5: 'Achieving an optimal level as foundation for school education and life in society, while respecting the child`s personality, needs, and interests. Supporting the individuality and uniqueness of each child.'
+    cLi6: 'Developing scientific literacy - encouraging a positive relationship with nature, the environment, fostering environmental awareness, while we also pay high attention to promoting a healthy lifestyle'
+    cLi7: 'Traffic education – traffic playground near the kindergarten'
+    cLi8: 'Various clubs – English language with tutors from UNITED!'
+    cLi9: 'Gymnastics with Fusion Fitnes'
+    cLi10: 'Phonemic awareness training for preschoolers'
+    cLi11: 'Ceramic workshop with a tutor'
+    cLi12: 'Movement and dance class with SHOW DS dance school'
+    dHeading1: 'CLUBS at our kindergarten'
+    dLi1: 'Phonemic awareness training according to Elkolin for children aged 5 – 6 years with a certified pedagogue'
+    dLi2: 'English language club with a certified English tutor from the language school UNITED!'
+    dLi3: 'Gymnastics with Fusion Fitnes'
+    dLi4: 'Movement and dance class with certified instructor Romanka – dance group SHOW DS Košice'
+    dLi5: 'Football Project Lets Score Together!'
+    dLi6: 'Ceramic workshop with ceramicist Juditka'
+    dLi7: 'Climbing wall in the courtyard'
+    dLi8: 'Skiing course'
+    dLi9: 'Ice skating course'
+    dLi10: 'Swimming course'
+    eHeading1: 'What is phonemic awareness training?'
+    eParagraf1: 'Phonemic awareness is the ability to perceive the sound structure of words, to perform phonemic analysis and synthesis of words, to remove and change the order of sounds.'
+    eParagraf2: 'This method reduces the risk of failure in learning, particularly in reading and writing, when children start school.'
+    eParagraf3: 'Our main advantages include an interactive program focused on learning through play, functional arrangement of the play area, phonemic awareness training through stimulation program, English language learning, high standards of primary care and hygiene, year-round operation (closed only on public holidays and weekends), facilities with modern equipment, and a safe location with great accessibility.'
+
 forParents:
     aHeading1: __forParents.aHeading1
     aLi1: __forParents.aLi1
@@ -102,16 +100,17 @@ review:
     formPlaceholderReview: __review.formPlaceholderReview
     formButton: __review.formButton
 contact:
-    heading1: __contact.heading1
-    subheading1: __contact.subheading1
-    adress: __contact.adress
-    formHeading: __contact.formHeading
-    formPlaceHolderName: __contact.formPlaceHolderName
-    formPlaceHolderEmail: __contact.formPlaceHolderEmail
-    formPlaceHolderTel: __contact.formPlaceHolderTel
-    formPlaceHolderTopic: __contact.formPlaceHolderTopic
-    formPlaceHolderText: __contact.formPlaceHolderText
-    formButton: __contact.formButton
+    heading1: 'Contact Information'
+    subheading1: 'Call us, write to us, or come visit.'
+    adress: 'Address'
+    formHeading: 'Send us an email'
+    formPlaceHolderName: 'Name'
+    formPlaceHolderEmail: 'Email'
+    formPlaceHolderTel: 'Phone number'
+    formPlaceHolderTopic: 'Subject'
+    formPlaceHolderText: 'Message text'
+    formButton: 'Send'
+
 teachers:
     heading1: __teachers.heading1
     paragraph1: __teachers.paragraph1
@@ -120,14 +119,15 @@ teachers:
     paragraph3: __teachers.paragraph3
     ourTeam: __teachers.ourTeam
 schedule:
-    heading: __schedule.heading
-    harmonogram: __schedule.harmonogram
-    activity1: __schedule.activity1
-    activity2: __schedule.activity2
-    activity3: __schedule.activity3
-    activity4: __schedule.activity4
-    activity5: __schedule.activity5
-    activity6: __schedule.activity6
-    activity7: __schedule.activity7
-    activity8: __schedule.activity8
-    activity9: __schedule.activity9
+    heading: 'Schedules'
+    harmonogram: 'Daily Schedule'
+    activity1: 'Child`s Arrival, Greeting'
+    activity2: 'Morning Playtime and Morning Physical Activities - Health Exercise'
+    activity3: 'Hygiene, Snack'
+    activity4: 'Educational Program through Games and Activities'
+    activity5: 'Outdoor Time'
+    activity6: 'Personal Hygiene, Lunch'
+    activity7: 'Nap Time, Afternoon Relaxation'
+    activity8: 'Personal Hygiene, Afternoon Snack'
+    activity9: 'Outdoor Time, Free Play, Extracurricular Activities, Clubs, Children`s Store to Home'
+

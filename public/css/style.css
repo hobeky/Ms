@@ -46,7 +46,7 @@ CSS STRUCTURE:
   4.5 Testimonial Section
   4.6 Faqs Section
   4.7 Pagination
-    
+
 /*--------------------------------------------------------------
 /** 1. VARIABLES
 --------------------------------------------------------------*/
@@ -919,4 +919,10 @@ iconify-icon.video-icon {
 
 iconify-icon.video-icon:hover {
   font-size: 45px;
+}
+
+.active_link {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--primary-color) !important;
 }
