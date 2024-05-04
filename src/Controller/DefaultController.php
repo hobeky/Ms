@@ -16,6 +16,14 @@ class DefaultController extends AbstractController
     {
     }
 
+    #[Route('/', name: 'index')]
+    public function index(): Response
+    {
+        return $this->render('template/about.html.twig', [
+            'heroName' => 'main.about'
+        ]);
+    }
+
     #[Route('/o-nas', name: 'about_us')]
     public function aboutUs(): Response
     {
