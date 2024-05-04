@@ -1,0 +1,28 @@
+<section id="banner" class="jarallax position-relative"
+         style="
+             background-image: url('{{ asset('images/testimonial-bg.jpg') }}');
+             background-size: cover;
+             background-repeat: no-repeat;
+             background-position: center;
+             margin-bottom: 2em;
+             ">
+
+    <div class="d-none d-md-flex justify-content-between position-absolute w-100 px-5 pt-5 mt-lg-5">
+        <div> <iconify-icon icon="solar:cloud-sun-2-outline"
+                            class="icon-float1 text-info-emphasis opacity-75"></iconify-icon></div>
+        <div> </div>
+        <div> </div>
+        <div> </div>
+        <div> <iconify-icon icon="solar:ufo-outline" class="icon-float2 text-warning opacity-75"></iconify-icon> </div>
+        <div> </div>
+        <div> <iconify-icon icon="ph:rainbow-cloud" class="icon-float1 text-success opacity-75"></iconify-icon></div>
+        <div> </div>
+        <div> <iconify-icon icon="solar:sun-2-outline" class="icon-float2 text-danger opacity-75"></iconify-icon> </div>
+    </div>
+
+    <div class="container padding-medium">
+        <div class="hero-content ">
+            <h2 class="banner-title display-2 text-white">{{ heroName|trans }}</h2>
+        </div>
+    </div>
+</section>
