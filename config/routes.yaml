@@ -7,6 +7,12 @@ controllers:
         en: '/en'
         sk: '/'
 
-image_controller:
-    resource: ../src/Controller/ImageController.php
-    type: attribute
+image_upload:
+    path: /image/{size}/{imageName}
+    controller: App\Controller\ImageController::uploaded
+    methods: [GET]  # Assuming this is a GET request, adjust if it's POST or another method
+    requirements:
+        size: 'original|small|medium|big'
+        imageName: '[^/]+'
+    defaults:
+        size: 'original'  # Default size if none is provided

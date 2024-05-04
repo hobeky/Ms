@@ -74,7 +74,7 @@ class Teacher
         if (!$this->image){
             return null;
         }
-        return '/image/medium/'. $this->image->getFileName();
+        return '/image/original/'. $this->image->getFileName();
     }
 
     public function setImage(string $imageName): static

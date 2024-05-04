@@ -20,9 +20,7 @@ class ImageController extends AbstractController
     {
     }
 
-    #[Route('/image/{size}/{imageName}', name: 'image', requirements: [
-        'size' => 'original|small|medium|big',
-    ], defaults: ['size' => 'original'])]
+    #[Route('/image/{size}/{imageName}', name: 'image')]
     public function uploaded(string $imageName, string $size, Request $request): Response
     {
         assert(is_string($this->parameterBag->get('kernel.project_dir')));

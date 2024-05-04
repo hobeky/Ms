@@ -12,7 +12,6 @@ use Symfony\Component\Routing\Attribute\Route;
 class DefaultController extends AbstractController
 {
     public function __construct(
-        private readonly LoggerInterface $logger,
         private readonly EntityManagerInterface $entityManager,
     )
     {
@@ -27,7 +26,6 @@ class DefaultController extends AbstractController
 
         $teacherRepo = $this->entityManager->getRepository(Teacher::class);
         $teachers = $teacherRepo->findAll();
-
         $templatePath = 'template/' . $templateName . '.html.twig';
 
 
