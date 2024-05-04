@@ -112,12 +112,12 @@ contact:
     formButton: 'Send'
 
 teachers:
-    heading1: __teachers.heading1
-    paragraph1: __teachers.paragraph1
-    heading2: __teachers.heading2
-    paragraph2: __teachers.paragraph2
-    paragraph3: __teachers.paragraph3
-    ourTeam: __teachers.ourTeam
+    heading1: 'Dear Parents'
+    paragraph1: 'we would like to introduce you to the teachers who lovingly care for all the needs of our little ones.'
+    heading2: 'In the Selection and Quality of Our Teachers, We Have Paid the Greatest Attention.'
+    paragraph2: 'As we are well aware of how much a wrong approach to a child can harm their current and future development. We know that a short text and a photograph do not fully reflect a person`s true abilities and personality.'
+    paragraph3: 'Our educators are fully qualified, creative, patient, loving, and kind. They can make fun of themselves for the smiles and happiness of your little ones, but also educate them fully in all areas necessary for their development.'
+    ourTeam: 'Our Team'
 schedule:
     heading: 'Schedules'
     harmonogram: 'Daily Schedule'

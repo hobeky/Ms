@@ -1,0 +1,36 @@
+<div class="tab-content mt-5" id="nav-tabContent">
+    {% for day in ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'] %}
+        <div class="tab-pane fade {{ loop.first ? 'show active' : '' }}" id="nav-{{ day }}" role="tabpanel" aria-labelledby="nav-{{ day }}-tab">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>{{ 'menu.menuBreakfast' | trans }}</h3>
+                    <div class="row">
+                        <div class="col-12 mb-2">
+                            <h4 class="lh-sm">Breakfast Cereal Bowl</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                        </div>
+                        <h3>{{ 'menu.menuBrunch' | trans }}</h3>
+                        <div class="col-12 mb-2">
+                            <h4 class="lh-sm">Avocado Sandwich with eggs</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                        </div>
+                        <h3>{{ 'menu.menuLunch' | trans }}</h3>
+                        <div class="col-12 mb-2">
+                            <h4 class="lh-sm">Avocado Sandwich with eggs</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                        </div>
+                        <h3>{{ 'menu.menuSnack' | trans }}</h3>
+                        <div class="col-12 mb-2">
+                            <h4 class="lh-sm">Avocado Sandwich with eggs</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
+                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

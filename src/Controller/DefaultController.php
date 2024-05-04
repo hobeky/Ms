@@ -20,7 +20,7 @@ class DefaultController extends AbstractController
     public function aboutUs(): Response
     {
         return $this->render('template/about.html.twig', [
-            'heroName' => 'about us'
+            'heroName' => 'main.about'
         ]);
     }
 
@@ -28,7 +28,7 @@ class DefaultController extends AbstractController
     public function reviews(): Response
     {
         return $this->render('template/reviews.html.twig', [
-            'heroName' => 'about us'
+            'heroName' => 'main.revies'
         ]);
     }
 
@@ -36,7 +36,7 @@ class DefaultController extends AbstractController
     public function contact(): Response
     {
         return $this->render('template/contact.html.twig', [
-            'heroName' => 'about us'
+            'heroName' => 'main.contact'
         ]);
     }
 
@@ -44,7 +44,7 @@ class DefaultController extends AbstractController
     public function forParents(): Response
     {
         return $this->render('template/for-parents.html.twig', [
-            'heroName' => 'about us'
+            'heroName' => 'main.forParents'
         ]);
     }
 
@@ -55,7 +55,7 @@ class DefaultController extends AbstractController
         $teachers = $teacherRepo->findAll();
 
         return $this->render('template/teachers.html.twig', [
-            'heroName' => 'about us',
+            'heroName' => 'main.ourTeam',
             'teachers' => $teachers
         ]);
     }
@@ -64,7 +64,7 @@ class DefaultController extends AbstractController
     public function gallery(): Response
     {
         return $this->render('template/gallery.html.twig', [
-            'heroName' => 'about us'
+            'heroName' => 'main.gallery'
         ]);
     }
 
@@ -72,7 +72,7 @@ class DefaultController extends AbstractController
     public function menu(): Response
     {
         return $this->render('template/meal-menu.html.twig', [
-            'heroName' => 'about us'
+            'heroName' => 'main.menu'
         ]);
     }
 
@@ -80,7 +80,7 @@ class DefaultController extends AbstractController
     public function shortMenu(): Response
     {
         return $this->render('template/menu-short.html.twig', [
-            'heroName' => 'about us'
+            'heroName' => 'main.menu'
         ]);
     }
 
@@ -88,14 +88,14 @@ class DefaultController extends AbstractController
     public function schedule(): Response
     {
         return $this->render('template/time-table.html.twig', [
-            'heroName' => 'about us'
+            'heroName' => 'main.schedule'
         ]);
     }
     #[Route('/bezpecnost-deti', name: 'child_safety')]
     public function childSafety(): Response
     {
         return $this->render('template/kid-security.html.twig', [
-            'heroName' => 'about us'
+            'heroName' => 'main.kidSafety'
         ]);
     }
 }
