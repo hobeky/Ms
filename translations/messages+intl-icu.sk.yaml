@@ -11,6 +11,7 @@ main:
     schedule: 'Rozvrhy'
     kidSafety: 'Bezpečnosť detí'
     workDays: 'Pracovné dni'
+    GDPR: 'Ochrana osobných údajov'
 
 about:
     aHeading1: 'Poskytujeme Povinné Predprimárne Vzdelávanie'
