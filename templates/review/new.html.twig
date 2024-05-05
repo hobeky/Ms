@@ -1,0 +1,71 @@
+{# templates/review/new.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Create a new review{% endblock %}
+
+{% block body %}
+    <h1>Create a new review</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.nick) }}
+    {{ form_row(form.reviewText) }}
+
+    <div class="star-rating">
+        {% for value in [ 5, 4, 3, 2, 1] %}
+            <input type="radio" name="{{ form.stars.vars.full_name }}" value="{{ value }}" id="star{{ value }}" {% if form.vars.value.stars == value %}checked{% endif %}/>
+            <label for="star{{ value }}" title="{{ value     }} stars">&#9733;</label>
+        {% endfor %}
+    </div>
+
+    <button type="submit">Submit</button>
+    {{ form_end(form) }}
+
+    <style>
+        .star-rating {
+            display: flex;
+            flex-direction: row; /* Changed to default row direction */
+            justify-content: start; /* Align stars to the start of the flex container */
+        }
+        .star-rating input[type="radio"] {
+            display: none;
+        }
+        .star-rating label {
+            font-size: 2rem;
+            color: #ccc;
+            cursor: pointer;
+        }
+        .star-rating label:hover,
+        .star-rating label:hover ~ label,
+        .star-rating input[type="radio"]:checked ~ label {
+            color: gold;
+        }
+    </style>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const stars = document.querySelectorAll('.star-rating input[type="radio"]');
+            stars.forEach(star => {
+                star.addEventListener('change', function () {
+                    updateStars();
+                });
+            });
+
+            function updateStars() {
+                let isChecked = false;
+                // Traverse stars in normal order since we removed row-reverse
+                stars.forEach(star => {
+                    const label = document.querySelector('label[for="' + star.id + '"]');
+                    if (star.checked) {
+                        isChecked = true;
+                    }
+                    label.style.color = isChecked ? 'gold' : '#ccc';
+                });
+            }
+        });
+    </script>
+
+
+
+{% endblock %}
