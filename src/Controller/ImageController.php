@@ -20,9 +20,9 @@ class ImageController extends AbstractController
     {
     }
 
-    #[Route('/image/{size}/{imageName}', name: 'image')]
     public function uploaded(string $imageName, string $size, Request $request): Response
     {
+
         assert(is_string($this->parameterBag->get('kernel.project_dir')));
         assert(is_string($this->parameterBag->get('img_dir')));
         $originalImagePath = sprintf(
