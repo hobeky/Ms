@@ -28,6 +28,9 @@ class Teacher
     #[ORM\JoinColumn(nullable: false)]
     private ?Image $image = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?int $oder = 0;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -74,12 +77,24 @@ class Teacher
         if (!$this->image){
             return null;
         }
-        return '/image/original/'. $this->image->getFileName();
+        return $this->image->getFileName();
     }
 
     public function setImage(string $imageName): static
     {
         $this->image = (new Image())->setFileName($imageName);
+
+        return $this;
+    }
+
+    public function getOder(): ?int
+    {
+        return $this->oder;
+    }
+
+    public function setOder(?int $oder): static
+    {
+        $this->oder = $oder;
 
         return $this;
     }
