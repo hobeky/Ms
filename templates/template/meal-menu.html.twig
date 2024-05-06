@@ -4,7 +4,7 @@
 
     <section>
         <div class="container padding-medium">
-            <h2 class="display-4 text-center mb-5">View our Meal Menu</h2>
+            <h2 class="display-4 text-center mb-5">{{ 'menu.menuHeading' | trans }}</h2>
 
             <div class="post-content ">
                 <div class="bootstrap-tabs">
@@ -12,19 +12,19 @@
                         <div class="nav nav-tabs d-flex flex-wrap justify-content-center" id="nav-tab" role="tablist">
                             <button class="nav-link mx-2 text-black fw-bold fs-5 active" id="nav-monday-tab"
                                     data-bs-toggle="tab" data-bs-target="#nav-monday" type="button" role="tab"
-                                    aria-controls="nav-monday" aria-selected="true">Monday</button>
+                                    aria-controls="nav-monday" aria-selected="true">{{ 'menu.menuMonday' | trans }}</button>
                             <button class="nav-link mx-2 text-black fw-bold fs-5" id="nav-tuesday-tab"
                                     data-bs-toggle="tab" data-bs-target="#nav-tuesday" type="button" role="tab"
-                                    aria-controls="nav-tuesday" aria-selected="false" tabindex="-1">Tuesday</button>
+                                    aria-controls="nav-tuesday" aria-selected="false" tabindex="-1">{{ 'menu.menuTuesday' | trans }}</button>
                             <button class="nav-link mx-2 text-black fw-bold fs-5" id="nav-wednesday-tab"
                                     data-bs-toggle="tab" data-bs-target="#nav-wednesday" type="button" role="tab"
-                                    aria-controls="nav-wednesday" aria-selected="false" tabindex="-1">Wednesday</button>
+                                    aria-controls="nav-wednesday" aria-selected="false" tabindex="-1">{{ 'menu.menuWednesday' | trans }}</button>
                             <button class="nav-link mx-2 text-black fw-bold fs-5" id="nav-thursday-tab"
                                     data-bs-toggle="tab" data-bs-target="#nav-thursday" type="button" role="tab"
-                                    aria-controls="nav-thursday" aria-selected="false" tabindex="-1">Thursday</button>
+                                    aria-controls="nav-thursday" aria-selected="false" tabindex="-1">{{ 'menu.menuThursday' | trans }}</button>
                             <button class="nav-link mx-2 text-black fw-bold fs-5" id="nav-friday-tab"
                                     data-bs-toggle="tab" data-bs-target="#nav-friday" type="button" role="tab"
-                                    aria-controls="nav-friday" aria-selected="false" tabindex="-1">Friday</button>
+                                    aria-controls="nav-friday" aria-selected="false" tabindex="-1">{{ 'menu.menuFriday' | trans }}</button>
                         </div>
                     </nav>
                     {% include 'template/partials/_mealTable.html.twig' %}

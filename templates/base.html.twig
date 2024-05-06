@@ -161,7 +161,8 @@
                                 <li class="nav-item px-3 py-2 py-lg-0 dropdown">
                                     <a class="nav-link p-0 dropdown-toggle {%
                                         if app.request.attributes.get('_route') == 'short_menu' or
-                                        app.request.attributes.get('_route') == 'schedule'
+                                        app.request.attributes.get('_route') == 'schedule' or
+                                        app.request.attributes.get('_route') == 'event'
                                     %}active{% endif %}" data-bs-toggle="dropdown" href="#" role="button"
                                        aria-expanded="false"><b>{{ 'main.organisation'|trans }}</b></a>
                                     <ul class="dropdown-menu dropdown-menu-end animate slide mt-3 border-0 shadow">
@@ -171,6 +172,10 @@
 
                                         <li class="nav-item px-3 py-2 py-lg-0">
                                             <a class="nav-link p-0 {% if app.request.attributes.get('_route') == 'schedule' %}active{% endif %}" aria-current="page" href="{{ path('schedule') }}"><b>{{ 'main.schedule'|trans }}</b></a>
+                                        </li>
+
+                                        <li class="nav-item px-3 py-2 py-lg-0">
+                                            <a class="nav-link p-0 {% if app.request.attributes.get('_route') == 'event' %}active{% endif %}" aria-current="page" href="{{ path('event') }}"><b>{{ 'main.event'|trans }}</b></a>
                                         </li>
                                     </ul>
                                 </li>

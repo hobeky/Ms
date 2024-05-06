@@ -7,98 +7,37 @@
             <h2 class="display-4 text-center mb-5">{{ 'review.reviewsFromParents'|trans }}</h2>
 
             <div class="row">
-                {% for set in 1..10 %}
-                    <div class=" mt-5 col-md-4">
+                <div class="col-md-12">
+                    {% include 'review/new.html.twig' %}
+                </div>
+
+                {% for review in reviews %}
+                    <div class="mt-5 col-md-4">
                         <div class="reviews-components p-5">
                             <iconify-icon icon="gridicons:quote" class="quote my-2"></iconify-icon>
-                            <p>“A delightful experience! The food was mouthwatering and the service was exceptional. Highly recommended!”</p>
+                            <p>“{{ review.reviewText }}”</p>
                             <div class="row mt-4">
-                                <div class="col-md-9">
-                                    <h5 class="lh-sm">user_12345</h5>
+                                <div class="col-md-8">
+                                    <h5 class="lh-sm">{{ review.nick }}</h5>
                                     <div class="d-flex">
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
+                                        {% for i in 1..(review.stars|number_format(0, 'floor')) %}
+                                            <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
+                                        {% endfor %}
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" mt-5 col-md-4">
-                        <div class="reviews-components p-5">
-                            <iconify-icon icon="gridicons:quote" class="quote my-2"></iconify-icon>
-                            <p>“Absolutely fantastic! The ambiance was charming and the food was divine. Will definitely be returning!”</p>
-                            <div class="row mt-4">
-                                <div class="col-md-9">
-                                    <h5 class="lh-sm">user_67890</h5>
-                                    <div class="d-flex">
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
+                                {% if review.createdAt %}
+                                    <div class="col-md-4 text-end">
+                                        <small class="text-muted">{{ review.createdAt|date('d m, Y') }}</small>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" mt-5 col-md-4">
-                        <div class="reviews-components p-5">
-                            <iconify-icon icon="gridicons:quote" class="quote my-2"></iconify-icon>
-                            <p>“An incredible experience! The staff was attentive and the dishes were absolutely delicious. Highly recommended!”</p>
-                            <div class="row mt-4">
-                                <div class="col-md-9">
-                                    <h5 class="lh-sm">user_54321</h5>
-                                    <div class="d-flex">
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" mt-5 col-md-4">
-                        <div class="reviews-components p-5">
-                            <iconify-icon icon="gridicons:quote" class="quote my-2"></iconify-icon>
-                            <p>“Outstanding service! The atmosphere was cozy and the food was simply amazing. Will definitely be back!”</p>
-                            <div class="row mt-4">
-                                <div class="col-md-9">
-                                    <h5 class="lh-sm">user_98765</h5>
-                                    <div class="d-flex">
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" mt-5 col-md-4">
-                        <div class="reviews-components p-5">
-                            <iconify-icon icon="gridicons:quote" class="quote my-2"></iconify-icon>
-                            <p>“Lovely experience! The food was top-notch and the service was impeccable. Will definitely recommend!”</p>
-                            <div class="row mt-4">
-                                <div class="col-md-9">
-                                    <h5 class="lh-sm">user_24680</h5>
-                                    <div class="d-flex">
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                        <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
-                                    </div>
-                                </div>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
                 {% endfor %}
+
+
+
+
             </div>
 
 

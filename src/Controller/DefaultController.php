@@ -2,9 +2,14 @@
 
 namespace App\Controller;
 
+use App\Entity\Review;
 use App\Entity\Teacher;
+use App\Form\ReviewType;
+use App\Repository\GalleryRepository;
+use App\Repository\ReviewRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
@@ -19,7 +24,7 @@ class DefaultController extends AbstractController
     #[Route('/', name: 'index')]
     public function index(): Response
     {
-        return $this->render('template/styles.html.twig', [
+        return $this->render('template/about.html.twig', [
             'heroName' => 'main.about'
         ]);
     }
@@ -33,12 +38,40 @@ class DefaultController extends AbstractController
     }
 
     #[Route('/recenzie', name: 'reviews')]
-    public function reviews(): Response
+    public function reviews(Request $request, ReviewRepository $reviewRepository): Response
     {
+        $review = new Review();
+        $form = $this->createForm(ReviewType::class, $review);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->entityManager->persist($review);
+            $this->entityManager->flush();
+
+            return $this->redirectToRoute('reviews');
+        }
+
         return $this->render('template/reviews.html.twig', [
-            'heroName' => 'main.revies'
+            'heroName' => 'Recenzie',
+            'review' => $review,
+            'form' => $form->createView(),
+            'reviews' => $reviewRepository->allAsc()
         ]);
     }
+
+//    #[Route('/clear-reviews', name: 'clear_reviews')]
+//    public function clearReviews(EntityManagerInterface $entityManager): Response
+//    {
+//        // Create a DQL query to delete all entries from the Review entity
+//        $query = $entityManager->createQuery('DELETE FROM App\Entity\Review');
+//        $query->execute();
+//
+//        // Optionally, add a flash message or some confirmation
+//        $this->addFlash('success', 'All reviews have been deleted.');
+//
+//        // Redirect to a confirmation page or back to the reviews page
+//        return $this->redirectToRoute('reviews');
+//    }
 
     #[Route('/kontakt', name: 'contact')]
     public function contact(): Response
@@ -69,10 +102,12 @@ class DefaultController extends AbstractController
     }
 
     #[Route('/galeria', name: 'gallery')]
-    public function gallery(): Response
+    public function gallery(GalleryRepository $galleryRepository): Response
     {
+
         return $this->render('template/gallery.html.twig', [
-            'heroName' => 'main.gallery'
+            'heroName' => 'main.gallery',
+            'gallery' => $galleryRepository->findByVisible()
         ]);
     }
 
@@ -104,6 +139,14 @@ class DefaultController extends AbstractController
     {
         return $this->render('template/kid-security.html.twig', [
             'heroName' => 'main.kidSafety'
+        ]);
+    }
+
+    #[Route('/udalosti', name: 'event')]
+    public function event(): Response
+    {
+        return $this->render('template/event.html.twig', [
+            'heroName' => 'main.event'
         ]);
     }
 }

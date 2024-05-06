@@ -4,159 +4,19 @@
 
     <section id="gallery">
         <div class="container padding-medium">
-            <h2 class="display-4 text-center mb-5">Keramika Sovičky – Hodiny</h2>
-            <div class="row entry-container">
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item1.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item1.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
+            {% for galleryItem in gallery %}
+                <h2 class="display-4 text-center mb-5">{{galleryItem.title}}</h2>
+                <div class="row entry-container mb-5">
+                    {% for image in galleryItem.images %}
+                        <div class="entry-item col-md-4 my-3">
+                            <a href="{{ path('image_upload', {'size':'original', 'imageName': image})}}" title="Kindergarten" class="image-link"><img
+                                    src="{{ path('image_upload', {'size':'medium', 'imageName': image})}}"
+                                    class=" post-image img-fluid rounded-4"></a>
+                        </div>
+                    {% endfor %}
                 </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item3.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item3.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item4.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item4.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item2.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item2.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item6.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item6.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item4.jpg') }}" title="Kindergarten" class="image-link">
-                        <img src="{{ asset('images/item4.jpg') }}" class="post-image img-fluid rounded-4">
-                    </a>
-                </div>
-
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item1.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item1.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item5.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item1.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item3.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item3.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item4.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item4.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item2.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item2.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item6.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item6.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-            </div>
-
-            <h2 class="display-4 text-center mb-5">Gymnastika s Fusion Fitness</h2>
-            <div class="row entry-container">
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item1.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item1.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item1.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item3.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item1.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item4.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item1.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item2.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item1.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item6.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item4.jpg') }}" title="Kindergarten" class="image-link">
-                        <img src="{{ asset('images/item4.jpg') }}" class="post-image img-fluid rounded-4">
-                    </a>
-                </div>
-
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item1.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item1.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item1.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item1.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item1.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item3.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item1.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item4.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item1.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item2.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item1.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item6.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item4.jpg') }}" title="Kindergarten" class="image-link">
-                        <img src="{{ asset('images/item4.jpg') }}" class="post-image img-fluid rounded-4">
-                    </a>
-                </div>
-
-                <div class="entry-item col-md-4 my-3">
-                    <a href="{{ asset('images/item1.jpg') }}" title="Kindergarten" class="image-link"><img
-                            src="{{ asset('images/item1.jpg') }}"
-                            class=" post-image img-fluid rounded-4"></a>
-                </div>
-            </div>
-            <nav class="navigation paging-navigation text-center mt-5" role="navigation">
-                <div class="pagination loop-pagination d-flex justify-content-center align-items-center">
-                    <a href="#" class="pagination-arrow d-flex align-items-center fw-normal mx-3">
-                        <iconify-icon icon="ic:baseline-keyboard-arrow-left" class="pagination-arrow fs-1"></iconify-icon>
-                    </a>
-                    <span aria-current="page" class="page-numbers fs-4 fw-normal mx-3 current">1</span>
-                    <a class="page-numbers fs-4 fw-normal mx-3" href="#">2</a>
-                    <a class="page-numbers fs-4 fw-normal mx-3" href="#">3</a>
-                    <a href="#" class="pagination-arrow d-flex align-items-center fw-normal mx-3">
-                        <iconify-icon icon="ic:baseline-keyboard-arrow-right" the="pagination-arrow fs-1"></iconify-icon>
-                    </a>
-                </div>
-            </nav>
+            {% endfor %}
         </div>
     </section>
+    <h2 class="text-center mb-5">Dalsie galerie budu pridane v dohladnej dobe, dakujeme za trpezlivost</h2>
 {% endblock %}

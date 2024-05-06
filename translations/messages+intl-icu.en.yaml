@@ -12,6 +12,8 @@ main:
     kidSafety: 'Child Safety'
     workDays: 'Working Days'
     GDPR: 'GDPR'
+
+    
 menu:
     heading1: 'In the Kindergarten, We Ensure Healthy Nutrition for Children,'
     paragraph1: 'snacks, lunches, and snacks in accordance with prescribed recommended daily doses of nutrients, vitamins, minerals, and trace elements necessary for the healthy growth and development of the child.'
@@ -131,4 +133,4 @@ schedule:
     activity7: 'Nap Time, Afternoon Relaxation'
     activity8: 'Personal Hygiene, Afternoon Snack'
     activity9: 'Outdoor Time, Free Play, Extracurricular Activities, Clubs, Children`s Store to Home'
-
+    activities: 'Krúžky'
