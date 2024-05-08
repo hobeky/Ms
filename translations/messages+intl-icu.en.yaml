@@ -72,30 +72,31 @@ about:
     eParagraf3: 'Our main advantages include an interactive program focused on learning through play, functional arrangement of the play area, phonemic awareness training through stimulation program, English language learning, high standards of primary care and hygiene, year-round operation (closed only on public holidays and weekends), facilities with modern equipment, and a safe location with great accessibility.'
 
 forParents:
-    aHeading1: __forParents.aHeading1
-    aLi1: __forParents.aLi1
-    aLi2: __forParents.aLi2
-    aLi3: __forParents.aLi3
-    aLi4: __forParents.aLi4
-    aLi5: __forParents.aLi5
-    bHeading1: __forParents.bHeading1
-    bLi1: __forParents.bLi1
-    bLi2: __forParents.bLi2
-    bLi3: __forParents.bLi3
-    bLi4: __forParents.bLi4
-    cHeading1: __forParents.cHeading1
-    cUl1: __forParents.cUl1
-    cUl1Li1: __forParents.cUl1Li1
-    cUl1Li2: __forParents.cUl1Li2
-    cUl2: __forParents.cUl2
-    cUl2Li1: __forParents.cUl2Li1
-    cUl2Li2: __forParents.cUl2Li2
-    eHeading1: __forParents.eHeading1
-    eParagraf1: __forParents.eParagraf1
-    eHeading2: __forParents.eHeading2
-    eParagraf2: __forParents.eParagraf2
+    aHeading1: 'What You Don t Need to Worry About'
+    aLi1: 'anti-allergic mattresses'
+    aLi2: 'anti-allergic duvets and pillows'
+    aLi3: 'bed linen'
+    aLi4: 'towels'
+    aLi5: 'a small cup'
+    bHeading1: 'What to Bring to Kindergarten'
+    bLi1: 'pajamas'
+    bLi2: 'slippers'
+    bLi3: 'toothbrush and toothpaste'
+    bLi4: 'spare clothes'
+    cHeading1: 'What to Bring to:'
+    cUl1: 'Ceramic Club'
+    cUl1Li1: 'raincoat'
+    cUl1Li2: 'an old shirt'
+    cUl2: 'Dance Club'
+    cUl2Li1: 'Girls: gym shoes or ballet flats, skirt, and a T-shirt'
+    cUl2Li2: 'Boys: gym shoes (not sneakers), sweatpants, and a T-shirt'
+    eHeading1: 'Elkonin Phonemic Awareness Training for 5-6 Year Olds'
+    eParagraf1: 'Primer – purchased at the SMS'
+    eHeading2: 'English with a Tutor'
+    eParagraf2: 'Good mood 🙂'
+
 review:
-    reviewsFromParents: __review.reviewsFromParents
+    reviewsFromParents: 'Reviews from parents'
     formHeading: __review.formHeading
     formSubHeading: __review.formSubHeading
     formPlaceholderName: __review.formPlaceholderName
