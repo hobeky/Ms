@@ -57,4 +57,9 @@ if [ "$1" = 'frankenphp' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
 	setfacl -dR -m u:www-data:rwX -m u:"$(whoami)":rwX var
 fi
 
+mkdir -p var/img_data/ORIGINAL
+mkdir -p var/img_data/SMALL
+mkdir -p var/img_data/MEDIUM
+mkdir -p var/img_data/BIG
+
 exec docker-php-entrypoint "$@"

@@ -4,216 +4,46 @@
 {% block body %}
     <section id="events" class="padding-medium">
         <div class="container">
-            <h2 class="display-4 text-center mb-5">Popular Events</h2>
+            <h2 class="display-4 text-center mb-5">{{ 'event.popular_events'|trans }}</h2>
 
             <div class="row entry-container">
-                <div class="entry-item col-md-4 my-5">
+                {% for event in events %}
+                    <div class="entry-item col-md-4 my-5">
 
-                    <div class="z-1 position-absolute m-2 px-3 py-1 bg-primary rounded-3">
-                        <h3 class="text-white lh-sm m-0">11</h3>
-                        <p class="text-white m-0">Feb</p>
-                    </div>
+                        <div class="z-1 position-absolute m-2 px-3 py-1 bg-primary rounded-3">
+                            <h3 class="text-white lh-sm m-0">{{ event.dateFrom|date('d') }}</h3> <!-- Day of the month -->
+                            <p class="text-white m-0">{{ event.dateFrom|date('M') }}</p> <!-- Abbreviated month name -->
+                        </div>
 
-                    <div class="card rounded-3 position-relative">
-                        <a href="event-details.html.twig"><img src="{{ asset('images/item3.jpg') }}" class="img-fluid rounded-3" alt="image"></a>
-                        <div class="card-body p-3">
 
-              <span class="badge text-white bg-success my-2"> <iconify-icon icon="mdi:clock-outline" class="fs-6"
-                                                                            style="vertical-align: text-bottom;"></iconify-icon> 7:00 pm -
-                9:00pm</span>
+                        <div class="card rounded-3 position-relative">
+                            <a href="event-details.html.twig"><img src="{{ path('image_upload', {'size':'original', 'imageName': event.image}) }}" class="img-fluid rounded-3" alt="image"></a>
+                            <div class="card-body p-3">
 
-                            <a href="event-details.html.twig" class="hover-color">
-                                <h2 class="py-2 my-1 lh-sm">Creative Teaching Seminar Master Class</h2>
-                            </a>
-                            <span>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, id dolorem
-                  quaerat
-                  quo fugiat veniam repellendus beatae cupiditate. <a href="event-details.html.twig"
-                                                                      class="blog-read text-capitalize border-0">learn more</a></p>
+                            <span class="badge text-white bg-success my-2">
+                                <iconify-icon icon="mdi:clock-outline" class="fs-6" style="vertical-align: text-bottom;"></iconify-icon>
+                                {{ event.dateFrom|date('g:i a') }} - {{ event.dateTo|date('g:i a') }}
+                            </span>
+
+                                <a href="event-details.html.twig" class="hover-color">
+                                    <h2 class="py-2 my-1 lh-sm">{{ event.title }}</h2>
+                                </a>
+                                <span>
+                <p>{{ event.text }}</p>
               </span>
 
-                            <div class=""><iconify-icon icon="mdi:location" class="text-primary fs-5 pt-1"
-                                                        style="vertical-align: sub;"></iconify-icon> Newyork City, USA</div>
+                                <div class=""><iconify-icon icon="mdi:location" class="text-primary fs-5 pt-1"
+                                                            style="vertical-align: sub;"></iconify-icon>
+                                    {{ event.place }}</div>
 
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="entry-item col-md-4 my-5">
+                {% endfor %}
 
-                    <div class="z-1 position-absolute m-2 px-3 py-1 bg-primary rounded-3">
-                        <h3 class="text-white lh-sm m-0">30</h3>
-                        <p class="text-white m-0">Feb</p>
-                    </div>
-
-                    <div class="card rounded-3 position-relative">
-                        <a href="event-details.html.twig"><img src="{{ asset('images/item2.jpg') }}" class="img-fluid rounded-3" alt="image"></a>
-                        <div class="card-body p-3">
-
-              <span class="badge text-white bg-success my-2"> <iconify-icon icon="mdi:clock-outline" class="fs-6"
-                                                                            style="vertical-align: text-bottom;"></iconify-icon> 5:00 pm -
-                11:00pm</span>
-
-                            <a href="event-details.html.twig" class="hover-color">
-                                <h2 class="py-2 my-1 lh-sm">Navigating the Future of Child</h2>
-                            </a>
-                            <span>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, id dolorem
-                  quaerat
-                  quo fugiat veniam repellendus beatae cupiditate. <a href="event-details.html.twig"
-                                                                      class="blog-read text-capitalize border-0">learn more</a></p>
-              </span>
-
-                            <div class=""><iconify-icon icon="mdi:location" class="text-primary fs-5 pt-1"
-                                                        style="vertical-align: sub;"></iconify-icon> Newyork City, USA</div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <div class="entry-item col-md-4 my-5">
-
-                    <div class="z-1 position-absolute m-2 px-3 py-1 bg-primary rounded-3">
-                        <h3 class="text-white lh-sm m-0">18</h3>
-                        <p class="text-white m-0">Feb</p>
-                    </div>
-
-                    <div class="card rounded-3 position-relative">
-                        <a href="event-details.html.twig"><img src="{{ asset('images/item1.jpg') }}" class="img-fluid rounded-3" alt="image"></a>
-                        <div class="card-body p-3">
-
-              <span class="badge text-white bg-success my-2"> <iconify-icon icon="mdi:clock-outline" class="fs-6"
-                                                                            style="vertical-align: text-bottom;"></iconify-icon> 8:00 am -
-                4:00pm</span>
-
-                            <a href="event-details.html.twig" class="hover-color">
-                                <h2 class="py-2 my-1 lh-sm">Digital Art Class with AI</h2>
-                            </a>
-                            <span>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, id dolorem
-                  quaerat
-                  quo fugiat veniam repellendus beatae cupiditate. <a href="event-details.html.twig"
-                                                                      class="blog-read text-capitalize border-0">learn more</a></p>
-              </span>
-
-                            <div class=""><iconify-icon icon="mdi:location" class="text-primary fs-5 pt-1"
-                                                        style="vertical-align: sub;"></iconify-icon> Frankfurt City, Germany</div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <div class="entry-item col-md-4 my-5">
-
-                    <div class="z-1 position-absolute m-2 px-3 py-1 bg-primary rounded-3">
-                        <h3 class="text-white lh-sm m-0">11</h3>
-                        <p class="text-white m-0">Feb</p>
-                    </div>
-
-                    <div class="card rounded-3 position-relative">
-                        <a href="event-details.html.twig"><img src="{{ asset('images/item4.jpg') }}" class="img-fluid rounded-3" alt="image"></a>
-                        <div class="card-body p-3">
-
-              <span class="badge text-white bg-success my-2"> <iconify-icon icon="mdi:clock-outline" class="fs-6"
-                                                                            style="vertical-align: text-bottom;"></iconify-icon> 7:00 pm -
-                9:00pm</span>
-
-                            <a href="event-details.html.twig" class="hover-color">
-                                <h2 class="py-2 my-1 lh-sm">Creative Teaching Seminar Master Class</h2>
-                            </a>
-                            <span>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, id dolorem
-                  quaerat
-                  quo fugiat veniam repellendus beatae cupiditate. <a href="event-details.html.twig"
-                                                                      class="blog-read text-capitalize border-0">learn more</a></p>
-              </span>
-
-                            <div class=""><iconify-icon icon="mdi:location" class="text-primary fs-5 pt-1"
-                                                        style="vertical-align: sub;"></iconify-icon> Newyork City, USA</div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <div class="entry-item col-md-4 my-5">
-
-                    <div class="z-1 position-absolute m-2 px-3 py-1 bg-primary rounded-3">
-                        <h3 class="text-white lh-sm m-0">30</h3>
-                        <p class="text-white m-0">Feb</p>
-                    </div>
-
-                    <div class="card rounded-3 position-relative">
-                        <a href="event-details.html.twig"><img src="{{ asset('images/item6.jpg') }}" class="img-fluid rounded-3" alt="image"></a>
-                        <div class="card-body p-3">
-
-              <span class="badge text-white bg-success my-2"> <iconify-icon icon="mdi:clock-outline" class="fs-6"
-                                                                            style="vertical-align: text-bottom;"></iconify-icon> 5:00 pm -
-                11:00pm</span>
-
-                            <a href="event-details.html.twig" class="hover-color">
-                                <h2 class="py-2 my-1 lh-sm">Navigating the Future of Child</h2>
-                            </a>
-                            <span>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, id dolorem
-                  quaerat
-                  quo fugiat veniam repellendus beatae cupiditate. <a href="event-details.html.twig"
-                                                                      class="blog-read text-capitalize border-0">learn more</a></p>
-              </span>
-
-                            <div class=""><iconify-icon icon="mdi:location" class="text-primary fs-5 pt-1"
-                                                        style="vertical-align: sub;"></iconify-icon> Newyork City, USA</div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <div class="entry-item col-md-4 my-5">
-
-                    <div class="z-1 position-absolute m-2 px-3 py-1 bg-primary rounded-3">
-                        <h3 class="text-white lh-sm m-0">18</h3>
-                        <p class="text-white m-0">Feb</p>
-                    </div>
-
-                    <div class="card rounded-3 position-relative">
-                        <a href="event-details.html.twig"><img src="{{ asset('images/item5.jpg') }}" class="img-fluid rounded-3" alt="image"></a>
-                        <div class="card-body p-3">
-
-              <span class="badge text-white bg-success my-2"> <iconify-icon icon="mdi:clock-outline" class="fs-6"
-                                                                            style="vertical-align: text-bottom;"></iconify-icon> 8:00 am -
-                4:00pm</span>
-
-                            <a href="event-details.html.twig" class="hover-color">
-                                <h2 class="py-2 my-1 lh-sm">Digital Art Class with AI</h2>
-                            </a>
-                            <span>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, id dolorem
-                  quaerat
-                  quo fugiat veniam repellendus beatae cupiditate. <a href="event-details.html.twig"
-                                                                      class="blog-read text-capitalize border-0">learn more</a></p>
-              </span>
-
-                            <div class=""><iconify-icon icon="mdi:location" class="text-primary fs-5 pt-1"
-                                                        style="vertical-align: sub;"></iconify-icon> Frankfurt City, Germany</div>
-
-
-                        </div>
-                    </div>
-                </div>
 
             </div>
-            <nav class="navigation paging-navigation text-center mt-5" role="navigation">
-                <div class="pagination loop-pagination d-flex justify-content-center align-items-center">
-                    <a href="#" class="pagination-arrow d-flex align-items-center fw-normal mx-3">
-                        <iconify-icon icon="ic:baseline-keyboard-arrow-left" class="pagination-arrow fs-1"></iconify-icon>
-                    </a>
-                    <span aria-current="page" class="page-numbers fs-4 fw-normal mx-3 current">1</span>
-                    <a class="page-numbers fs-4 fw-normal mx-3" href="#">2</a>
-                    <a class="page-numbers fs-4 fw-normal mx-3" href="#">3</a>
-                    <a href="#" class="pagination-arrow d-flex align-items-center fw-normal mx-3">
-                        <iconify-icon icon="ic:baseline-keyboard-arrow-right" class="pagination-arrow fs-1"></iconify-icon>
-                    </a>
-                </div>
-            </nav>
         </div>
     </section>
 {% endblock %}

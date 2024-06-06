@@ -1,32 +1,66 @@
 <div class="tab-content mt-5" id="nav-tabContent">
-    {% for day in ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'] %}
+    {%dump(foodWeek.weekDays()) %}
+    {% for day, foodDay in foodWeek.getWeekDays() %}
         <div class="tab-pane fade {{ loop.first ? 'show active' : '' }}" id="nav-{{ day }}" role="tabpanel" aria-labelledby="nav-{{ day }}-tab">
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h3>{{ 'menu.menuBreakfast' | trans }}</h3>
                     <div class="row">
                         <div class="col-12 mb-2">
-                            <h4 class="lh-sm">Breakfast Cereal Bowl</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                            {% if foodDay and foodDay.breakfast %}
+                                <h4 class="lh-sm">{{ foodDay.breakfast.title }}</h4>
+                                <p>{{ foodDay.breakfast.description }}</p>
+                                {% if foodDay.breakfast.alergens %}
+                                    <p><strong>Alergens:</strong> {{ foodDay.breakfast.alergens }}</p>
+                                {% endif %}
+                            {% else %}
+                                <p>No data available</p>
+                            {% endif %}
                         </div>
-                        <h3>{{ 'menu.menuBrunch' | trans }}</h3>
+                    </div>
+
+                    <h3>{{ 'menu.menuBrunch' | trans }}</h3>
+                    <div class="row">
                         <div class="col-12 mb-2">
-                            <h4 class="lh-sm">Avocado Sandwich with eggs</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                            {% if foodDay and foodDay.snack1 %}
+                                <h4 class="lh-sm">{{ foodDay.snack1.title }}</h4>
+                                <p>{{ foodDay.snack1.description }}</p>
+                                {% if foodDay.snack1.alergens %}
+                                    <p><strong>Alergens:</strong> {{ foodDay.snack1.alergens }}</p>
+                                {% endif %}
+                            {% else %}
+                                <p>No data available</p>
+                            {% endif %}
                         </div>
-                        <h3>{{ 'menu.menuLunch' | trans }}</h3>
+                    </div>
+
+                    <h3>{{ 'menu.menuLunch' | trans }}</h3>
+                    <div class="row">
                         <div class="col-12 mb-2">
-                            <h4 class="lh-sm">Avocado Sandwich with eggs</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                            {% if foodDay and foodDay.lunch %}
+                                <h4 class="lh-sm">{{ foodDay.lunch.title }}</h4>
+                                <p>{{ foodDay.lunch.description }}</p>
+                                {% if foodDay.lunch.alergens %}
+                                    <p><strong>Alergens:</strong> {{ foodDay.lunch.alergens }}</p>
+                                {% endif %}
+                            {% else %}
+                                <p>No data available</p>
+                            {% endif %}
                         </div>
-                        <h3>{{ 'menu.menuSnack' | trans }}</h3>
+                    </div>
+
+                    <h3>{{ 'menu.menuSnack' | trans }}</h3>
+                    <div class="row">
                         <div class="col-12 mb-2">
-                            <h4 class="lh-sm">Avocado Sandwich with eggs</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                            {% if foodDay and foodDay.snack2 %}
+                                <h4 class="lh-sm">{{ foodDay.snack2.title }}</h4>
+                                <p>{{ foodDay.snack2.description }}</p>
+                                {% if foodDay.snack2.alergens %}
+                                    <p><strong>Alergens:</strong> {{ foodDay.snack2.alergens }}</p>
+                                {% endif %}
+                            {% else %}
+                                <p>No data available</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

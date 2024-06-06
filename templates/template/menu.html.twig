@@ -13,8 +13,7 @@
                 <div class="imageblock">
                     <div class="animated-border">
                         <img src="https://mssturova.sk/wp-content/uploads/2020/06/ovocie-1024x766.jpeg" alt="img" class="img-fluid rounded-circle"
-                             style="width: 400px;height: 400px;"
-                        >
+                             style="width: 400px;height: 400px;">
                     </div>
                 </div>
             </div>
@@ -37,8 +36,7 @@
                 <div class="imageblock">
                     <div class="animated-border">
                         <img src="https://mssturova.sk/wp-content/uploads/2020/06/mysky.jpg" alt="img" class="img-fluid rounded-circle"
-                             style="width: 400px;height: 400px;"
-                        >
+                             style="width: 400px;height: 400px;">
                     </div>
                 </div>
             </div>
@@ -61,18 +59,26 @@
                         </div>
                     </nav>
                     <div class="tab-content mt-5" id="nav-tabContent">
-                        {% for day in ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'] %}
-                            <div class="tab-pane fade {% if loop.first %}show active{% endif %}" id="nav-{{ day|lower }}" role="tabpanel"
-                                 aria-labelledby="nav-{{ day|lower }}-tab">
+                        {% for day in ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'] %}
+                            {% set foodDay = attribute(foodWeek, day) %}
+                            <div class="tab-pane fade {% if loop.first %}show active{% endif %}" id="nav-{{ day }}" role="tabpanel"
+                                 aria-labelledby="nav-{{ day }}-tab">
                                 <div class="row">
                                     <div class="col-md-12 text-center">
-                                        {% for meal in ['Breakfast', 'Brunch', 'Lunch', 'Snack'] %}
+                                        {% for meal in ['Breakfast', 'Snack1', 'Lunch', 'Snack2'] %}
+                                            {% set food = attribute(foodDay, meal|lower) %}
                                             <h3>{{ 'menu.menu' ~ meal|capitalize|trans }}</h3>
                                             <div class="row">
                                                 <div class="col-12 mb-2">
-                                                    <h4 class="lh-sm">Avocado Sandwich with eggs</h4>
-                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aut
-                                                        perferendis optio nemo tempora voluptatem placeat nostrum.</p>
+                                                    {% if food %}
+                                                        <h4 class="lh-sm">{{ food.title }}</h4>
+                                                        <p>{{ food.description }}</p>
+                                                        {% if food.alergens %}
+                                                            <p><strong>Alergens:</strong> {{ food.alergens }}</p>
+                                                        {% endif %}
+                                                    {% else %}
+                                                        <p>No data available</p>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         {% endfor %}

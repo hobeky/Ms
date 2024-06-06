@@ -12,6 +12,7 @@ main:
     kidSafety: 'Child Safety'
     workDays: 'Working Days'
     GDPR: 'GDPR'
+    event: 'Events'
 
     
 menu:
@@ -135,3 +136,6 @@ schedule:
     activity8: 'Personal Hygiene, Afternoon Snack'
     activity9: 'Outdoor Time, Free Play, Extracurricular Activities, Clubs, Children`s Store to Home'
     activities: 'Krúžky'
+    
+event:
+    popular_events: 'Events'

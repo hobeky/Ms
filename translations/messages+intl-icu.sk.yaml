@@ -143,3 +143,6 @@ kidSafety:
     LDD: 'Linka detskej dôvery'
     LDN: 'Linka dôvery nezábudka'
     LDI: 'Linka detskej istoty'
+
+event:
+    popular_events: 'Udalosti'

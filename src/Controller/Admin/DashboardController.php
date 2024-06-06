@@ -2,6 +2,10 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Event;
+use App\Entity\Food;
+use App\Entity\FoodDay;
+use App\Entity\FoodWeek;
 use App\Entity\Gallery;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -44,5 +48,8 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToDashboard('Ucitelia', 'fa fa-home');
          yield MenuItem::linkToCrud('Galeria', 'fas fa-list', Gallery::class);
+         yield MenuItem::linkToCrud('Banner obrazky', 'fas fa-list', Gallery::class);
+         yield MenuItem::linkToCrud('Event', 'fas fa-list', Event::class);
+         yield MenuItem::linkToCrud('Menu', 'fas fa-list', FoodWeek::class);
     }
 }

@@ -2,9 +2,12 @@
 
 namespace App\Controller;
 
+
 use App\Entity\Review;
 use App\Entity\Teacher;
 use App\Form\ReviewType;
+use App\Repository\EventRepository;
+use App\Repository\FoodWeekRepository;
 use App\Repository\GalleryRepository;
 use App\Repository\ReviewRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -112,18 +115,25 @@ class DefaultController extends AbstractController
     }
 
     #[Route('/jedalny-listok', name: 'long_menu')]
-    public function menu(): Response
+    public function menu(FoodWeekRepository $foodWeekRepository): Response
     {
+        $foodWeek = $foodWeekRepository->findAll();
+
+
         return $this->render('template/meal-menu.html.twig', [
-            'heroName' => 'main.menu'
+            'heroName' => 'main.menu',
+            'foodWeek' => $foodWeek,
         ]);
     }
 
     #[Route('/jedalny-listok-kratky', name: 'short_menu')]
-    public function shortMenu(): Response
+    public function shortMenu(FoodWeekRepository $foodWeekRepository): Response
     {
+        $foodWeek = $foodWeekRepository->find(1);
+
         return $this->render('template/menu-short.html.twig', [
-            'heroName' => 'main.menu'
+            'heroName' => 'main.menu',
+            'foodWeek' => $foodWeek,
         ]);
     }
 
@@ -143,10 +153,11 @@ class DefaultController extends AbstractController
     }
 
     #[Route('/udalosti', name: 'event')]
-    public function event(): Response
+    public function event(EventRepository $eventRepository): Response
     {
         return $this->render('template/event.html.twig', [
-            'heroName' => 'main.event'
+            'heroName' => 'main.event',
+            'events' => $eventRepository->findAll()
         ]);
     }
 }
