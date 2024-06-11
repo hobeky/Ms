@@ -29,8 +29,10 @@ class EventCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id')->hideOnForm(), // ID is automatically generated, hide it on forms
-            TextField::new('title', 'Event Title'),
+            IdField::new('id')
+                ->hideOnForm(),
+            TextField::new('title', 'Event Title')
+                ->setColumns(12),
             ImageField::new('image')->setBasePath('/image/medium/')->setUploadDir($this->parameterBag->get('img_dir') . 'original'),
             TextareaField::new('text', 'Description')
                 ->setHelp('Enter the detailed description of the event here.'), // Providing context for the input field

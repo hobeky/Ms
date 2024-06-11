@@ -25,14 +25,6 @@ class FoodDay
     #[ORM\OneToOne(cascade: ['persist', 'remove'], fetch: 'EAGER')]
     private ?Food $snack2 = null;
 
-    #[ORM\Column]
-    private ?\DateTimeImmutable $day = null;
-
-
-    public function __toString(): string
-    {
-        return $this->day->format('Y-m-d') ?? '';
-    }
     public function getId(): ?int
     {
         return $this->id;
@@ -86,15 +78,4 @@ class FoodDay
         return $this;
     }
 
-    public function getDay(): ?\DateTimeImmutable
-    {
-        return $this->day;
-    }
-
-    public function setDay(?\DateTimeImmutable $day): static
-    {
-        $this->day = $day;
-
-        return $this;
-    }
 }

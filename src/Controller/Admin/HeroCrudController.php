@@ -2,21 +2,18 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Gallery;
+use App\Entity\Hero;
+use App\Entity\Image;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
-class GalleryCrudController extends AbstractCrudController
+class HeroCrudController extends AbstractCrudController
 {
-
     public function __construct(
         private readonly ParameterBagInterface $parameterBag
     )
@@ -25,8 +22,9 @@ class GalleryCrudController extends AbstractCrudController
     }
     public static function getEntityFqcn(): string
     {
-        return Gallery::class;
+        return Hero::class;
     }
+
 
     public function configureFields(string $pageName): iterable
     {
@@ -34,16 +32,11 @@ class GalleryCrudController extends AbstractCrudController
             AssociationField::new('title')
                 ->renderAsEmbeddedForm(TranslationCrudController::class)
                 ->setColumns(12),
-            DateField::new('happenedAt')
-                ->setColumns(6),
-            BooleanField::new('isVisible')
-                ->setColumns(6),
-            ImageField::new('images')
+            ImageField::new('image')
                 ->setBasePath('/image/medium/')
                 ->setUploadDir($this->parameterBag->get('img_dir') . 'original')
-                ->setFormTypeOptions(['multiple' => true])
-                ->setColumns(12)
-            ,
+                ->setColumns(12),
         ];
     }
+
 }

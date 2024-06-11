@@ -28,10 +28,18 @@ class TeacherCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            TextField::new('name'),
-            AssociationField::new('position')->renderAsEmbeddedForm(TranslationCrudController::class),
-            AssociationField::new('description')->renderAsEmbeddedForm(TranslationCrudController::class),
-            ImageField::new('image')->setBasePath('/image/medium/')->setUploadDir($this->parameterBag->get('img_dir') . 'original'),
+            TextField::new('name')
+                ->setColumns(12),
+            AssociationField::new('position')
+                ->renderAsEmbeddedForm(TranslationCrudController::class)
+                ->setColumns(12),
+            AssociationField::new('description')
+                ->renderAsEmbeddedForm(TranslationCrudController::class)
+                ->setColumns(12),
+            ImageField::new('image')
+                ->setBasePath('/image/medium/')
+                ->setUploadDir($this->parameterBag->get('img_dir') . 'original')
+                ->setColumns(12),
         ];
     }
 

@@ -26,7 +26,7 @@ class ImageCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            ImageField::new('image')->setBasePath('/uploads/images/')->setUploadDir($this->parameterBag->get('image_path') . 'original'),
+            ImageField::new('image')->setBasePath('/uploads/images/')->setUploadDir($this->parameterBag->get('img_dir') . 'original'),
         ];
     }
 

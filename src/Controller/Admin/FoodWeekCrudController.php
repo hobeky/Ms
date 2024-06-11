@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\FoodWeek;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\FormField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
@@ -21,6 +22,10 @@ class FoodWeekCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
+            DateTimeField::new('mondayDate')
+               ->setColumns(12)
+                ->addCssClass('text-large text-bold'),
+
            AssociationField::new('monday', 'Pondelok')
                ->renderAsEmbeddedForm(FoodDayCrudController::class)
                ->setColumns(12)

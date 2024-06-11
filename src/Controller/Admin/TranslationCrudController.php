@@ -19,8 +19,10 @@ class TranslationCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            TextField::new('sk'),
-            TextField::new('en'),
+            TextField::new('sk')
+                ->setColumns(6),
+            TextField::new('en')
+                ->setColumns(6),
         ];
     }
 

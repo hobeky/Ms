@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-
+use App\Entity\Hero;
 use App\Entity\Review;
 use App\Entity\Teacher;
 use App\Form\ReviewType;
@@ -14,21 +14,22 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
     public function __construct(
         private readonly EntityManagerInterface $entityManager,
-    )
-    {
-    }
+    ) {}
 
     #[Route('/', name: 'index')]
     public function index(): Response
     {
         return $this->render('template/about.html.twig', [
-            'heroName' => 'main.about'
+            'heroName' => 'main.about',
+            'page_title' => 'page.title.home',
+            'page_description' => 'page.description.home',
+            'page_keywords' => 'page.keywords.home'
         ]);
     }
 
@@ -36,7 +37,10 @@ class DefaultController extends AbstractController
     public function aboutUs(): Response
     {
         return $this->render('template/about.html.twig', [
-            'heroName' => 'main.about'
+            'heroName' => 'main.about',
+            'page_title' => 'page.title.about_us',
+            'page_description' => 'page.description.about_us',
+            'page_keywords' => 'page.keywords.about_us'
         ]);
     }
 
@@ -55,32 +59,24 @@ class DefaultController extends AbstractController
         }
 
         return $this->render('template/reviews.html.twig', [
-            'heroName' => 'Recenzie',
+            'heroName' => 'reviews.title',
             'review' => $review,
             'form' => $form->createView(),
-            'reviews' => $reviewRepository->allAsc()
+            'reviews' => $reviewRepository->allAsc(),
+            'page_title' => 'page.title.reviews',
+            'page_description' => 'page.description.reviews',
+            'page_keywords' => 'page.keywords.reviews'
         ]);
     }
-
-//    #[Route('/clear-reviews', name: 'clear_reviews')]
-//    public function clearReviews(EntityManagerInterface $entityManager): Response
-//    {
-//        // Create a DQL query to delete all entries from the Review entity
-//        $query = $entityManager->createQuery('DELETE FROM App\Entity\Review');
-//        $query->execute();
-//
-//        // Optionally, add a flash message or some confirmation
-//        $this->addFlash('success', 'All reviews have been deleted.');
-//
-//        // Redirect to a confirmation page or back to the reviews page
-//        return $this->redirectToRoute('reviews');
-//    }
 
     #[Route('/kontakt', name: 'contact')]
     public function contact(): Response
     {
         return $this->render('template/contact.html.twig', [
-            'heroName' => 'main.contact'
+            'heroName' => 'main.contact',
+            'page_title' => 'page.title.contact',
+            'page_description' => 'page.description.contact',
+            'page_keywords' => 'page.keywords.contact'
         ]);
     }
 
@@ -88,7 +84,10 @@ class DefaultController extends AbstractController
     public function forParents(): Response
     {
         return $this->render('template/for-parents.html.twig', [
-            'heroName' => 'main.forParents'
+            'heroName' => 'main.forParents',
+            'page_title' => 'page.title.for_parents',
+            'page_description' => 'page.description.for_parents',
+            'page_keywords' => 'page.keywords.for_parents'
         ]);
     }
 
@@ -100,17 +99,22 @@ class DefaultController extends AbstractController
 
         return $this->render('template/teachers.html.twig', [
             'heroName' => 'main.ourTeam',
-            'teachers' => $teachers
+            'teachers' => $teachers,
+            'page_title' => 'page.title.teachers',
+            'page_description' => 'page.description.teachers',
+            'page_keywords' => 'page.keywords.teachers'
         ]);
     }
 
     #[Route('/galeria', name: 'gallery')]
     public function gallery(GalleryRepository $galleryRepository): Response
     {
-
         return $this->render('template/gallery.html.twig', [
             'heroName' => 'main.gallery',
-            'gallery' => $galleryRepository->findByVisible()
+            'gallery' => $galleryRepository->findByVisible(),
+            'page_title' => 'page.title.gallery',
+            'page_description' => 'page.description.gallery',
+            'page_keywords' => 'page.keywords.gallery'
         ]);
     }
 
@@ -118,22 +122,27 @@ class DefaultController extends AbstractController
     public function menu(FoodWeekRepository $foodWeekRepository): Response
     {
         $foodWeek = $foodWeekRepository->findAll();
-
-
+        dump($foodWeek);
         return $this->render('template/meal-menu.html.twig', [
             'heroName' => 'main.menu',
             'foodWeek' => $foodWeek,
+            'page_title' => 'page.title.long_menu',
+            'page_description' => 'page.description.long_menu',
+            'page_keywords' => 'page.keywords.long_menu'
         ]);
     }
 
     #[Route('/jedalny-listok-kratky', name: 'short_menu')]
     public function shortMenu(FoodWeekRepository $foodWeekRepository): Response
     {
-        $foodWeek = $foodWeekRepository->find(1);
+        $foodWeek = $foodWeekRepository->findOneBy([], ['mondayDate'=> 'DESC']);
 
         return $this->render('template/menu-short.html.twig', [
             'heroName' => 'main.menu',
             'foodWeek' => $foodWeek,
+            'page_title' => 'page.title.short_menu',
+            'page_description' => 'page.description.short_menu',
+            'page_keywords' => 'page.keywords.short_menu'
         ]);
     }
 
@@ -141,14 +150,21 @@ class DefaultController extends AbstractController
     public function schedule(): Response
     {
         return $this->render('template/time-table.html.twig', [
-            'heroName' => 'main.schedule'
+            'heroName' => 'main.schedule',
+            'page_title' => 'page.title.schedule',
+            'page_description' => 'page.description.schedule',
+            'page_keywords' => 'page.keywords.schedule'
         ]);
     }
+
     #[Route('/bezpecnost-deti', name: 'child_safety')]
     public function childSafety(): Response
     {
         return $this->render('template/kid-security.html.twig', [
-            'heroName' => 'main.kidSafety'
+            'heroName' => 'main.kidSafety',
+            'page_title' => 'page.title.child_safety',
+            'page_description' => 'page.description.child_safety',
+            'page_keywords' => 'page.keywords.child_safety'
         ]);
     }
 
@@ -157,7 +173,11 @@ class DefaultController extends AbstractController
     {
         return $this->render('template/event.html.twig', [
             'heroName' => 'main.event',
-            'events' => $eventRepository->findAll()
+            'events' => $eventRepository->findAll(),
+            'page_title' => 'page.title.event',
+            'page_description' => 'page.description.event',
+            'page_keywords' => 'page.keywords.event'
         ]);
     }
+
 }

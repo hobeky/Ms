@@ -2,23 +2,25 @@
 
 {% block body %}
     <section id="enroll">
-        <div class="container padding-medium"
-            style="padding-top: 5em;"
-        >
-                <div class="offset-md-3 col-md-6 text-center ">
-                    <h2 style="margin-bottom: 2em;">{{ 'kidSafety.heading'| trans }}:</h2>
-                    <a href="https://www.linkadeti.sk/domov" target="_blank" style="margin-bottom: 2em;">
-                        <span style="color: red;">{{ 'kidSafety.LDD'| trans }}: </span> https://www.linkadeti.sk/domov
-                    </a></br></br>
-                    <a href="https://www.dusevnezdravie.sk/linky-pomoci" target="_blank">
-                        <span style="color: red;">{{ 'kidSafety.LDN'| trans }}: </span>
-                        https://www.dusevnezdravie.sk/linky-pomoci
-                    </a></br></br>
-                    <a href="https://www.ldi.sk" target="_blank">
-                        <span style="color: red;">{{ 'kidSafety.LDI'| trans }}: </span> https://www.ldi.sk
-                    </a></br>
+        <div class="container padding-medium" style="padding-top: 5em;">
+            <div class="offset-md-3 col-md-6 text-center">
+                <h1 class="mb-4">{{ 'kidSafety.heading'| trans }}</h1>
+                <div class="mb-4">
+                    <a href="https://www.linkadeti.sk/domov" target="_blank">
+                        <span style="color: red;">{{ 'kidSafety.LDD'| trans }}:</span> https://www.linkadeti.sk/domov
+                    </a>
                 </div>
+                <div class="mb-4">
+                    <a href="https://www.dusevnezdravie.sk/linky-pomoci" target="_blank">
+                        <span style="color: red;">{{ 'kidSafety.LDN'| trans }}:</span> https://www.dusevnezdravie.sk/linky-pomoci
+                    </a>
+                </div>
+                <div class="mb-4">
+                    <a href="https://www.ldi.sk" target="_blank">
+                        <span style="color: red;">{{ 'kidSafety.LDI'| trans }}:</span> https://www.ldi.sk
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 {% endblock %}
-

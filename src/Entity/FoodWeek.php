@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\FoodWeekRepository;
+use DateTimeImmutable;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: FoodWeekRepository::class)]
@@ -31,6 +32,16 @@ class FoodWeek
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $name = null;
 
+    #[ORM\Column]
+    private ?DateTimeImmutable $createdAt = null;
+
+    #[ORM\Column]
+    private ?DateTimeImmutable $mondayDate = null;
+
+    public function __construct()
+    {
+        $this->createdAt = new DateTimeImmutable('now');
+    }
     public function getId(): ?int
     {
         return $this->id;
@@ -117,5 +128,29 @@ class FoodWeek
             'thursday' => $this->getThursday(),
             'friday' => $this->getFriday(),
         ];
+    }
+
+    public function getCreatedAt(): ?DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(DateTimeImmutable $createdAt): static
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getMondayDate(): ?DateTimeImmutable
+    {
+        return $this->mondayDate;
+    }
+
+    public function setMondayDate(DateTimeImmutable $mondayDate): static
+    {
+        $this->mondayDate = $mondayDate;
+
+        return $this;
     }
 }

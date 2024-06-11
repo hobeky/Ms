@@ -1,48 +1,38 @@
 {% extends 'base.html.twig' %}
 
-
 {% block body %}
     <section id="events" class="padding-medium">
         <div class="container">
-            <h2 class="display-4 text-center mb-5">{{ 'event.popular_events'|trans }}</h2>
+            <h1 class="display-4 text-center mb-5">{{ 'event.popular_events'|trans }}</h1>
 
             <div class="row entry-container">
                 {% for event in events %}
                     <div class="entry-item col-md-4 my-5">
-
                         <div class="z-1 position-absolute m-2 px-3 py-1 bg-primary rounded-3">
-                            <h3 class="text-white lh-sm m-0">{{ event.dateFrom|date('d') }}</h3> <!-- Day of the month -->
+                            <h2 class="text-white lh-sm m-0">{{ event.dateFrom|date('d') }}</h2> <!-- Day of the month -->
                             <p class="text-white m-0">{{ event.dateFrom|date('M') }}</p> <!-- Abbreviated month name -->
                         </div>
 
-
                         <div class="card rounded-3 position-relative">
-                            <a href="event-details.html.twig"><img src="{{ path('image_upload', {'size':'original', 'imageName': event.image}) }}" class="img-fluid rounded-3" alt="image"></a>
+                            <a href="event-details.html.twig"><img src="{{ path('image_upload', {'size':'original', 'imageName': event.image}) }}" class="img-fluid rounded-3" alt="{{ event.title }} {{ 'main.picture'| trans }}"></a>
                             <div class="card-body p-3">
-
-                            <span class="badge text-white bg-success my-2">
-                                <iconify-icon icon="mdi:clock-outline" class="fs-6" style="vertical-align: text-bottom;"></iconify-icon>
-                                {{ event.dateFrom|date('g:i a') }} - {{ event.dateTo|date('g:i a') }}
-                            </span>
+                                <span class="badge text-white bg-success my-2">
+                                    <iconify-icon icon="mdi:clock-outline" class="fs-6" style="vertical-align: text-bottom;"></iconify-icon>
+                                    {{ event.dateFrom|date('g:i a') }} - {{ event.dateTo|date('g:i a') }}
+                                </span>
 
                                 <a href="event-details.html.twig" class="hover-color">
-                                    <h2 class="py-2 my-1 lh-sm">{{ event.title }}</h2>
+                                    <h3 class="py-2 my-1 lh-sm">{{ event.title }}</h3>
                                 </a>
-                                <span>
-                <p>{{ event.text }}</p>
-              </span>
+                                <p>{{ event.text }}</p>
 
-                                <div class=""><iconify-icon icon="mdi:location" class="text-primary fs-5 pt-1"
-                                                            style="vertical-align: sub;"></iconify-icon>
-                                    {{ event.place }}</div>
-
-
+                                <div><iconify-icon icon="mdi:location" class="text-primary fs-5 pt-1" style="vertical-align: sub;"></iconify-icon>
+                                    {{ event.place }}
+                                </div>
                             </div>
                         </div>
                     </div>
                 {% endfor %}
-
-
             </div>
         </div>
     </section>

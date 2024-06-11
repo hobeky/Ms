@@ -1,24 +1,20 @@
 {% extends 'base.html.twig' %}
 
-
 {% block body %}
     <section class="contact-us">
         <div class="container padding-medium">
             <div class="row">
                 <div class="contact-info col-lg-6">
-                    <h2>{{ 'contact.heading1'|trans }}</h2>
+                    <h1>{{ 'contact.heading1'|trans }}</h1>
                     <p>{{ 'contact.subheading1'|trans }}</p>
                     <div class="page-content d-flex flex-wrap">
                         <div class="col-lg-12 col-sm-12">
                             <div class="content-box text-dark pe-4">
-                                <h2 class="mb-2">{{ 'contact.adress'|trans }} :</h2>
-                                <h4>Créme de la Créme</h4>
-                                <p><iconify-icon class="text-primary fs-5 me-2" icon="mdi:location"
-                                                 style="vertical-align:text-bottom"></iconify-icon>Štúrova 44, 040 01 Košice</p>
-                                <p><iconify-icon class="text-primary fs-5 me-2" icon="solar:phone-bold"
-                                                 style="vertical-align:text-bottom"></iconify-icon>+421 918 757 178</p>
-                                <p><iconify-icon class="text-primary fs-5 me-2" icon="ic:baseline-email"
-                                                 style="vertical-align:text-bottom"></iconify-icon> riaditel@mssturova.sk </p>
+                                <h2 class="mb-2">{{ 'contact.address'|trans }}:</h2>
+                                <h3>Créme de la Créme</h3>
+                                <p><iconify-icon class="text-primary fs-5 me-2" icon="mdi:location" style="vertical-align:text-bottom"></iconify-icon>Štúrova 44, 040 01 Košice</p>
+                                <p><iconify-icon class="text-primary fs-5 me-2" icon="solar:phone-bold" style="vertical-align:text-bottom"></iconify-icon>+421 918 757 178</p>
+                                <p><iconify-icon class="text-primary fs-5 me-2" icon="ic:baseline-email" style="vertical-align:text-bottom"></iconify-icon> riaditel@mssturova.sk </p>
                             </div>
                         </div>
                     </div>
@@ -28,22 +24,21 @@
                         <h2>{{ 'contact.formHeading'|trans }}</h2>
                         <form id="form" class="form-group flex-wrap mt-4">
                             <div class="form-input col-lg-12 d-flex mb-3">
-                                <input type="text" name="email" placeholder="{{ 'contact.formPlaceHolderName'|trans }}" class="form-control ps-3 me-3">
-                                <input type="text" name="email" placeholder="{{ 'contact.formPlaceHolderEmail'|trans }}" class="form-control ps-3">
+                                <input type="text" name="name" placeholder="{{ 'contact.formPlaceHolderName'|trans }}" class="form-control ps-3 me-3">
+                                <input type="email" name="email" placeholder="{{ 'contact.formPlaceHolderEmail'|trans }}" class="form-control ps-3">
                             </div>
                             <div class="col-lg-12 mb-3">
-                                <input type="text" name="email" placeholder="{{ 'contact.formPlaceHolderTel'|trans }}" class="form-control ps-3">
+                                <input type="tel" name="phone" placeholder="{{ 'contact.formPlaceHolderTel'|trans }}" class="form-control ps-3">
                             </div>
                             <div class="col-lg-12 mb-3">
-                                <input type="text" name="email" placeholder="{{ 'contact.formPlaceHolderTopic'|trans }}" class="form-control ps-3">
+                                <input type="text" name="topic" placeholder="{{ 'contact.formPlaceHolderTopic'|trans }}" class="form-control ps-3">
                             </div>
                             <div class="col-lg-12 mb-3">
-                                <textarea placeholder="{{ 'contact.formPlaceHolderText'|trans }}" class="form-control ps-3"
-                                          style="height:150px;"></textarea>
+                                <textarea name="message" placeholder="{{ 'contact.formPlaceHolderText'|trans }}" class="form-control ps-3" style="height:150px;"></textarea>
                             </div>
                         </form>
                         <div class="d-grid">
-                            <button class="btn btn-primary px-5 py-3 ">{{ 'contact.formButton'|trans }}</button>
+                            <button class="btn btn-primary px-5 py-3">{{ 'contact.formButton'|trans }}</button>
                         </div>
                     </div>
                 </div>
@@ -53,19 +48,17 @@
 
     <section class="google-map">
         <div class="mapouter">
-            <div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas"
-                                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4349.680229272155!2d21.24903807745324!3d48.71636351068955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ee06e8ebdb381%3A0xae80ccf71b973ac5!2zxaB0w7pyb3ZhIDIyLzQ0LCAwNDAgMDEgS2_FoWljZQ!5e1!3m2!1ssk!2ssk!4v1713814413972!5m2!1ssk!2ssk"
-                                             frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-                    href="https://getasearch.com/fmovies"></a><br>
+            <div class="gmap_canvas">
+                <iframe width="100%" height="500" id="gmap_canvas"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4349.680229272155!2d21.24903807745324!3d48.71636351068955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ee06e8ebdb381%3A0xae80ccf71b973ac5!2zxaB0w7pyb3ZhIDIyLzQ0LCAwNDAgMDEgS2_FoWljZQ!5e1!3m2!1ssk!2ssk!4v1713814413972!5m2!1ssk!2ssk"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 <style>
                     .mapouter {
                         position: relative;
-                        text-align:right;
+                        text-align: right;
                         height: 500px;
                         width: 100%;
                     }
-                </style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
-                <style>
                     .gmap_canvas {
                         overflow: hidden;
                         background: none !important;

@@ -1,6 +1,6 @@
 main:
     about: 'About Us'
-    revies: 'Reviews'
+    reviews: 'Reviews'
     contact: 'Contact'
     forParents: 'For Parents'
     ourTeam: 'Our Team'
@@ -13,6 +13,7 @@ main:
     workDays: 'Working Days'
     GDPR: 'GDPR'
     event: 'Events'
+    picture: ' image'
 
     
 menu:
@@ -71,7 +72,12 @@ about:
     eParagraf1: 'Phonemic awareness is the ability to perceive the sound structure of words, to perform phonemic analysis and synthesis of words, to remove and change the order of sounds.'
     eParagraf2: 'This method reduces the risk of failure in learning, particularly in reading and writing, when children start school.'
     eParagraf3: 'Our main advantages include an interactive program focused on learning through play, functional arrangement of the play area, phonemic awareness training through stimulation program, English language learning, high standards of primary care and hygiene, year-round operation (closed only on public holidays and weekends), facilities with modern equipment, and a safe location with great accessibility.'
-
+    alt:
+        about_us_image: "About Us Image"
+        bee_class_image_1: "Bee Class Image 1"
+        bee_class_image_2: "Bee Class Image 2"
+        owl_class_image_1: "Owl Class Image 1"
+        owl_class_image_2: "Owl Class Image 2"
 forParents:
     aHeading1: 'What You Don t Need to Worry About'
     aLi1: 'anti-allergic mattresses'
@@ -139,3 +145,50 @@ schedule:
     
 event:
     popular_events: 'Events'
+
+
+page:
+    title:
+        home: "Home - Štúrová Kindergarten"
+        about_us: "About Us - Štúrová Kindergarten"
+        reviews: "Reviews - Štúrová Kindergarten"
+        contact: "Contact Us - Štúrová Kindergarten"
+        for_parents: "For Parents - Štúrová Kindergarten"
+        teachers: "Our Team - Štúrová Kindergarten"
+        gallery: "Gallery - Štúrová Kindergarten"
+        long_menu: "Weekly Menu - Štúrová Kindergarten"
+        short_menu: "Short Menu - Štúrová Kindergarten"
+        schedule: "Schedule - Štúrová Kindergarten"
+        child_safety: "Child Safety - Štúrová Kindergarten"
+        event: "Events - Štúrová Kindergarten"
+    description:
+        home: "Discover more about our school, our values, and our mission to provide quality education."
+        about_us: "Learn more about our history, mission, and values that drive our educational approach."
+        reviews: "Read reviews from our students and parents and see why they love our school."
+        contact: "Get in touch with us for any inquiries or support. We are here to help you."
+        for_parents: "Find resources and important information for parents of our students."
+        teachers: "Meet our dedicated team of teachers who are committed to student success."
+        gallery: "Explore our photo gallery showcasing events and activities at our school."
+        long_menu: "Check out our weekly menu with a variety of delicious and healthy meals."
+        short_menu: "View our daily menu offering nutritious choices for students."
+        schedule: "View the class schedule for the current term and plan your classes accordingly."
+        child_safety: "Learn about our child safety policies and procedures to ensure a safe environment."
+        event: "Stay updated with our latest events and activities happening at our school."
+
+    keywords:
+        home: "school, education, mission, values"
+        about_us: "about us, history, mission, values"
+        reviews: "reviews, testimonials, feedback"
+        contact: "contact, inquiries, support"
+        for_parents: "parents, resources, information"
+        teachers: "teachers, staff, team"
+        gallery: "gallery, photos, events, activities"
+        long_menu: "menu, weekly menu, meals"
+        short_menu: "menu, daily menu, healthy meals"
+        schedule: "schedule, class schedule, term"
+        child_safety: "child safety, policies, procedures"
+        event: "events, activities, updates"
+
+
+gallery.message: "More galleries will be added soon, thank you for your patience."
+banner.image_alt: "Photo from our kindergarten, with kids during activity"

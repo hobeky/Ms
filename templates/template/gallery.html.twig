@@ -1,22 +1,21 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
     <section id="gallery">
         <div class="container padding-medium">
             {% for galleryItem in gallery %}
-                <h2 class="display-4 text-center mb-5">{{galleryItem.title}}</h2>
+                <h1 class="display-4 text-center mb-5">{{ galleryItem.title }}</h1>
                 <div class="row entry-container mb-5">
                     {% for image in galleryItem.images %}
                         <div class="entry-item col-md-4 my-3">
-                            <a href="{{ path('image_upload', {'size':'original', 'imageName': image})}}" title="Kindergarten" class="image-link"><img
-                                    src="{{ path('image_upload', {'size':'medium', 'imageName': image})}}"
-                                    class=" post-image img-fluid rounded-4"></a>
+                            <a href="{{ path('image_upload', {'size':'original', 'imageName': image})}}" title="{{ galleryItem.title }}" class="image-link">
+                                <img src="{{ path('image_upload', {'size':'medium', 'imageName': image})}}" class="post-image img-fluid rounded-4" alt="{{ galleryItem.title }} Image">
+                            </a>
                         </div>
                     {% endfor %}
                 </div>
             {% endfor %}
         </div>
     </section>
-    <h2 class="text-center mb-5">Dalsie galerie budu pridane v dohladnej dobe, dakujeme za trpezlivost</h2>
+    <h2 class="text-center mb-5">{{ 'gallery.message'|trans }}</h2>
 {% endblock %}

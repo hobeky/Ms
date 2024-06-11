@@ -22,8 +22,6 @@ class FoodDayCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            FormField::addColumn(12),
-            DateField::new('day'),
             FormField::addColumn(3),
             AssociationField::new('breakfast')->renderAsEmbeddedForm(FoodCrudController::class),
             FormField::addColumn(3),

@@ -1,11 +1,18 @@
 <section id="banner" class="jarallax position-relative"
+{#         aria-label="{{ 'banner.image_alt'|trans }}"#}
          style="
-             background-image: url('{{ asset('images/test.jpg') }}');
+             background-image: url('{{ hero_image()? path('image_upload', {'imageName': hero_image().image}):asset('images/test.jpg') }}');
              background-size: cover;
              background-repeat: no-repeat;
              background-position: center;
              margin-bottom: 2em;
              ">
+    <img
+        src="{{ hero_image()? path('image_upload', {'imageName': hero_image().image}):asset('images/test.jpg') }}"
+        alt="{{ hero_image() and hero_image().title is not null ? hero_image().title : 'banner.image_alt'|trans }}"
+        style="display: none;"
+    >
+
 
     <div class="d-none d-md-flex justify-content-between position-absolute w-100 px-5 pt-5 mt-lg-5">
         <div> <iconify-icon icon="solar:cloud-sun-2-outline"

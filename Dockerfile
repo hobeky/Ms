@@ -29,7 +29,7 @@ RUN set -eux; \
 		intl \
 		opcache \
 		zip \
-    	pdo_pgsql \
+    	pdo_mysql \
     	gd \
 	;
 

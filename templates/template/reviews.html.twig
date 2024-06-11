@@ -3,7 +3,7 @@
 {% block body %}
     <section id="review">
         <div class="services-sub container padding-medium">
-            <h2 class="display-4 text-center mb-5">{{ 'review.reviewsFromParents'|trans }}</h2>
+            <h1 class="display-4 text-center mb-5">{{ 'review.reviewsFromParents'|trans }}</h1>
             <div class="row">
 
                 {% for review in reviews %}
@@ -13,7 +13,7 @@
                             <p>“{{ review.reviewText }}”</p>
                             <div class="row mt-4">
                                 <div class="col-md-8">
-                                    <h5 class="lh-sm">{{ review.nick }}</h5>
+                                    <h2 class="lh-sm">{{ review.nick }}</h2>
                                     <div class="d-flex">
                                         {% for i in 1..(review.stars|number_format(0, 'floor')) %}
                                             <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>
@@ -22,7 +22,7 @@
                                 </div>
                                 {% if review.createdAt %}
                                     <div class="col-md-4 text-end">
-                                        <small class="text-muted">{{ review.createdAt|date('d m, Y') }}</small>
+                                        <small class="text-muted">{{ review.createdAt|date('d M, Y') }}</small>
                                     </div>
                                 {% endif %}
                             </div>
@@ -31,14 +31,11 @@
                 {% endfor %}
 
             </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        {% include 'review/new.html.twig' %}
-                    </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {% include 'review/new.html.twig' %}
                 </div>
-
-
-
+            </div>
         </div>
     </section>
 {% endblock %}

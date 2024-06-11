@@ -24,6 +24,24 @@ doctrine:
                 alias: App
         controller_resolver:
             auto_mapping: true
+        dql:
+            string_functions:
+                GROUP_CONCAT: DoctrineExtensions\Query\Mysql\GroupConcat
+                DATE_FORMAT: DoctrineExtensions\Query\Mysql\DateFormat
+                MATCH: DoctrineExtensions\Query\Mysql\MatchAgainst
+            numeric_functions:
+                ACOS: DoctrineExtensions\Query\Mysql\Acos
+                CEIL: DoctrineExtensions\Query\Mysql\Ceil
+                COS: DoctrineExtensions\Query\Mysql\Cos
+                FLOOR: DoctrineExtensions\Query\Mysql\Floor
+                SIN: DoctrineExtensions\Query\Mysql\Sin
+                TAN: DoctrineExtensions\Query\Mysql\Tan
+                RAND: DoctrineExtensions\Query\Mysql\Rand
+            datetime_functions:
+                DATE_ADD: DoctrineExtensions\Query\Mysql\DateAdd
+                DATEDIFF: DoctrineExtensions\Query\Mysql\DateDiff
+                DATE_SUB: DoctrineExtensions\Query\Mysql\DateSub
+                NOW: DoctrineExtensions\Query\Mysql\Now
 
 when@test:
     doctrine:

@@ -6,12 +6,12 @@
             <div class="col-md-6 pe-md-5">
                 <div class="imageblock">
                     <div class="animated-border">
-                        <img src="{{ asset('images/about-img.jpg') }}" alt="img" class="img-fluid rounded-circle">
+                        <img src="{{ asset('images/about-img.jpg') }}" alt="{{ 'about.alt.about_us_image' | trans }}" class="img-fluid rounded-circle">
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mt-5 mt-md-0">
-                <h2 class="display-4">{{ 'about.aHeading1' | trans }}</h2>
+                <h1 class="display-4">{{ 'about.aHeading1' | trans }}</h1>
                 <p><b>{{ 'about.aHeading2' | trans }}</b></p>
                 <p>{{ 'about.aParagraph1' | trans }}</p>
             </div>
@@ -27,12 +27,12 @@
         <div class="row">
             <div class="col-md-6">
                 <figure>
-                    <img src="{{ asset('images/blog1.jpg') }}" alt="Sample Image" class="img-fluid">
+                    <img src="{{ asset('images/blog1.jpg') }}" alt="{{ 'about.alt.bee_class_image_1' | trans }}" class="img-fluid">
                 </figure>
             </div>
             <div class="col-md-6">
                 <figure>
-                    <img src="{{ asset('images/blog1.jpg') }}" alt="Sample Image" class="img-fluid">
+                    <img src="{{ asset('images/blog2.jpg') }}" alt="{{ 'about.alt.bee_class_image_2' | trans }}" class="img-fluid">
                 </figure>
             </div>
         </div>
@@ -47,16 +47,15 @@
         <div class="row">
             <div class="col-md-6">
                 <figure>
-                    <img src="{{ asset('images/blog1.jpg') }}" alt="Sample Image" class="img-fluid">
+                    <img src="{{ asset('images/blog3.jpg') }}" alt="{{ 'about.alt.owl_class_image_1' | trans }}" class="img-fluid">
                 </figure>
             </div>
             <div class="col-md-6">
                 <figure>
-                    <img src="{{ asset('images/blog1.jpg') }}" alt="Sample Image" class="img-fluid">
+                    <img src="{{ asset('images/blog4.jpg') }}" alt="{{ 'about.alt.owl_class_image_2' | trans }}" class="img-fluid">
                 </figure>
             </div>
         </div>
-
 
         <p>{{ 'about.bParagraph1' | trans }}</p>
         <p>{{ 'about.bParagraph2' | trans }}</p>
@@ -64,7 +63,7 @@
         <p>{{ 'about.bParagraph4' | trans }}</p>
         <p>{{ 'about.bParagraph5' | trans }}</p>
 
-        <h1>{{ 'about.cHeading1' | trans }}</h1>
+        <h2>{{ 'about.cHeading1' | trans }}</h2>
 
         <ul>
             <li>{{ 'about.cLi1' | trans }}</li>
@@ -81,7 +80,7 @@
             <li>{{ 'about.cLi12' | trans }}</li>
         </ul>
 
-        <h1>{{ 'about.dHeading1' | trans }}</h1>
+        <h2>{{ 'about.dHeading1' | trans }}</h2>
         <ul>
             <li>{{ 'about.dLi1' | trans }}</li>
             <li>{{ 'about.dLi2' | trans }}</li>
@@ -94,7 +93,7 @@
             <li>{{ 'about.dLi9' | trans }}</li>
         </ul>
 
-        <h2>{{ 'about.eHeading1' | trans }}</h2>
+        <h3>{{ 'about.eHeading1' | trans }}</h3>
         <p>{{ 'about.eParagraf1' | trans }}</p>
     </div>
 

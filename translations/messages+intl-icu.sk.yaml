@@ -1,6 +1,6 @@
 main:
     about: 'O nás'
-    revies: 'Recenzie'
+    reviews: 'Recenzie'
     contact: 'Kontakt'
     forParents: 'Pre Rodičov'
     ourTeam: 'Náš tím'
@@ -13,6 +13,7 @@ main:
     workDays: 'Pracovné dni'
     GDPR: 'Ochrana osobných údajov'
     event: 'Udalosti'
+    picture: ' obrázok'
 
 about:
     aHeading1: 'Poskytujeme Povinné Predprimárne Vzdelávanie'
@@ -52,7 +53,12 @@ about:
     eParagraf1: 'Fonematické uvedomovanie je schopnosť uvedomovať si zvukovú štruktúru slov, uskutočňovať hláskovú analýzu a syntézu slov, odobrať a zmeniť poradie hlásky.'
     eParagraf2: 'Použitím tejto metódy sa znižuje riziko zlyhávania v učení, a to v čítaní a písaní, keď prídu do školy.'
     eParagraf3: 'Za naše hlavné výhody považujeme interaktívny program zameraný na učenie hrou, funkčné usporiadanie herne ,tréning fonematického uvedomovania u deti v predškolskom veku prostredníctvom stimulačného programu, výučbu angličtiny, vysoký štandard primárnej starostlivosti a hygieny, celoročnú prevádzku (zatvorené je iba počas štátnych sviatkov a víkendov), kvalitné priestory s moderným vybavením a bezpečnú lokalitu s dobrou dostupnosťou.'
-
+    alt:
+        about_us_image: "Obrázok O Nás"
+        bee_class_image_1: "Obrázok 1 Trieda Včiel"
+        bee_class_image_2: "Obrázok 2 Trieda Včiel "
+        owl_class_image_1: "Obrázok 1 Trieda Sôv"
+        owl_class_image_2: "Obrázok 2 Trieda Sôv"
 review:
     reviewsFromParents: 'Recenzie Od Rodičov'
     formHeading: 'Akú máte s nami skúsenosť?'
@@ -146,3 +152,50 @@ kidSafety:
 
 event:
     popular_events: 'Udalosti'
+
+
+
+page:
+    title:
+        home: "Domov - MŠ Štúrová"
+        about_us: "O nás - MŠ Štúrová"
+        reviews: "Recenzie - MŠ Štúrová"
+        contact: "Kontakt - MŠ Štúrová"
+        for_parents: "Pre rodičov - MŠ Štúrová"
+        teachers: "Náš tím - MŠ Štúrová"
+        gallery: "Galéria - MŠ Štúrová"
+        long_menu: "Týždenné menu - MŠ Štúrová"
+        short_menu: "Krátke menu - MŠ Štúrová"
+        schedule: "Rozvrh - MŠ Štúrová"
+        child_safety: "Bezpečnosť detí - MŠ Štúrová"
+        event: "Udalosti - MŠ Štúrová"
+    description:
+        home: "Vitajte na našej stránke. Zistite viac o nás."
+        about_us: "Dozviete sa viac o našej misii a hodnotách."
+        reviews: "Prečítajte si, čo o nás hovoria naši zákazníci."
+        contact: "Kontaktujte nás pre viac informácií."
+        for_parents: "Informácie a zdroje pre rodičov."
+        teachers: "Zoznámte sa s našim odhodlaným tímom profesionálov."
+        gallery: "Pozrite si našu foto galériu."
+        long_menu: "Pozrite si naše chutné týždenné menu."
+        short_menu: "Pozrite si naše krátke menu."
+        schedule: "Zobraziť náš denný rozvrh."
+        child_safety: "Zistite viac o našich opatreniach pre bezpečnosť detí."
+        event: "Sledujte naše najnovšie udalosti."
+    keywords:
+        home: "domov, MŠ Štúrová"
+        about_us: "o nás, misia, hodnoty"
+        reviews: "recenzie, spätná väzba zákazníkov"
+        contact: "kontakt, spojte sa s nami"
+        for_parents: "rodičia, zdroje, informácie"
+        teachers: "tím, učitelia, profesionáli"
+        gallery: "galéria, fotografie, obrázky"
+        long_menu: "menu, jedlo, týždenné"
+        short_menu: "menu, jedlo, krátke menu"
+        schedule: "rozvrh, denný, časový rozvrh"
+        child_safety: "bezpečnosť detí, zabezpečenie, opatrenia"
+        event: "udalosti, aktualizácie, správy"
+        
+gallery.message: "Ďalšie galérie budú pridané v dohľadnej dobe, ďakujeme za trpezlivosť."
+banner.image_alt: "Fotografia z našej škôlky, s deťmi počas aktivity"
+
