@@ -1,35 +1,36 @@
-<section id="banner" class="jarallax position-relative"
-{#         aria-label="{{ 'banner.image_alt'|trans }}"#}
-         style="
-             background-image: url('{{ hero_image()? path('image_upload', {'imageName': hero_image().image}):asset('images/test.jpg') }}');
-             background-size: cover;
-             background-repeat: no-repeat;
-             background-position: center;
-             margin-bottom: 2em;
-             ">
-    <img
-        src="{{ hero_image()? path('image_upload', {'imageName': hero_image().image}):asset('images/test.jpg') }}"
-        alt="{{ hero_image() and hero_image().title is not null ? hero_image().title : 'banner.image_alt'|trans }}"
-        style="display: none;"
-    >
+{% if heroName is defined %}
+    <section id="banner" class="jarallax position-relative"
+        {#         aria-label="{{ 'banner.image_alt'|trans }}"#}
+             style="
+                 background-image: url('{{ hero_image() ? path('image_upload', {'imageName': hero_image().image}) : asset('images/test.jpg') }}');
+                 background-size: cover;
+                 background-repeat: no-repeat;
+                 background-position: center;
+                 margin-bottom: 2em;
+                 ">
+        <img
+            src="{{ hero_image() ? path('image_upload', {'imageName': hero_image().image}) : asset('images/test.jpg') }}"
+            alt="{{ hero_image() and hero_image().title is not null ? hero_image().title : 'banner.image_alt'|trans }}"
+            style="display: none;"
+        >
 
-
-    <div class="d-none d-md-flex justify-content-between position-absolute w-100 px-5 pt-5 mt-lg-5">
-        <div> <iconify-icon icon="solar:cloud-sun-2-outline"
-                            class="icon-float1 text-info-emphasis opacity-75"></iconify-icon></div>
-        <div> </div>
-        <div> </div>
-        <div> </div>
-        <div> <iconify-icon icon="solar:ufo-outline" class="icon-float2 text-warning opacity-75"></iconify-icon> </div>
-        <div> </div>
-        <div> <iconify-icon icon="ph:rainbow-cloud" class="icon-float1 text-success opacity-75"></iconify-icon></div>
-        <div> </div>
-        <div> <iconify-icon icon="solar:sun-2-outline" class="icon-float2 text-danger opacity-75"></iconify-icon> </div>
-    </div>
-
-    <div class="container padding-medium">
-        <div class="hero-content ">
-            <h2 class="banner-title display-2 text-white">{{ heroName|trans }}</h2>
+        <div class="d-none d-md-flex justify-content-between position-absolute w-100 px-5 pt-5 mt-lg-5">
+            <div> <iconify-icon icon="solar:cloud-sun-2-outline"
+                                class="icon-float1 text-info-emphasis opacity-75"></iconify-icon></div>
+            <div> </div>
+            <div> </div>
+            <div> </div>
+            <div> <iconify-icon icon="solar:ufo-outline" class="icon-float2 text-warning opacity-75"></iconify-icon> </div>
+            <div> </div>
+            <div> <iconify-icon icon="ph:rainbow-cloud" class="icon-float1 text-success opacity-75"></iconify-icon></div>
+            <div> </div>
+            <div> <iconify-icon icon="solar:sun-2-outline" class="icon-float2 text-danger opacity-75"></iconify-icon> </div>
         </div>
-    </div>
-</section>
+
+        <div class="container padding-medium">
+            <div class="hero-content ">
+                <h2 class="banner-title display-2 text-white">{{ heroName|trans }}</h2>
+            </div>
+        </div>
+    </section>
+{% endif %}

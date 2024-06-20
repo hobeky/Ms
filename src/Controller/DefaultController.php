@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Hero;
 use App\Entity\Review;
 use App\Entity\Teacher;
+use App\Entity\User;
 use App\Form\ReviewType;
 use App\Repository\EventRepository;
 use App\Repository\FoodWeekRepository;
@@ -72,6 +73,17 @@ class DefaultController extends AbstractController
     #[Route('/kontakt', name: 'contact')]
     public function contact(): Response
     {
+//        $user = new User();
+//        $user->setEmail('hobeky@gmail.com');
+//        $user->setPassword('$2b$04$.1Xa24lgpq5CrRV3HFdmmOmjhMyoYChPkyLZIBEge3EwyWFhT5XBu');
+//        $user->setRoles(['ROLE_USER', 'ROLE_ADMIN']);
+//
+//        $this->entityManager->persist($user);
+//        $this->entityManager->flush();
+
+        $userRepo = $this->entityManager->getRepository(User::class);
+        dump($userRepo->findAll());
+
         return $this->render('template/contact.html.twig', [
             'heroName' => 'main.contact',
             'page_title' => 'page.title.contact',
