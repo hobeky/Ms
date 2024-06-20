@@ -59,7 +59,7 @@ class DefaultController extends AbstractController
         }
 
         return $this->render('template/reviews.html.twig', [
-            'heroName' => 'reviews.title',
+            'heroName' => 'main.reviews',
             'review' => $review,
             'form' => $form->createView(),
             'reviews' => $reviewRepository->allAsc(),
@@ -121,11 +121,21 @@ class DefaultController extends AbstractController
     #[Route('/jedalny-listok', name: 'long_menu')]
     public function menu(FoodWeekRepository $foodWeekRepository): Response
     {
-        $foodWeek = $foodWeekRepository->findAll();
-        dump($foodWeek);
+        // Get all FoodWeek entities
+        $foodWeeks = $foodWeekRepository->findAll();
+
+        // Filter the most recent FoodWeek
+        $recentFoodWeek = null;
+        if (!empty($foodWeeks)) {
+            usort($foodWeeks, function($a, $b) {
+                return $b->getCreatedAt() <=> $a->getCreatedAt();
+            });
+            $recentFoodWeek = $foodWeeks[0];
+        }
+
         return $this->render('template/meal-menu.html.twig', [
             'heroName' => 'main.menu',
-            'foodWeek' => $foodWeek,
+            'foodWeek' => $recentFoodWeek,
             'page_title' => 'page.title.long_menu',
             'page_description' => 'page.description.long_menu',
             'page_keywords' => 'page.keywords.long_menu'
@@ -135,11 +145,21 @@ class DefaultController extends AbstractController
     #[Route('/jedalny-listok-kratky', name: 'short_menu')]
     public function shortMenu(FoodWeekRepository $foodWeekRepository): Response
     {
-        $foodWeek = $foodWeekRepository->findOneBy([], ['mondayDate'=> 'DESC']);
+        // Get all FoodWeek entities
+        $foodWeeks = $foodWeekRepository->findAll();
+
+        // Filter the most recent FoodWeek
+        $recentFoodWeek = null;
+        if (!empty($foodWeeks)) {
+            usort($foodWeeks, function($a, $b) {
+                return $b->getCreatedAt() <=> $a->getCreatedAt();
+            });
+            $recentFoodWeek = $foodWeeks[0];
+        }
 
         return $this->render('template/menu-short.html.twig', [
             'heroName' => 'main.menu',
-            'foodWeek' => $foodWeek,
+            'foodWeek' => $recentFoodWeek,
             'page_title' => 'page.title.short_menu',
             'page_description' => 'page.description.short_menu',
             'page_keywords' => 'page.keywords.short_menu'

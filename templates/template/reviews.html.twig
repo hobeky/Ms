@@ -13,7 +13,7 @@
                             <p>“{{ review.reviewText }}”</p>
                             <div class="row mt-4">
                                 <div class="col-md-8">
-                                    <h2 class="lh-sm">{{ review.nick }}</h2>
+                                    <h2 class="lh-sm">{{ review.formPlaceholderName }}</h2>
                                     <div class="d-flex">
                                         {% for i in 1..(review.stars|number_format(0, 'floor')) %}
                                             <iconify-icon icon="ion:star" class="rate pe-1 text-warning"></iconify-icon>

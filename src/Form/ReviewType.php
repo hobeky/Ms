@@ -10,14 +10,26 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class ReviewType extends AbstractType
 {
+    public function __construct(
+        private readonly TranslatorInterface $translator
+    )
+    {
+
+    }
+
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nick', TextType::class)
-            ->add('reviewText', TextareaType::class)
+            ->add('nick', TextType::class, [
+                'label' => $this->translator->trans('review.formPlaceholderName')
+            ])
+            ->add('reviewText', TextareaType::class, [
+                'label' => $this->translator->trans('review.formPlaceholderReview')
+            ])
             ->add('stars', ChoiceType::class, [
             'choices'  => [
                 '1 Star' => 1,
@@ -38,3 +50,4 @@ class ReviewType extends AbstractType
         ]);
     }
 }
+

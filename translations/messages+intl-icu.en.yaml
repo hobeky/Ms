@@ -29,9 +29,9 @@ menu:
     menuWednesday: 'Wednesday'
     menuThursday: 'Thursday'
     menuFriday: 'Friday'
-    menuBreakfast: 'Breakfast'
-    menuBrunch: 'Morning Snack'
-    menuLunch: 'Lunch'
+    menuBreakfast: 'Morning Snack'
+    menuBrunch: 'Soup'
+    menuLunch: 'Main meal'
     menuSnack: 'Afternoon Snack'
 
 kidSafety:
@@ -103,13 +103,13 @@ forParents:
     eParagraf2: 'Good mood 🙂'
 
 review:
-    reviewsFromParents: 'Reviews from parents'
-    formHeading: __review.formHeading
-    formSubHeading: __review.formSubHeading
-    formPlaceholderName: __review.formPlaceholderName
-    formPlaceholderStars: __review.formPlaceholderStars
-    formPlaceholderReview: __review.formPlaceholderReview
-    formButton: __review.formButton
+    reviewsFromParents: 'Reviews from Parents'
+    formHeading: 'What is your experience with us?'
+    formSubHeading: 'Share it with others'
+    formPlaceholderName: 'Name'
+    formPlaceholderStars: 'Review stars'
+    formPlaceholderReview: 'Review'
+    formButton: 'Submit'
 contact:
     heading1: 'Contact Information'
     subheading1: 'Call us, write to us, or come visit.'

@@ -125,9 +125,9 @@ menu:
     menuWednesday: 'Streda'
     menuThursday: 'Štvrtok'
     menuFriday: 'Piatok'
-    menuBreakfast: 'Raňajky'
-    menuBrunch: 'Desiata'
-    menuLunch: 'Obed'
+    menuBreakfast: 'Desiata'
+    menuBrunch: 'Polievka'
+    menuLunch: 'Hlavné jedlo'
     menuSnack: 'Olovrant'
 
 
