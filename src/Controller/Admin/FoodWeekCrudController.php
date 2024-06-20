@@ -24,28 +24,28 @@ class FoodWeekCrudController extends AbstractCrudController
         return [
             DateTimeField::new('mondayDate')
                ->setColumns(12)
-                ->addCssClass('text-large text-bold'),
+                ->addCssClass('text-large text-bold')
+            ->setLabel('Pondelkový dátum'),
 
            AssociationField::new('monday', 'Pondelok')
                ->renderAsEmbeddedForm(FoodDayCrudController::class)
-               ->setColumns(12)
-               ->addCssClass('text-large text-bold'),
+               ->hideOnIndex(),
 
            AssociationField::new('tuesday', 'Utorok')
                ->renderAsEmbeddedForm(FoodDayCrudController::class)
-               ->setColumns(12),
+               ->hideOnIndex(),
 
            AssociationField::new('wednesday', 'Streda')
                ->renderAsEmbeddedForm(FoodDayCrudController::class)
-               ->setColumns(12),
+               ->hideOnIndex(),
 
            AssociationField::new('thursday', 'Stvrtok')
                ->renderAsEmbeddedForm(FoodDayCrudController::class)
-               ->setColumns(12),
+               ->hideOnIndex(),
 
            AssociationField::new('friday', 'Piatok')
                ->renderAsEmbeddedForm(FoodDayCrudController::class)
-               ->setColumns(12),
+               ->hideOnIndex(),
         ];
     }
 
