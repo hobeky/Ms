@@ -17,6 +17,11 @@
         'class': 'd-none'
     }
 }) }}
+
+<div class="form-group">
+    {{ form_row(form.captcha, {'attr': {'class': 'form-control'}}) }}
+</div>
+
 <button type="submit" class="btn btn-primary mt-4">{{ 'review.formButton'|trans }}</button>
 {{ form_end(form) }}
 
@@ -52,5 +57,4 @@
             });
         });
     });
-
 </script>

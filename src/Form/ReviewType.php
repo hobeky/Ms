@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Review;
+use Gregwar\CaptchaBundle\Type\CaptchaType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -40,6 +41,10 @@ class ReviewType extends AbstractType
             ],
             'expanded' => true,
             'multiple' => false,
+        ])
+        ->add('captcha', CaptchaType::class, [
+            'label' => $this->translator->trans('review.formCaptcha'),
+            'attr' => ['class' => 'captcha-field']
         ]);
     }
 

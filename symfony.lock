@@ -47,6 +47,9 @@
     "fabricio872/register-command": {
         "version": "v2.0.0"
     },
+    "gregwar/captcha-bundle": {
+        "version": "v2.3.0"
+    },
     "stof/doctrine-extensions-bundle": {
         "version": "1.10",
         "recipe": {

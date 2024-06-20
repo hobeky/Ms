@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="MsDatabaza" uuid="c39389d1-746c-4b57-9d77-cf727b1e9aef">
+    <data-source source="LOCAL" name="ms_sturova_db" uuid="57f73738-2701-4f31-b1a2-561656735fdd">
       <driver-ref>mariadb</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mariadb://mysql1.inver.int/</jdbc-url>
+      <jdbc-url>jdbc:mariadb://sql11.hostcreators.sk:3316</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
