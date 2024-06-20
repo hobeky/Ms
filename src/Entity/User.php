@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Fabricio872\RegisterCommand\Annotations\RegisterCommand;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -17,18 +18,29 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?int $id = null;
 
     #[ORM\Column(length: 180)]
+    #[RegisterCommand(
+        field: "string",
+        userIdentifier: true
+    )]
     private ?string $email = null;
 
     /**
      * @var list<string> The user roles
      */
     #[ORM\Column]
+    #[RegisterCommand(
+        field: "list",
+        options: ["ROLE_USER", "ROLE_ADMIN", "ROLE_SUPER_ADMIN"]
+    )]
     private array $roles = [];
 
     /**
      * @var string The hashed password
      */
     #[ORM\Column]
+    #[RegisterCommand(
+        field: "password"
+    )]
     private ?string $password = null;
 
     public function getId(): ?int
