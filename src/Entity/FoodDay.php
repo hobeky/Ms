@@ -25,6 +25,11 @@ class FoodDay
     #[ORM\OneToOne(cascade: ['persist', 'remove'], fetch: 'EAGER')]
     private ?Food $snack2 = null;
 
+    public function __toString(): string
+    {
+        return (string)$this->id;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
