@@ -33,7 +33,9 @@ class EventCrudController extends AbstractCrudController
                 ->hideOnForm(),
             TextField::new('title', 'Event Title')
                 ->setColumns(12),
-            ImageField::new('image')->setBasePath('/image/medium/')->setUploadDir($this->parameterBag->get('img_dir') . 'original'),
+            ImageField::new('image')
+                ->setBasePath('/image/medium/')
+                ->setUploadDir($this->parameterBag->get('img_dir').'/original/' ),
             TextareaField::new('text', 'Description')
                 ->setHelp('Enter the detailed description of the event here.'), // Providing context for the input field
             TextField::new('place', 'Event Location'),

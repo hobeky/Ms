@@ -1,5 +1,0 @@
-gregwar_captcha:
-    image_src: '/captcha'
-    gcaptcha:
-        site_key: 'your_site_key'
-        secret_key: 'your_secret_key'

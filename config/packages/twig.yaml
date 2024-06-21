@@ -2,6 +2,7 @@ twig:
     file_name_pattern: '*.twig'
     globals:
         locales: sk,en
+        recaptcha_site_key: '%env(string:RECAPTCHA3_KEY)%'
 
 when@test:
     twig:

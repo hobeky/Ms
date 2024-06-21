@@ -40,7 +40,7 @@ class GalleryCrudController extends AbstractCrudController
                 ->setColumns(6),
             ImageField::new('images')
                 ->setBasePath('/image/medium/')
-                ->setUploadDir($this->parameterBag->get('img_dir') . 'original')
+                ->setUploadDir($this->parameterBag->get('img_dir') . '/original')
                 ->setFormTypeOptions(['multiple' => true])
                 ->setColumns(12)
             ,

@@ -38,7 +38,7 @@ class TeacherCrudController extends AbstractCrudController
                 ->setColumns(12),
             ImageField::new('image')
                 ->setBasePath('/image/medium/')
-                ->setUploadDir($this->parameterBag->get('img_dir') . 'original')
+                ->setUploadDir($this->parameterBag->get('img_dir') . '/original')
                 ->setColumns(12),
         ];
     }

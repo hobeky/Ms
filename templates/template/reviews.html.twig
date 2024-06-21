@@ -1,5 +1,18 @@
 {% extends 'base.html.twig' %}
 
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://www.google.com/recaptcha/api.js?render={{ recaptcha_site_key }}"></script>
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('{{ recaptcha_site_key }}', {action: 'homepage'}).then(function(token) {
+                document.querySelector('.captcha-field').value = token;
+            });
+        });
+    </script>
+{% endblock %}
+
+
 {% block body %}
     <section id="review">
         <div class="services-sub container padding-medium">

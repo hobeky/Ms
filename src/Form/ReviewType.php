@@ -2,13 +2,12 @@
 
 namespace App\Form;
 
-use App\Entity\Review;
-use Gregwar\CaptchaBundle\Type\CaptchaType;
+use Karser\Recaptcha3Bundle\Form\Recaptcha3Type;
+use Karser\Recaptcha3Bundle\Validator\Constraints\Recaptcha3;
+use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Contracts\Translation\TranslatorInterface;
@@ -31,6 +30,12 @@ class ReviewType extends AbstractType
             ->add('reviewText', TextareaType::class, [
                 'label' => $this->translator->trans('review.formPlaceholderReview')
             ])
+            ->add('captcha', Recaptcha3Type::class, [
+                'attr' => ['class' => 'captcha-field'],
+                'constraints' => new Recaptcha3(),
+                'action_name' => 'homepage',
+                'mapped' => false
+            ])
             ->add('stars', ChoiceType::class, [
             'choices'  => [
                 '1 Star' => 1,
@@ -41,10 +46,6 @@ class ReviewType extends AbstractType
             ],
             'expanded' => true,
             'multiple' => false,
-        ])
-        ->add('captcha', CaptchaType::class, [
-            'label' => $this->translator->trans('review.formCaptcha'),
-            'attr' => ['class' => 'captcha-field']
         ]);
     }
 
