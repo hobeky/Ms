@@ -31,10 +31,8 @@ class ReviewType extends AbstractType
                 'label' => $this->translator->trans('review.formPlaceholderReview')
             ])
             ->add('captcha', Recaptcha3Type::class, [
-                'attr' => ['class' => 'captcha-field'],
                 'constraints' => new Recaptcha3(),
                 'action_name' => 'homepage',
-                'mapped' => false
             ])
             ->add('stars', ChoiceType::class, [
             'choices'  => [

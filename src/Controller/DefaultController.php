@@ -6,12 +6,14 @@ use App\Entity\Hero;
 use App\Entity\Review;
 use App\Entity\Teacher;
 use App\Entity\User;
+use App\Form\ContactType;
 use App\Form\ReviewType;
 use App\Repository\EventRepository;
 use App\Repository\FoodWeekRepository;
 use App\Repository\GalleryRepository;
 use App\Repository\ReviewRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Karser\Recaptcha3Bundle\Validator\Constraints\Recaptcha3Validator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -46,13 +48,21 @@ class DefaultController extends AbstractController
     }
 
     #[Route('/recenzie', name: 'reviews')]
-    public function reviews(Request $request, ReviewRepository $reviewRepository): Response
+    public function reviews(
+        Request $request,
+        ReviewRepository $reviewRepository,
+        Recaptcha3Validator $recaptcha3Validator
+    ): Response
     {
         $review = new Review();
         $form = $this->createForm(ReviewType::class, $review);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            dump('hi');
+            $score = $recaptcha3Validator->getLastResponse()->getScore();
+            dump($score);
+            dump($review);
             $this->entityManager->persist($review);
             $this->entityManager->flush();
 
@@ -66,29 +76,36 @@ class DefaultController extends AbstractController
             'reviews' => $reviewRepository->allAsc(),
             'page_title' => 'page.title.reviews',
             'page_description' => 'page.description.reviews',
-            'page_keywords' => 'page.keywords.reviews'
+            'page_keywords' => 'page.keywords.reviews',
+            'siteKey' => $this->getParameter('captchaKey')
         ]);
     }
 
     #[Route('/kontakt', name: 'contact')]
-    public function contact(): Response
+    public function contact(Request $request): Response
     {
-//        $user = new User();
-//        $user->setEmail('hobeky@gmail.com');
-//        $user->setPassword('$2b$04$.1Xa24lgpq5CrRV3HFdmmOmjhMyoYChPkyLZIBEge3EwyWFhT5XBu');
-//        $user->setRoles(['ROLE_USER', 'ROLE_ADMIN']);
-//
-//        $this->entityManager->persist($user);
-//        $this->entityManager->flush();
+        $form = $this->createForm(ContactType::class);
 
-        $userRepo = $this->entityManager->getRepository(User::class);
-        dump($userRepo->findAll());
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $data = $form->getData();
+            // Handle form data (e.g., send email, save to database, etc.)
+
+            // Add a flash message
+            $this->addFlash('success', 'Your message has been sent!');
+
+            // Redirect to avoid re-submitting the form on page refresh
+            return $this->redirectToRoute('contact');
+        }
 
         return $this->render('template/contact.html.twig', [
             'heroName' => 'main.contact',
             'page_title' => 'page.title.contact',
             'page_description' => 'page.description.contact',
-            'page_keywords' => 'page.keywords.contact'
+            'page_keywords' => 'page.keywords.contact',
+            'form' => $form->createView(),
+            'siteKey' => $this->getParameter('captchaKey'),
         ]);
     }
 
