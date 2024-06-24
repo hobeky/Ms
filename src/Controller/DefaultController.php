@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Contact;
 use App\Entity\Hero;
 use App\Entity\Review;
 use App\Entity\Teacher;
@@ -81,14 +82,16 @@ class DefaultController extends AbstractController
     #[Route('/kontakt', name: 'contact')]
     public function contact(Request $request): Response
     {
-        $form = $this->createForm(ContactType::class);
+        $email = new Contact();
+        $form = $this->createForm(ContactType::class, $email);
 
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
             // Handle form data (e.g., send email, save to database, etc.)
-
+            $this->entityManager->persist($email);
+            $this->entityManager->flush();
             // Add a flash message
             $this->addFlash('success', 'Your message has been sent!');
 
