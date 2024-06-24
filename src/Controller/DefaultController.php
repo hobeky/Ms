@@ -59,10 +59,7 @@ class DefaultController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            dump('hi');
             $score = $recaptcha3Validator->getLastResponse()->getScore();
-            dump($score);
-            dump($review);
             $this->entityManager->persist($review);
             $this->entityManager->flush();
 

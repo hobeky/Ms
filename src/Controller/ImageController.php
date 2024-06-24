@@ -39,7 +39,6 @@ class ImageController extends AbstractController
             $imageName
         );
 
-        dump($desiredImagePath);
         $host = $request->server->get('REQUEST_SCHEME') . '://' . $request->getHttpHost();
         $pathArray = explode('/', $originalImagePath);
         $imageName = end($pathArray);
