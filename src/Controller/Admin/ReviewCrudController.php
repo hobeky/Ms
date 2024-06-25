@@ -2,32 +2,27 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Food;
+use App\Entity\Review;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use EasyCorp\Bundle\EasyAdminBundle\Field\FormField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
-class FoodCrudController extends AbstractCrudController
+class ReviewCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
     {
-        return Food::class;
+        return Review::class;
     }
 
-
+    /*
     public function configureFields(string $pageName): iterable
     {
         return [
-            FormField::addColumn(12),
+            IdField::new('id'),
             TextField::new('title'),
-//            for now it is enough to use just title
-//            FormField::addColumn(12),
-//            TextField::new('description'),
-//            FormField::addColumn(12),
-//            TextField::new('alergens'),
+            TextEditorField::new('description'),
         ];
     }
-
+    */
 }
