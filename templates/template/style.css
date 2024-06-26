@@ -46,7 +46,7 @@ CSS STRUCTURE:
   4.5 Testimonial Section
   4.6 Faqs Section
   4.7 Pagination
-    
+
 /*--------------------------------------------------------------
 /** 1. VARIABLES
 --------------------------------------------------------------*/
@@ -208,7 +208,6 @@ h5,
 h6 {
   color: var(--black-color);
   font-family: var(--heading-font);
-  text-transform: capitalize;
   font-weight: 400;
   line-height: 3rem;
   letter-spacing: 0.0675rem;

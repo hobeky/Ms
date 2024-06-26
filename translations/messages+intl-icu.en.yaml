@@ -101,7 +101,10 @@ forParents:
     eParagraf1: 'Primer – purchased at the SMS'
     eHeading2: 'English with a tutor'
     eParagraf2: 'Good mood 🙂'
-
+    dHeading1: 'Download'
+document:
+    health_kid: 'Confirmation of child`s health status new'
+    application_kid: 'Application for child admission to nursery school'
 review:
     reviewsFromParents: 'Reviews from parents'
     formHeading: 'What is your experience with us?'

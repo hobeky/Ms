@@ -74,6 +74,25 @@
                             </div>
                         </div>
                     </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button bg-transparent focus-transparent shadow-none collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                {{ 'forParents.dHeading1'|trans }}
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                            <div class="accordion-body">
+                                <a download="" class="d-block py-2 fs-5" href="{{ asset('documents/Potvrdenie-o-zdravotnom-stave-dieťaťa-nové.doc') }}">
+                                    <i class="bi bi-download"></i>   {{ 'document.health_kid' | trans }}
+                                </a>
+                                <a download="" class="d-block py-2 fs-5" href="{{ asset('documents/Žiadosť-o-prijatie-dieťaťa-do-SMŠ.docx') }}">
+                                    <i class="bi bi-download"></i>   {{ 'document.application_kid'| trans }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

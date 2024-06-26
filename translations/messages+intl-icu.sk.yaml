@@ -102,7 +102,10 @@ forParents:
     eParagraf1: 'Šlabikár – zakúpený v SMŠ'
     eHeading2: 'Angličtina s lektorkou'
     eParagraf2: 'Dobrú náladu 🙂'
-
+    dHeading1: 'Na stiahnutie'
+document:
+    health_kid: 'Potvrdenie o zdravotnom stave dieťaťa nové'
+    application_kid: 'Žiadosť o prijatie dieťaťa do SMŠ'
 teachers:
     heading1: 'Vážení rodičia'
     paragraph1: 'radi by sme Vám predstavili pani učiteľky, ktoré sa s láskou starajú o všetky potreby našich detičiek.'
