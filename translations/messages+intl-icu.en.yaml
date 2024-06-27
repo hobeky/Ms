@@ -14,6 +14,7 @@ main:
     GDPR: 'GDPR'
     event: 'Events'
     picture: ' image'
+    pricing: 'Price list'
 
     
 menu:
@@ -164,6 +165,7 @@ page:
         schedule: "Schedule - Štúrová Kindergarten"
         child_safety: "Child Safety - Štúrová Kindergarten"
         event: "Events - Štúrová Kindergarten"
+        pricing: "Pricing - Štúrová Kindergarten"
     description:
         home: "Discover more about our school, our values, and our mission to provide quality education."
         about_us: "Learn more about our history, mission, and values that drive our educational approach."
@@ -177,7 +179,7 @@ page:
         schedule: "View the class schedule for the current term and plan your classes accordingly."
         child_safety: "Learn about our child safety policies and procedures to ensure a safe environment."
         event: "Stay updated with our latest events and activities happening at our school."
-
+        pricing: "Learn about our pricing and fee structure for various services."
     keywords:
         home: "school, education, mission, values"
         about_us: "about us, history, mission, values"
@@ -191,6 +193,31 @@ page:
         schedule: "schedule, class schedule, term"
         child_safety: "child safety, policies, procedures"
         event: "events, activities, updates"
+        pricing: "pricing, fees, costs"
+
+pricing:
+    title: 'Contribution Payment for Attendance and Meals'
+    information_to_title: 'The amount of the monthly contribution for partial coverage of costs associated with material provision in the preschool facility for one child is:'
+    title_half_day: 'half-day care'
+    title_full_day: 'full-day care'
+    enrollment_fee: '10% sibling discount for the second child'
+    title_price_included: 'The price includes all children`s activities:'
+    club_english: 'English with a lecturer'
+    club_ceramics: 'ceramics club'
+    club_dancing: 'dance and movement preparation with a lecturer'
+    club_fonematic: 'phonemic awareness training according to D.B. Eľkomina'
+    club_climbing: 'climbing wall'
+    gymnastic: 'gymnastics with a trainer'
+    title_pay_lunch: 'In addition to this contribution, the parent is obliged to pay the contribution for the child`s meals'
+    food_money: 'Meal cost'
+    food_money_classic: '2.9€/day (morning snack, lunch, afternoon snack)'
+    or: 'or'
+    food_money_gluten_free: '3.95€/day (morning snack, lunch, afternoon snack) - gluten-free diet'
+    info_payment_day: 'Tuition and meals are paid for the current month, by the 10th day of the month to the account:'
+    iban: 'IBAN: SK57 7500 0000 0040 2560 0967'
+    extra_club_money: 'Swimming, skiing, and skating lessons are paid by the parent, according to the current price list'
+    end_title_individual: 'Of course, there is teaching and an individual approach to each child.'
+    warning_pay_back_money: 'The flat fee for full-day/half-day care, or any part of it, will not be refunded for public holidays, state holidays, Christmas holidays, three-week summer holidays, in case of child illness, early termination of the child`s attendance at SMŠ during the month'
 
 
 gallery.message: "More galleries will be added soon, thank you for your patience."

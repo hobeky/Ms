@@ -164,6 +164,9 @@
                         <li class="nav-item px-3 py-2 py-lg-0">
                             <a class="nav-link p-0 {% if app.request.attributes.get('_route') == 'child_safety' %}active{% endif %}" aria-current="page" href="{{ path('child_safety') }}"><b>{{ 'main.kidSafety'|trans }}</b></a>
                         </li>
+                        <li class="nav-item px-3 py-2 py-lg-0">
+                            <a class="nav-link p-0 {% if app.request.attributes.get('_route') == 'pricing' %}active{% endif %}" aria-current="page" href="{{ path('pricing') }}"><b>{{ 'main.pricing'|trans }}</b></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -182,7 +185,7 @@
                     <use xlink:href="#location"></use>
                 </svg>Štúrova 44, 040 01 Košice
             </li>
-            <li class="email text-capitalize mb-2 d-flex justify-content-center align-items-center">
+            <li class="email mb-2 d-flex justify-content-center align-items-center">
                 <svg class="text-primary me-1" width="18" height="18">
                     <use xlink:href="#email"></use>
                 </svg>riaditel@mssturova.sk
@@ -195,7 +198,7 @@
             <li class="clock text-capitalize mb-2 d-flex justify-content-center align-items-center">
                 <svg class="text-primary me-1" width="18" height="18">
                     <use xlink:href="#clock"></use>
-                </svg>{{ 'main.workDays'| trans }} 8:00-16:00,
+                </svg>{{ 'main.workDays'| trans }} 7:00-17:00,
             </li>
             <li class="clock text-capitalize mb-2 d-flex justify-content-center align-items-center">
                 <a href="https://www.osobnyudaj.sk/informovanie/47025115/gdpr/sk/zakladne-informacie" target="_blank">{{ 'main.GDPR'|trans }}</a>

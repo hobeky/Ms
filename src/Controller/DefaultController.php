@@ -229,4 +229,15 @@ class DefaultController extends AbstractController
         ]);
     }
 
+
+    #[Route('/cennik', name: 'pricing')]
+    public function pricing(): Response
+    {
+        return $this->render('template/pricing.html.twig', [
+            'heroName' => 'main.pricing',
+            'page_title' => 'page.title.event',
+            'page_description' => 'page.description.event',
+            'page_keywords' => 'page.keywords.event'
+        ]);
+    }
 }

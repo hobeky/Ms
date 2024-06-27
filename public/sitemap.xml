@@ -73,6 +73,12 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://mssturova.sk/cennik</loc>
+        <lastmod>2024-06-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
     <!-- English (eng) locale URLs -->
     <url>
@@ -145,6 +151,12 @@
         <loc>https://mssturova.sk/en/event</loc>
         <lastmod>2024-06-11</lastmod>
         <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mssturova.sk/en/pricing</loc>
+        <lastmod>2024-06-27</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 </urlset>
