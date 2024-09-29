@@ -8,6 +8,7 @@ use App\Repository\GalleryRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: GalleryRepository::class)]
 class Gallery
@@ -35,6 +36,14 @@ class Gallery
 
     #[ORM\Column]
     private bool $isVisible = false;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    #[Assert\Url]
+    #[Assert\Regex(
+        pattern: "/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/",
+        message: "The URL must be a valid YouTube link containing a 'v' parameter with a valid video ID."
+    )]
+    private ?string $youtubeUrl = null;
 
     public function __construct()
     {
@@ -88,7 +97,7 @@ class Gallery
      */
     public function getImages(): ?array
     {
-        return $this->images->map(fn (Image $image) => $image->getFileName())->toArray();
+        return $this->images->map(fn(Image $image) => $image->getFileName())->toArray();
     }
 
     public function addImage(string $image): static
@@ -122,5 +131,29 @@ class Gallery
         $this->isVisible = $isVisible;
 
         return $this;
+    }
+
+    public function getYoutubeUrl(): ?string
+    {
+        return $this->youtubeUrl;
+    }
+
+    public function setYoutubeUrl(?string $youtubeUrl): static
+    {
+        $this->youtubeUrl = $youtubeUrl;
+
+        return $this;
+    }
+
+    public function getYoutubeId()
+    {
+        $parsedUrl = parse_url($this->youtubeUrl);
+        $queryParams = [];
+
+        if (isset($parsedUrl['query'])) {
+            parse_str($parsedUrl['query'], $queryParams);
+        }
+
+        return isset($queryParams['v']) ? $queryParams['v'] : null;
     }
 }
