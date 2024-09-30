@@ -2,12 +2,14 @@
 
 namespace App\Controller;
 
+use App\DTO\GallerySearchDto;
 use App\Entity\Contact;
 use App\Entity\Hero;
 use App\Entity\Review;
 use App\Entity\Teacher;
 use App\Entity\User;
 use App\Form\ContactType;
+use App\Form\GallerySearchType;
 use App\Form\ReviewType;
 use App\Repository\EventRepository;
 use App\Repository\FoodWeekRepository;
@@ -18,6 +20,9 @@ use Karser\Recaptcha3Bundle\Validator\Constraints\Recaptcha3Validator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Attribute\MapQueryString;
+use Symfony\Component\HttpKernel\Attribute\MapRequestPayload;
+use Symfony\Component\HttpKernel\Attribute\ValueResolver;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
@@ -136,14 +141,15 @@ class DefaultController extends AbstractController
     }
 
     #[Route('/galeria', name: 'gallery')]
-    public function gallery(GalleryRepository $galleryRepository): Response
+    public function gallery(GalleryRepository $galleryRepository, #[MapQueryString]?GallerySearchDto $searchDto): Response
     {
         return $this->render('template/gallery.html.twig', [
             'heroName' => 'main.gallery',
-            'gallery' => $galleryRepository->findByVisible(),
+            'gallery' => $galleryRepository->findByVisibleAndSearch($searchDto),
+            'galleryStartDate' => $galleryRepository->getOldestRecord()?->getHappenedAt(),
             'page_title' => 'page.title.gallery',
             'page_description' => 'page.description.gallery',
-            'page_keywords' => 'page.keywords.gallery'
+            'page_keywords' => 'page.keywords.gallery',
         ]);
     }
 
