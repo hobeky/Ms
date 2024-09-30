@@ -26,16 +26,34 @@ class GallerySearchDto
         return $this->month;
     }
 
-    public function getDatetime(): ?DateTimeImmutable
+    public function getStartDatetime(): ?DateTimeImmutable
     {
         if (!$this->startYear) {
             return null;
         }
 
         if (!$this->month) {
-            return DateTimeImmutable::createFromFormat('Y-d-m h:i:s', $this->startYear . '-1-1 0:00:00');
+            return new DateTimeImmutable("{$this->startYear}-07-01 00:00:00");
         }
 
-        return DateTimeImmutable::createFromFormat('Y-d-m h:i:s', $this->startYear . '-1-' . $this->month . ' 0:00:00');
+        $year = $this->startYear;
+        if ($this->month < 7) {
+            $year++;
+        }
+
+        return new DateTimeImmutable("{$year}-{$this->month}-01 00:00:00");
+    }
+
+    public function getEndDatetime(): ?DateTimeImmutable
+    {
+        if (!$this->startYear) {
+            return null;
+        }
+
+        if (!$this->month) {
+            return $this->getStartDatetime()->modify("+ 1 Year");
+        }
+
+        return $this->getStartDatetime()->modify("+ 1 Month");
     }
 }

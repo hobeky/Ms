@@ -1,22 +1,20 @@
 main:
     about: 'About Us'
-    reviews: 'Reviews'
-    contact: 'Contact'
+    reviews: Reviews
+    contact: Contact
     forParents: 'For Parents'
     ourTeam: 'Our Team'
-    gallery: 'Gallery'
-    menu: 'Menu'
-    organisation: 'Organization'
-    shortMenu: 'Menu'
-    schedule: 'Schedules'
+    gallery: Gallery
+    menu: Menu
+    organisation: Organization
+    shortMenu: Menu
+    schedule: Schedules
     kidSafety: 'Child Safety'
     workDays: 'Working Days'
-    GDPR: 'GDPR'
-    event: 'Events'
+    GDPR: GDPR
+    event: Events
     picture: ' image'
     pricing: 'Price list'
-
-    
 menu:
     heading1: 'In the kindergarten, we ensure healthy nutrition for children,'
     paragraph1: 'snacks, lunches, and snacks in accordance with prescribed recommended daily doses of nutrients, vitamins, minerals, and trace elements necessary for the healthy growth and development of the child.'
@@ -25,18 +23,20 @@ menu:
     paragraph3: 'We offer healthy food to children, tailored to those with eating disorders and intolerance to certain foods.'
     paragraph4: 'Children do not eat in the classrooms but in a separate dining room.'
     menuHeading: 'Weekly menu'
-    menuMonday: 'Monday'
-    menuTuesday: 'Tuesday'
-    menuWednesday: 'Wednesday'
-    menuThursday: 'Thursday'
-    menuFriday: 'Friday'
+    menuMonday: Monday
+    menuTuesday: Tuesday
+    menuWednesday: Wednesday
+    menuThursday: Thursday
+    menuFriday: Friday
     menuBreakfast: 'Morning snack'
-    menuBrunch: 'Soup'
+    menuBrunch: Soup
     menuLunch: 'Main meal'
     menuSnack: 'Afternoon snack'
-
 kidSafety:
     heading: 'Important links'
+    LDD: __kidSafety.LDD
+    LDN: __kidSafety.LDN
+    LDI: __kidSafety.LDI
 about:
     aHeading1: 'We provide compulsory pre-school education'
     aHeading2: 'Since September 1st, 2019, we have been incorporated into the system of schools and school facilities'
@@ -74,26 +74,29 @@ about:
     eParagraf2: 'This method reduces the risk of failure in learning, particularly in reading and writing, when children start school.'
     eParagraf3: 'Our main advantages include an interactive program focused on learning through play, functional arrangement of the play area, phonemic awareness training through stimulation program, English language learning, high standards of primary care and hygiene, year-round operation (closed only on public holidays and weekends), facilities with modern equipment, and a safe location with great accessibility.'
     alt:
-        about_us_image: "About Us Image"
-        bee_class_image_1: "Bee Class Image 1"
-        bee_class_image_2: "Bee Class Image 2"
-        owl_class_image_1: "Owl Class Image 1"
-        owl_class_image_2: "Owl Class Image 2"
+        about_us_image: 'About Us Image'
+        bee_class_image_1: 'Bee Class Image 1'
+        bee_class_image_2: 'Bee Class Image 2'
+        owl_class_image_1: 'Owl Class Image 1'
+        owl_class_image_2: 'Owl Class Image 2'
+    bParagraph3: __about.bParagraph3
+    bParagraph4: __about.bParagraph4
+    bParagraph5: __about.bParagraph5
 forParents:
     aHeading1: 'What you don t need to worry about'
     aLi1: 'anti-allergic mattresses'
     aLi2: 'anti-allergic duvets and pillows'
     aLi3: 'bed linen'
-    aLi4: 'towels'
+    aLi4: towels
     aLi5: 'a small cup'
     bHeading1: 'What to Bring to Kindergarten'
-    bLi1: 'pajamas'
-    bLi2: 'slippers'
+    bLi1: pajamas
+    bLi2: slippers
     bLi3: 'toothbrush and toothpaste'
     bLi4: 'spare clothes'
     cHeading1: 'What to bring to:'
     cUl1: 'Ceramic club'
-    cUl1Li1: 'raincoat'
+    cUl1Li1: raincoat
     cUl1Li2: 'an old shirt'
     cUl2: 'Dance club'
     cUl2Li1: 'Girls: gym shoes or ballet flats, skirt, and a T-shirt'
@@ -102,7 +105,7 @@ forParents:
     eParagraf1: 'Primer – purchased at the SMS'
     eHeading2: 'English with a tutor'
     eParagraf2: 'Good mood 🙂'
-    dHeading1: 'Download'
+    dHeading1: Download
 document:
     health_kid: 'Confirmation of child`s health status new'
     application_kid: 'Application for child admission to nursery school'
@@ -110,22 +113,21 @@ review:
     reviewsFromParents: 'Reviews from parents'
     formHeading: 'What is your experience with us?'
     formSubHeading: 'Share it with others'
-    formPlaceholderName: 'Name'
+    formPlaceholderName: Name
     formPlaceholderStars: 'Review stars'
-    formPlaceholderReview: 'Review'
-    formButton: 'Submit'
+    formPlaceholderReview: Review
+    formButton: Submit
 contact:
     heading1: 'Contact Information'
     subheading1: 'Call us, write to us, or come visit.'
-    address: 'Address'
+    address: Address
     formHeading: 'Send us an email'
-    formPlaceHolderName: 'Name'
-    formPlaceHolderEmail: 'Email'
+    formPlaceHolderName: Name
+    formPlaceHolderEmail: Email
     formPlaceHolderTel: 'Phone number'
-    formPlaceHolderTopic: 'Subject'
+    formPlaceHolderTopic: Subject
     formPlaceHolderText: 'Message text'
-    formButton: 'Send'
-
+    formButton: Send
 teachers:
     heading1: 'Dear parents'
     paragraph1: 'we would like to introduce you to the teachers who lovingly care for all the needs of our little ones.'
@@ -134,7 +136,7 @@ teachers:
     paragraph3: 'Our educators are fully qualified, creative, patient, loving, and kind. They can make fun of themselves for the smiles and happiness of your little ones, but also educate them fully in all areas necessary for their development.'
     ourTeam: 'Our team'
 schedule:
-    heading: 'Schedules'
+    heading: Schedules
     harmonogram: 'Daily schedule'
     activity1: 'Child`s arrival, greeting'
     activity2: 'Morning playtime and morning physical activities - health exercise'
@@ -145,56 +147,52 @@ schedule:
     activity7: 'Nap time, afternoon relaxation'
     activity8: 'Personal hygiene, afternoon snack'
     activity9: 'Outdoor time, free play, extracurricular activities, clubs, children`s store to home'
-    activities: 'Activities'
-    
+    activities: Activities
 event:
-    popular_events: 'Events'
-
-
+    popular_events: Events
 page:
     title:
-        home: "Home - Štúrová Kindergarten"
-        about_us: "About Us - Štúrová Kindergarten"
-        reviews: "Reviews - Štúrová Kindergarten"
-        contact: "Contact Us - Štúrová Kindergarten"
-        for_parents: "For Parents - Štúrová Kindergarten"
-        teachers: "Our Team - Štúrová Kindergarten"
-        gallery: "Gallery - Štúrová Kindergarten"
-        long_menu: "Weekly Menu - Štúrová Kindergarten"
-        short_menu: "Short Menu - Štúrová Kindergarten"
-        schedule: "Schedule - Štúrová Kindergarten"
-        child_safety: "Child Safety - Štúrová Kindergarten"
-        event: "Events - Štúrová Kindergarten"
-        pricing: "Pricing - Štúrová Kindergarten"
+        home: 'Home - Štúrová Kindergarten'
+        about_us: 'About Us - Štúrová Kindergarten'
+        reviews: 'Reviews - Štúrová Kindergarten'
+        contact: 'Contact Us - Štúrová Kindergarten'
+        for_parents: 'For Parents - Štúrová Kindergarten'
+        teachers: 'Our Team - Štúrová Kindergarten'
+        gallery: 'Gallery - Štúrová Kindergarten'
+        long_menu: 'Weekly Menu - Štúrová Kindergarten'
+        short_menu: 'Short Menu - Štúrová Kindergarten'
+        schedule: 'Schedule - Štúrová Kindergarten'
+        child_safety: 'Child Safety - Štúrová Kindergarten'
+        event: 'Events - Štúrová Kindergarten'
+        pricing: 'Pricing - Štúrová Kindergarten'
     description:
-        home: "Discover more about our school, our values, and our mission to provide quality education."
-        about_us: "Learn more about our history, mission, and values that drive our educational approach."
-        reviews: "Read reviews from our students and parents and see why they love our school."
-        contact: "Get in touch with us for any inquiries or support. We are here to help you."
-        for_parents: "Find resources and important information for parents of our students."
-        teachers: "Meet our dedicated team of teachers who are committed to student success."
-        gallery: "Explore our photo gallery showcasing events and activities at our school."
-        long_menu: "Check out our weekly menu with a variety of delicious and healthy meals."
-        short_menu: "View our daily menu offering nutritious choices for students."
-        schedule: "View the class schedule for the current term and plan your classes accordingly."
-        child_safety: "Learn about our child safety policies and procedures to ensure a safe environment."
-        event: "Stay updated with our latest events and activities happening at our school."
-        pricing: "Learn about our pricing and fee structure for various services."
+        home: 'Discover more about our school, our values, and our mission to provide quality education.'
+        about_us: 'Learn more about our history, mission, and values that drive our educational approach.'
+        reviews: 'Read reviews from our students and parents and see why they love our school.'
+        contact: 'Get in touch with us for any inquiries or support. We are here to help you.'
+        for_parents: 'Find resources and important information for parents of our students.'
+        teachers: 'Meet our dedicated team of teachers who are committed to student success.'
+        gallery: 'Explore our photo gallery showcasing events and activities at our school.'
+        long_menu: 'Check out our weekly menu with a variety of delicious and healthy meals.'
+        short_menu: 'View our daily menu offering nutritious choices for students.'
+        schedule: 'View the class schedule for the current term and plan your classes accordingly.'
+        child_safety: 'Learn about our child safety policies and procedures to ensure a safe environment.'
+        event: 'Stay updated with our latest events and activities happening at our school.'
+        pricing: 'Learn about our pricing and fee structure for various services.'
     keywords:
-        home: "school, education, mission, values"
-        about_us: "about us, history, mission, values"
-        reviews: "reviews, testimonials, feedback"
-        contact: "contact, inquiries, support"
-        for_parents: "parents, resources, information"
-        teachers: "teachers, staff, team"
-        gallery: "gallery, photos, events, activities"
-        long_menu: "menu, weekly menu, meals"
-        short_menu: "menu, daily menu, healthy meals"
-        schedule: "schedule, class schedule, term"
-        child_safety: "child safety, policies, procedures"
-        event: "events, activities, updates"
-        pricing: "pricing, fees, costs"
-
+        home: 'school, education, mission, values'
+        about_us: 'about us, history, mission, values'
+        reviews: 'reviews, testimonials, feedback'
+        contact: 'contact, inquiries, support'
+        for_parents: 'parents, resources, information'
+        teachers: 'teachers, staff, team'
+        gallery: 'gallery, photos, events, activities'
+        long_menu: 'menu, weekly menu, meals'
+        short_menu: 'menu, daily menu, healthy meals'
+        schedule: 'schedule, class schedule, term'
+        child_safety: 'child safety, policies, procedures'
+        event: 'events, activities, updates'
+        pricing: 'pricing, fees, costs'
 pricing:
     title: 'Contribution Payment for Attendance and Meals'
     information_to_title: 'The amount of the monthly contribution for partial coverage of costs associated with material provision in the preschool facility for one child is:'
@@ -211,14 +209,16 @@ pricing:
     title_pay_lunch: 'In addition to this contribution, the parent is obliged to pay the contribution for the child`s meals'
     food_money: 'Meal cost'
     food_money_classic: '2.9€/day (morning snack, lunch, afternoon snack)'
-    or: 'or'
+    or: or
     food_money_gluten_free: '3.95€/day (morning snack, lunch, afternoon snack) - gluten-free diet'
     info_payment_day: 'Tuition and meals are paid for the current month, by the 10th day of the month to the account:'
     iban: 'IBAN: SK57 7500 0000 0040 2560 0967'
     extra_club_money: 'Swimming, skiing, and skating lessons are paid by the parent, according to the current price list'
     end_title_individual: 'Of course, there is teaching and an individual approach to each child.'
     warning_pay_back_money: 'The flat fee for full-day/half-day care, or any part of it, will not be refunded for public holidays, state holidays, Christmas holidays, three-week summer holidays, in case of child illness, early termination of the child`s attendance at SMŠ during the month'
-
-
-gallery.message: "More galleries will be added soon, thank you for your patience."
-banner.image_alt: "Photo from our kindergarten, with kids during activity"
+gallery:
+    message: 'More galleries will be added soon, thank you for your patience.'
+    search: 'Search'
+    noImages: 'No results found'
+banner:
+    image_alt: 'Photo from our kindergarten, with kids during activity'

@@ -23,9 +23,11 @@ class GalleryRepository extends ServiceEntityRepository
         $qb = $this->createQueryBuilder('g')
             ->where('g.isVisible = true')
             ->orderBy('g.happenedAt', 'ASC');
-        if ($searchDto && $searchDto->getDatetime()){
+        if ($searchDto && $searchDto->getStartDatetime()){
             $qb->andWhere('g.happenedAt > :startDate');
-            $qb->setParameter('startDate', $searchDto->getDatetime());
+            $qb->setParameter('startDate', $searchDto->getStartDatetime());
+            $qb->andWhere('g.happenedAt < :endDate');
+            $qb->setParameter('endDate', $searchDto->getEndDatetime());
         }
         return $qb->getQuery()->getResult();
     }
@@ -34,6 +36,7 @@ class GalleryRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('g')
             ->orderBy('g.happenedAt', 'ASC')
+            ->setMaxResults(1)
             ->getQuery()
             ->getOneOrNullResult();
     }
