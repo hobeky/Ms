@@ -9,7 +9,7 @@
                     {% set startYear = galleryStartDate|date('m')>6 ? galleryStartDate|date('Y') : galleryStartDate|date('Y')-1 %}
                     {% for year in range(startYear, date()|date('Y')) %}
                         <a href="{{ path('gallery', {'startYear':year}) }}"
-                           class="btn mx-1 rounded-pill {{ app.request.get('startYear')==year? 'active btn-warning': 'btn-secondary' }}"
+                           class="btn mx-1 rounded-pill {{ searchDto.startYear==year? 'active btn-warning': 'btn-secondary' }}"
                         >
                             {{ '%s/%s'|format(year, year+1) }}
                         </a>
@@ -20,7 +20,7 @@
                 <div class="col-12 d-flex justify-content-center">
                     {% for month in range(7, 12) %}
                         <a href="{{ path('gallery', {'startYear':app.request.get('startYear')?:date()|date('Y'), 'month':month}) }}"
-                           class="btn mx-1 rounded-pill {{ app.request.get('month')==month? 'active btn-warning': 'btn-secondary' }}"
+                           class="btn mx-1 rounded-pill {{ searchDto.month==month? 'active btn-warning': 'btn-secondary' }}"
                         >
                             {{ month }}
                         </a>
@@ -28,7 +28,7 @@
                     /
                     {% for month in range(1, 6) %}
                         <a href="{{ path('gallery', {'startYear':app.request.get('startYear')?:date()|date('Y'), 'month':month}) }}"
-                           class="btn mx-1 rounded-pill {{ app.request.get('month')==month? 'active btn-warning': 'btn-secondary' }}"
+                           class="btn mx-1 rounded-pill {{ searchDto.month==month? 'active btn-warning': 'btn-secondary' }}"
                         >
                             {{ month }}
                         </a>

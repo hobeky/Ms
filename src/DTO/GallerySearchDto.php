@@ -16,9 +16,9 @@ class GallerySearchDto
     {
     }
 
-    public function getStartYear(): ?int
+    public function getStartYear(): int
     {
-        return $this->startYear;
+        return $this->startYear??(new DateTimeImmutable())->format('Y');
     }
 
     public function getMonth(): ?int
@@ -28,29 +28,21 @@ class GallerySearchDto
 
     public function getStartDatetime(): ?DateTimeImmutable
     {
-        if (!$this->startYear) {
-            return null;
+        if (!$this->getMonth()) {
+            return new DateTimeImmutable("{$this->getStartYear()}-07-01 00:00:00");
         }
 
-        if (!$this->month) {
-            return new DateTimeImmutable("{$this->startYear}-07-01 00:00:00");
-        }
-
-        $year = $this->startYear;
-        if ($this->month < 7) {
+        $year = $this->getStartYear();
+        if ($this->getMonth() < 7) {
             $year++;
         }
 
-        return new DateTimeImmutable("{$year}-{$this->month}-01 00:00:00");
+        return new DateTimeImmutable("{$year}-{$this->getMonth()}-01 00:00:00");
     }
 
     public function getEndDatetime(): ?DateTimeImmutable
     {
-        if (!$this->startYear) {
-            return null;
-        }
-
-        if (!$this->month) {
+        if (!$this->getMonth()) {
             return $this->getStartDatetime()->modify("+ 1 Year");
         }
 
