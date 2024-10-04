@@ -143,6 +143,7 @@ class DefaultController extends AbstractController
         return $this->render('template/gallery.html.twig', [
             'heroName' => 'main.gallery',
             'gallery' => $galleryRepository->findByVisibleAndSearch($searchDto),
+            'maxResult' => $galleryRepository->countByVisibleAndSearch($searchDto),
             'galleryStartDate' => $galleryRepository->getOldestRecord()?->getHappenedAt(),
             'searchDto' => $searchDto,
             'page_title' => 'page.title.gallery',

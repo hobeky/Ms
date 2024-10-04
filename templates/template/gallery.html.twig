@@ -59,6 +59,35 @@
             {% else %}
                 <h1 class="display-4 text-center mt-5">{{ 'gallery.noImages'|trans }}</h1>
             {% endfor %}
+
+            {% set limit = searchDto.limit %}
+            {% set offset = searchDto.offset %}
+            {% set totalPages = (maxResult / limit)|round(0, 'ceil') %}
+            {% set currentPage = (offset / limit) + 1 %}
+            {% set prevOffset = (offset - limit) < 0 ? 0 : (offset - limit) %}
+            {% set nextOffset = (offset + limit) >= maxResult ? offset : (offset + limit) %}
+
+            {% if totalPages > 1 %}
+            <nav class="navigation paging-navigation text-center mt-5" role="navigation">
+                <div class="pagination loop-pagination d-flex justify-content-center align-items-center">
+                    <a href="{{ path('gallery', {'startYear': searchDto.startYear, 'month': searchDto.month, 'offset': prevOffset, 'limit': searchDto.limit}) }}"
+                       class="pagination-arrow d-flex align-items-center fw-normal mx-3 {{ currentPage == 1 ? 'disabled' : '' }}">
+                        <iconify-icon icon="ic:baseline-keyboard-arrow-left" class="pagination-arrow fs-1"></iconify-icon>
+                    </a>
+                    {% for page in 1..totalPages %}
+                        {% set pageOffset = (page - 1) * limit %}
+                        <a class="page-numbers fs-4 fw-normal mx-3 {{ currentPage == page ? 'current' : '' }}"
+                           href="{{ path('gallery', {'startYear': searchDto.startYear, 'month': searchDto.month, 'offset': pageOffset, 'limit': searchDto.limit}) }}">
+                            {{ page }}
+                        </a>
+                    {% endfor %}
+                    <a href="{{ path('gallery', {'startYear': searchDto.startYear, 'month': searchDto.month, 'offset': nextOffset, 'limit': searchDto.limit}) }}"
+                       class="pagination-arrow d-flex align-items-center fw-normal mx-3 {{ currentPage == totalPages ? 'disabled' : '' }}">
+                        <iconify-icon icon="ic:baseline-keyboard-arrow-right" class="pagination-arrow fs-1"></iconify-icon>
+                    </a>
+                </div>
+            </nav>
+            {% endif %}
         </div>
     </section>
     <h2 class="text-center mb-5">{{ 'gallery.message'|trans }}</h2>
