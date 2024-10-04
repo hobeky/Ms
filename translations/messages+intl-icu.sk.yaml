@@ -1,21 +1,20 @@
 main:
     about: 'O nás'
-    reviews: 'Recenzie'
-    contact: 'Kontakt'
+    reviews: Recenzie
+    contact: Kontakt
     forParents: 'Pre Rodičov'
     ourTeam: 'Náš tím'
-    gallery: 'Galéria'
+    gallery: Galéria
     menu: 'Jedálny lístok'
-    organisation: 'Organizácia'
-    shortMenu: 'Menu'
-    schedule: 'Rozvrhy'
+    organisation: Organizácia
+    shortMenu: Menu
+    schedule: Rozvrhy
     kidSafety: 'Bezpečnosť detí'
     workDays: 'Pracovné dni'
     GDPR: 'Ochrana osobných údajov'
-    event: 'Udalosti'
+    event: Udalosti
     picture: ' obrázok'
-    pricing: 'Cenník'
-
+    pricing: Cenník
 about:
     aHeading1: 'Poskytujeme povinné predprimárne vzdelávanie'
     aHeading2: 'od 1.9.2019 sme Ministerstvom školstva zaradený do siete škôl a školských zariadení.'
@@ -55,46 +54,44 @@ about:
     eParagraf2: 'Použitím tejto metódy sa znižuje riziko zlyhávania v učení, a to v čítaní a písaní, keď prídu do školy.'
     eParagraf3: 'Za naše hlavné výhody považujeme interaktívny program zameraný na učenie hrou, funkčné usporiadanie herne ,tréning fonematického uvedomovania u deti v predškolskom veku prostredníctvom stimulačného programu, výučbu angličtiny, vysoký štandard primárnej starostlivosti a hygieny, celoročnú prevádzku (zatvorené je iba počas štátnych sviatkov a víkendov), kvalitné priestory s moderným vybavením a bezpečnú lokalitu s dobrou dostupnosťou.'
     alt:
-        about_us_image: "Obrázok O Nás"
-        bee_class_image_1: "Obrázok 1 Trieda Včiel"
-        bee_class_image_2: "Obrázok 2 Trieda Včiel "
-        owl_class_image_1: "Obrázok 1 Trieda Sôv"
-        owl_class_image_2: "Obrázok 2 Trieda Sôv"
+        about_us_image: 'Obrázok O Nás'
+        bee_class_image_1: 'Obrázok 1 Trieda Včiel'
+        bee_class_image_2: 'Obrázok 2 Trieda Včiel '
+        owl_class_image_1: 'Obrázok 1 Trieda Sôv'
+        owl_class_image_2: 'Obrázok 2 Trieda Sôv'
 review:
     reviewsFromParents: 'Recenzie Od Rodičov'
     formHeading: 'Akú máte s nami skúsenosť?'
     formSubHeading: 'Podeľte sa s ostatními'
-    formPlaceholderName: 'Meno'
+    formPlaceholderName: Meno
     formPlaceholderStars: 'Počet hviezdičiek'
-    formPlaceholderReview: 'Recenzia'
-    formButton: 'Pridať'
-
+    formPlaceholderReview: Recenzia
+    formButton: Pridať
 contact:
     heading1: 'Kontaktné informácie'
     subheading1: 'Zavolajte nám, napíšte, alebo sa prídťe pozrieť.'
     formHeading: 'Napíšte nám e-mail'
-    formPlaceHolderName: 'Meno'
-    formPlaceHolderEmail: 'Email'
+    formPlaceHolderName: Meno
+    formPlaceHolderEmail: Email
     formPlaceHolderTel: 'Tel. číslo'
-    formPlaceHolderTopic: 'Predmet'
+    formPlaceHolderTopic: Predmet
     formPlaceHolderText: 'Text správy'
-    formButton: 'Odoslať'
-
+    formButton: Odoslať
 forParents:
     aHeading1: 'O čo sa nemusíte starať'
     aLi1: 'anti alergické matrace'
     aLi2: 'anti alergické paplóny a vankúše'
     aLi3: 'posteľné prádlo'
-    aLi4: 'uteráky'
-    aLi5: 'pohárik'
+    aLi4: uteráky
+    aLi5: pohárik
     bHeading1: 'Čo si priniesť do škôlky'
-    bLi1: 'pyžamko'
-    bLi2: 'papučky'
+    bLi1: pyžamko
+    bLi2: papučky
     bLi3: 'zubnú kefku a pastu'
     bLi4: 'náhradné oblečenie'
     cHeading1: 'Čo si priniesť na:'
     cUl1: 'Keramický krúžok'
-    cUl1Li1: 'pláštenku'
+    cUl1Li1: pláštenku
     cUl1Li2: 'starú košeľu'
     cUl2: 'Tanečný krúžok'
     cUl2Li1: 'Dievčatá: cvičky alebo baletky, sukňu a tričko'
@@ -114,7 +111,6 @@ teachers:
     paragraph2: 'Nakoľko si veľmi dobre uvedomujeme, ako veľmi môže uškodiť nesprávny prístup k dieťaťu v jeho terajšom ale i v budúcom rozvoji.Vieme, že krátky text a fotografia ani zďaleka neodzrkadľujú skutočné schopnosti a osobnosť človeka.'
     paragraph3: 'Naši pedagógovia sú plne kvalifikovaní, tvoriví, trpezliví, milujúci a láskaví, dokážu si pre úsmev a šťastie Vašich detičiek urobiť zo seba srandu, ale ich aj plnohodnotne vzdelávať vo všetkých oblastiach potrebných pre ich rozvoj.'
     ourTeam: 'Náš tím'
-
 menu:
     heading1: 'V Materskej Škole Dbáme Na Zdravé Stravovanie Detí,'
     paragraph1: 'desiate,obedy a  olovranty v súlade s predpísanými odporúčanými dennými dávkami stavebných látok, vitamínov, minerálov a stopových prvkov, potrebných pre zdravý rast a vývoj dieťaťa.'
@@ -123,19 +119,17 @@ menu:
     paragraph3: 'Deťom ponúkame zdravú stravu, prispôsobenú aj deťom s poruchami výživy a neznášanlivosťou niektorých potravín.'
     paragraph4: 'Detičky nepapajú v triedach,ale v samostatnej  jedálni.'
     menuHeading: 'Týždenné menu'
-    menuMonday: 'Pondelok'
-    menuTuesday: 'Utorok'
-    menuWednesday: 'Streda'
-    menuThursday: 'Štvrtok'
-    menuFriday: 'Piatok'
-    menuBreakfast: 'Desiata'
-    menuBrunch: 'Polievka'
+    menuMonday: Pondelok
+    menuTuesday: Utorok
+    menuWednesday: Streda
+    menuThursday: Štvrtok
+    menuFriday: Piatok
+    menuBreakfast: Desiata
+    menuBrunch: Polievka
     menuLunch: 'Hlavné jedlo'
-    menuSnack: 'Olovrant'
-
-
+    menuSnack: Olovrant
 schedule:
-    heading: 'Rozvrhy'
+    heading: Rozvrhy
     harmonogram: 'Denný harmonogram'
     activity1: 'Príchod dieťaťa, privítanie'
     activity2: 'Ranné hranie a ranné pohybové aktivity - zdravotné cvičenie'
@@ -146,63 +140,57 @@ schedule:
     activity7: 'Spánok, popoludňajšia relaxácia'
     activity8: 'Osobná hygiena, olovrant'
     activity9: 'Pobyt vonku, voľné hranie, záujmové činnosti, krúžky, obchod detí domov'
-
+    activities: __schedule.activities
 kidSafety:
     heading: 'Dôležité linky'
     LDD: 'Linka detskej dôvery'
     LDN: 'Linka dôvery nezábudka'
     LDI: 'Linka detskej istoty'
-
 event:
-    popular_events: 'Udalosti'
-
-
-
+    popular_events: Udalosti
 page:
     title:
-        home: "Domov - MŠ Štúrová"
-        about_us: "O nás - MŠ Štúrová"
-        reviews: "Recenzie - MŠ Štúrová"
-        contact: "Kontakt - MŠ Štúrová"
-        for_parents: "Pre rodičov - MŠ Štúrová"
-        teachers: "Náš tím - MŠ Štúrová"
-        gallery: "Galéria - MŠ Štúrová"
-        long_menu: "Týždenné menu - MŠ Štúrová"
-        short_menu: "Krátke menu - MŠ Štúrová"
-        schedule: "Rozvrh - MŠ Štúrová"
-        child_safety: "Bezpečnosť detí - MŠ Štúrová"
-        event: "Udalosti - MŠ Štúrová"
-        pricing: "Cenník - MŠ Štúrová"
+        home: 'Domov - MŠ Štúrová'
+        about_us: 'O nás - MŠ Štúrová'
+        reviews: 'Recenzie - MŠ Štúrová'
+        contact: 'Kontakt - MŠ Štúrová'
+        for_parents: 'Pre rodičov - MŠ Štúrová'
+        teachers: 'Náš tím - MŠ Štúrová'
+        gallery: 'Galéria - MŠ Štúrová'
+        long_menu: 'Týždenné menu - MŠ Štúrová'
+        short_menu: 'Krátke menu - MŠ Štúrová'
+        schedule: 'Rozvrh - MŠ Štúrová'
+        child_safety: 'Bezpečnosť detí - MŠ Štúrová'
+        event: 'Udalosti - MŠ Štúrová'
+        pricing: 'Cenník - MŠ Štúrová'
     description:
-        home: "Vitajte na našej stránke. Zistite viac o nás."
-        about_us: "Dozviete sa viac o našej misii a hodnotách."
-        reviews: "Prečítajte si, čo o nás hovoria naši zákazníci."
-        contact: "Kontaktujte nás pre viac informácií."
-        for_parents: "Informácie a zdroje pre rodičov."
-        teachers: "Zoznámte sa s našim odhodlaným tímom profesionálov."
-        gallery: "Pozrite si našu foto galériu."
-        long_menu: "Pozrite si naše chutné týždenné menu."
-        short_menu: "Pozrite si naše krátke menu."
-        schedule: "Zobraziť náš denný rozvrh."
-        child_safety: "Zistite viac o našich opatreniach pre bezpečnosť detí."
-        event: "Sledujte naše najnovšie udalosti."
-        pricing: "Informácie o cenách a poplatkoch za služby."
+        home: 'Vitajte na našej stránke. Zistite viac o nás.'
+        about_us: 'Dozviete sa viac o našej misii a hodnotách.'
+        reviews: 'Prečítajte si, čo o nás hovoria naši zákazníci.'
+        contact: 'Kontaktujte nás pre viac informácií.'
+        for_parents: 'Informácie a zdroje pre rodičov.'
+        teachers: 'Zoznámte sa s našim odhodlaným tímom profesionálov.'
+        gallery: 'Pozrite si našu foto galériu.'
+        long_menu: 'Pozrite si naše chutné týždenné menu.'
+        short_menu: 'Pozrite si naše krátke menu.'
+        schedule: 'Zobraziť náš denný rozvrh.'
+        child_safety: 'Zistite viac o našich opatreniach pre bezpečnosť detí.'
+        event: 'Sledujte naše najnovšie udalosti.'
+        pricing: 'Informácie o cenách a poplatkoch za služby.'
     keywords:
-        home: "domov, MŠ Štúrová"
-        about_us: "o nás, misia, hodnoty"
-        reviews: "recenzie, spätná väzba zákazníkov"
-        contact: "kontakt, spojte sa s nami"
-        for_parents: "rodičia, zdroje, informácie"
-        teachers: "tím, učitelia, profesionáli"
-        gallery: "galéria, fotografie, obrázky"
-        long_menu: "menu, jedlo, týždenné"
-        short_menu: "menu, jedlo, krátke menu"
-        schedule: "rozvrh, denný, časový rozvrh"
-        child_safety: "bezpečnosť detí, zabezpečenie, opatrenia"
-        event: "udalosti, aktualizácie, správy"
-        pricing: "cenník, ceny, poplatky"
-
-
+        home: 'domov, MŠ Štúrová'
+        about_us: 'o nás, misia, hodnoty'
+        reviews: 'recenzie, spätná väzba zákazníkov'
+        contact: 'kontakt, spojte sa s nami'
+        for_parents: 'rodičia, zdroje, informácie'
+        teachers: 'tím, učitelia, profesionáli'
+        gallery: 'galéria, fotografie, obrázky'
+        long_menu: 'menu, jedlo, týždenné'
+        short_menu: 'menu, jedlo, krátke menu'
+        schedule: 'rozvrh, denný, časový rozvrh'
+        child_safety: 'bezpečnosť detí, zabezpečenie, opatrenia'
+        event: 'udalosti, aktualizácie, správy'
+        pricing: 'cenník, ceny, poplatky'
 pricing:
     title: 'Úhrada príspevkov za dochádzku a stravu'
     information_to_title: 'Výška mesačného príspevku na čiastočnú úhradu nákladov spojených s hmotným zabezpečením v predškolskom zariadení na jedno deťa je:'
@@ -217,16 +205,18 @@ pricing:
     club_climbing: 'lezecká stena'
     gymnastic: 'gymnastika s trénerkou'
     title_pay_lunch: 'Okrem tohto príspevku je rodič povinný uhradit príspevok na stravovanie dieťaťa'
-    food_money: 'Stravné'
+    food_money: Stravné
     food_money_classic: '2,9€/deň (desiata, obed, olovrant)'
-    or: 'alebo'
+    or: alebo
     food_money_gluten_free: '3,95€/deň (desiata, obed, olovrant) - bezlepková diéta'
     info_payment_day: 'Školné a stravné sa uhrádza za aktuálny mesiac, do 10. dňa v mesiaci na účet:'
     iban: 'IBAN: SK57 7500 0000 0040 2560 0967'
     extra_club_money: 'Plavecký, lyžiarsky a korčuliarsky výcvik si hradí rodič, podľa aktuálneho cenníka'
     end_title_individual: 'Samozrejmosťou je výučba a individuálny prístup ku každému dieťaťu.'
     warning_pay_back_money: 'Paušálny poplatok za celodennú/ poldennú starostlivost, ani žiadna jeho časť sa nebude vracať za dni pracovného pokoja, štátne sviatky, vianočné prázdniny, trojtýždňové prázdniny v lete, v prípade choroby dieťaťa, predčasného ukončenia dochádzky deťaťa do SMŠ počas mesiaca'
-        
-gallery.message: "Ďalšie galérie budú pridané v dohľadnej dobe, ďakujeme za trpezlivosť."
-banner.image_alt: "Fotografia z našej škôlky, s deťmi počas aktivity"
-
+gallery:
+    message: 'Ďalšie galérie budú pridané v dohľadnej dobe, ďakujeme za trpezlivosť.'
+    search: 'Vyhľadávanie'
+    noImages: 'Nenašli sa žiadne výsledky'
+banner:
+    image_alt: 'Fotografia z našej škôlky, s deťmi počas aktivity'

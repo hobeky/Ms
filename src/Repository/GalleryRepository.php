@@ -2,7 +2,9 @@
 
 namespace App\Repository;
 
+use App\DTO\GallerySearchDto;
 use App\Entity\Gallery;
+use DateTimeImmutable;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -16,14 +18,27 @@ class GalleryRepository extends ServiceEntityRepository
         parent::__construct($registry, Gallery::class);
     }
 
-    public function findByVisible()
+    public function findByVisibleAndSearch(?GallerySearchDto $searchDto=null)
+    {
+        $qb = $this->createQueryBuilder('g')
+            ->where('g.isVisible = true')
+            ->orderBy('g.happenedAt', 'ASC');
+        if ($searchDto && $searchDto->getStartDatetime()){
+            $qb->andWhere('g.happenedAt > :startDate');
+            $qb->setParameter('startDate', $searchDto->getStartDatetime());
+            $qb->andWhere('g.happenedAt < :endDate');
+            $qb->setParameter('endDate', $searchDto->getEndDatetime());
+        }
+        return $qb->getQuery()->getResult();
+    }
+
+    public function getOldestRecord(): ?Gallery
     {
         return $this->createQueryBuilder('g')
-            ->where('g.isVisible = true')
             ->orderBy('g.happenedAt', 'ASC')
+            ->setMaxResults(1)
             ->getQuery()
-            ->getResult();
-
+            ->getOneOrNullResult();
     }
 
 //    /**

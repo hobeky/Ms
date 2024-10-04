@@ -3,8 +3,41 @@
 {% block body %}
     <section id="gallery">
         <div class="container padding-medium">
+            <h1 class="display-4 text-center mb-5">{{ 'gallery.search'|trans }}</h1>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center mb-3">
+                    {% set startYear = galleryStartDate|date('m')>6 ? galleryStartDate|date('Y') : galleryStartDate|date('Y')-1 %}
+                    {% for year in range(startYear, date()|date('Y')) %}
+                        <a href="{{ path('gallery', {'startYear':year}) }}"
+                           class="btn mx-1 rounded-pill {{ searchDto.startYear==year? 'active btn-warning': 'btn-secondary' }}"
+                        >
+                            {{ '%s/%s'|format(year, year+1) }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    {% for month in range(7, 12) %}
+                        <a href="{{ path('gallery', {'startYear':app.request.get('startYear')?:date()|date('Y'), 'month':month}) }}"
+                           class="btn mx-1 rounded-pill {{ searchDto.month==month? 'active btn-warning': 'btn-secondary' }}"
+                        >
+                            {{ month }}
+                        </a>
+                    {% endfor %}
+                    /
+                    {% for month in range(1, 6) %}
+                        <a href="{{ path('gallery', {'startYear':app.request.get('startYear')?:date()|date('Y'), 'month':month}) }}"
+                           class="btn mx-1 rounded-pill {{ searchDto.month==month? 'active btn-warning': 'btn-secondary' }}"
+                        >
+                            {{ month }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
             {% for galleryItem in gallery %}
-                <h1 class="display-4 text-center mb-5">{{ galleryItem.title }}</h1>
+                <h1 class="display-4 text-center my-5">{{ galleryItem.title }}</h1>
+                <h3>{{ galleryItem.happenedAt|date('d. m. Y') }}</h3>
                 {% if galleryItem.youtubeUrl %}
                 <div class="row mb-5 mx-md-5">
                     <div class="ratio ratio-16x9">
@@ -15,12 +48,16 @@
                 <div class="row entry-container mb-5">
                     {% for image in galleryItem.images %}
                         <div class="entry-item col-md-4 my-3">
-                            <a href="{{ path('image_upload', {'size':'original', 'imageName': image})}}" title="{{ galleryItem.title }}" class="image-link">
-                                <img src="{{ path('image_upload', {'size':'medium', 'imageName': image})}}" class="post-image img-fluid rounded-4" alt="{{ galleryItem.title }} Image">
+                            <a href="{{ path('image_upload', {'size':'original', 'imageName': image}) }}"
+                               title="{{ galleryItem.title }}" class="image-link">
+                                <img src="{{ path('image_upload', {'size':'medium', 'imageName': image}) }}"
+                                     class="post-image img-fluid rounded-4" alt="{{ galleryItem.title }} Image">
                             </a>
                         </div>
                     {% endfor %}
                 </div>
+            {% else %}
+                <h1 class="display-4 text-center mt-5">{{ 'gallery.noImages'|trans }}</h1>
             {% endfor %}
         </div>
     </section>
