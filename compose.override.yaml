@@ -23,7 +23,7 @@ services:
   
   database:
       ports:
-        - "3306"
+        - "3306:3306"
 
 ###> symfony/mercure-bundle ###
 ###< symfony/mercure-bundle ###

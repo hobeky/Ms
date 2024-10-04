@@ -5,6 +5,13 @@
         <div class="container padding-medium">
             {% for galleryItem in gallery %}
                 <h1 class="display-4 text-center mb-5">{{ galleryItem.title }}</h1>
+                {% if galleryItem.youtubeUrl %}
+                <div class="row mb-5 mx-md-5">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/{{ galleryItem.youtubeId }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                {% endif %}
                 <div class="row entry-container mb-5">
                     {% for image in galleryItem.images %}
                         <div class="entry-item col-md-4 my-3">

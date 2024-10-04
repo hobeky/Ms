@@ -58,10 +58,10 @@ if [ "$1" = 'frankenphp' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
 fi
 
 mkdir -p var/images
-mkdir -p var/images/ORIGINAL
-mkdir -p var/images/SMALL
-mkdir -p var/images/MEDIUM
-mkdir -p var/images/BIG
+mkdir -p var/images/original
+mkdir -p var/images/small
+mkdir -p var/images/medium
+mkdir -p var/images/big
 chmod -R 777 .
 
 exec docker-php-entrypoint "$@"
