@@ -925,3 +925,10 @@ iconify-icon.video-icon:hover {
     border-color: transparent;
     color: var(--primary-color) !important;
 }
+
+.diagonal-line {
+    width: 69px;
+    height: 1px;
+    transform: rotate(-69deg);
+    margin: 0 15px;
+}
