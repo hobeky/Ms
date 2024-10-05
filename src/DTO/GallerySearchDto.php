@@ -5,15 +5,27 @@ namespace App\DTO;
 use DateTimeImmutable;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class GallerySearchDto
+readonly class  GallerySearchDto
 {
     public function __construct(
+        private int $offset = 0,
+        private int $limit = 3,
         #[Assert\Range(min: 1900)]
         private ?int $startYear = null,
         #[Assert\Range(min: 1, max: 12)]
-        private ?int $month = null
+        private ?int $month = null,
     )
     {
+    }
+
+    public function getOffset(): int
+    {
+        return $this->offset;
+    }
+
+    public function getLimit(): int
+    {
+        return $this->limit;
     }
 
     public function getStartYear(): int
