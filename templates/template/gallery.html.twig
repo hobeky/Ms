@@ -39,11 +39,14 @@
                 <h1 class="display-4 text-center my-5">{{ galleryItem.title }}</h1>
                 <h3>{{ galleryItem.happenedAt|date('d. m. Y') }}</h3>
                 {% if galleryItem.youtubeUrl %}
-                <div class="row mb-5 mx-md-5">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/{{ galleryItem.youtubeId }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="row mb-5 mx-md-5">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/{{ galleryItem.youtubeId }}"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
                     </div>
-                </div>
                 {% endif %}
                 <div class="row entry-container mb-5">
                     {% for image in galleryItem.images %}
@@ -62,31 +65,72 @@
 
             {% set limit = searchDto.limit %}
             {% set offset = searchDto.offset %}
-            {% set totalPages = (maxResult / limit)|round(0, 'ceil') %}
+            {% set totalPages = (maxResult / limit)|round(0, 'ceil') + 10 %}
             {% set currentPage = (offset / limit) + 1 %}
             {% set prevOffset = (offset - limit) < 0 ? 0 : (offset - limit) %}
             {% set nextOffset = (offset + limit) >= maxResult ? offset : (offset + limit) %}
 
             {% if totalPages > 1 %}
-            <nav class="navigation paging-navigation text-center mt-5" role="navigation">
-                <div class="pagination loop-pagination d-flex justify-content-center align-items-center">
-                    <a href="{{ path('gallery', {'startYear': searchDto.startYear, 'month': searchDto.month, 'offset': prevOffset, 'limit': searchDto.limit}) }}"
-                       class="pagination-arrow d-flex align-items-center fw-normal mx-3 {{ currentPage == 1 ? 'disabled' : '' }}">
-                        <iconify-icon icon="ic:baseline-keyboard-arrow-left" class="pagination-arrow fs-1"></iconify-icon>
-                    </a>
-                    {% for page in 1..totalPages %}
-                        {% set pageOffset = (page - 1) * limit %}
-                        <a class="page-numbers fs-4 fw-normal mx-3 {{ currentPage == page ? 'current' : '' }}"
-                           href="{{ path('gallery', {'startYear': searchDto.startYear, 'month': searchDto.month, 'offset': pageOffset, 'limit': searchDto.limit}) }}">
-                            {{ page }}
+                <nav class="navigation paging-navigation text-center mt-5" role="navigation">
+                    <div class="pagination loop-pagination d-flex justify-content-center align-items-center flex-wrap">
+                        <!-- Previous Arrow -->
+                        <a href="{{ path('gallery', {'startYear': searchDto.startYear, 'month': searchDto.month, 'offset': prevOffset, 'limit': searchDto.limit}) }}"
+                           class="pagination-arrow d-flex align-items-center fw-normal mx-1 {{ currentPage == 1 ? 'disabled' : '' }}">
+                            <iconify-icon icon="ic:baseline-keyboard-arrow-left"
+                                          class="pagination-arrow fs-1"></iconify-icon>
                         </a>
-                    {% endfor %}
-                    <a href="{{ path('gallery', {'startYear': searchDto.startYear, 'month': searchDto.month, 'offset': nextOffset, 'limit': searchDto.limit}) }}"
-                       class="pagination-arrow d-flex align-items-center fw-normal mx-3 {{ currentPage == totalPages ? 'disabled' : '' }}">
-                        <iconify-icon icon="ic:baseline-keyboard-arrow-right" class="pagination-arrow fs-1"></iconify-icon>
-                    </a>
-                </div>
-            </nav>
+
+                        <!-- Pagination Number Links -->
+                        <div class="pagination-scroll d-flex align-items-center justify-content-center">
+                            {% if totalPages > 5 %}
+                                <!-- Mobile view: show only first, current, last, and ellipsis -->
+                                <a class="page-numbers fs-4 fw-normal mx-1 {{ currentPage == 1 ? 'current' : '' }}"
+                                   href="{{ path('gallery', {'startYear': searchDto.startYear, 'month': searchDto.month, 'offset': 0, 'limit': searchDto.limit}) }}">
+                                    1
+                                </a>
+
+                                {% if currentPage > 3 %}
+                                    <span class="mx-2">...</span>
+                                {% endif %}
+
+                                <!-- Show current page and two surrounding pages on mobile -->
+                                {% for page in max(2, currentPage - 1)..min(totalPages - 1, currentPage + 1) %}
+                                    {% set pageOffset = (page - 1) * limit %}
+                                    <a class="page-numbers fs-4 fw-normal mx-1 {{ currentPage == page ? 'current' : '' }}"
+                                       href="{{ path('gallery', {'startYear': searchDto.startYear, 'month': searchDto.month, 'offset': pageOffset, 'limit': searchDto.limit}) }}">
+                                        {{ page }}
+                                    </a>
+                                {% endfor %}
+
+                                {% if currentPage < totalPages - 2 %}
+                                    <span class="mx-2">...</span>
+                                {% endif %}
+
+                                <a class="page-numbers fs-4 fw-normal mx-1 {{ currentPage == totalPages ? 'current' : '' }}"
+                                   href="{{ path('gallery', {'startYear': searchDto.startYear, 'month': searchDto.month, 'offset': (totalPages - 1) * limit, 'limit': searchDto.limit}) }}">
+                                    {{ totalPages }}
+                                </a>
+                            {% else %}
+                                <!-- Show all pages if totalPages is less than or equal to 5 -->
+                                {% for page in 1..totalPages %}
+                                    {% set pageOffset = (page - 1) * limit %}
+                                    <a class="page-numbers fs-4 fw-normal mx-1 {{ currentPage == page ? 'current' : '' }}"
+                                       href="{{ path('gallery', {'startYear': searchDto.startYear, 'month': searchDto.month, 'offset': pageOffset, 'limit': searchDto.limit}) }}">
+                                        {{ page }}
+                                    </a>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+
+                        <!-- Next Arrow -->
+                        <a href="{{ path('gallery', {'startYear': searchDto.startYear, 'month': searchDto.month, 'offset': nextOffset, 'limit': searchDto.limit}) }}"
+                           class="pagination-arrow d-flex align-items-center fw-normal mx-1 {{ currentPage == totalPages ? 'disabled' : '' }}">
+                            <iconify-icon icon="ic:baseline-keyboard-arrow-right"
+                                          class="pagination-arrow fs-1"></iconify-icon>
+                        </a>
+                    </div>
+                </nav>
+
             {% endif %}
         </div>
     </section>
