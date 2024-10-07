@@ -77,7 +77,7 @@
 
             {% set limit = searchDto.limit %}
             {% set offset = searchDto.offset %}
-            {% set totalPages = (maxResult / limit)|round(0, 'ceil') + 10 %}
+            {% set totalPages = (maxResult / limit)|round(0, 'ceil') %}
             {% set currentPage = (offset / limit) + 1 %}
             {% set prevOffset = (offset - limit) < 0 ? 0 : (offset - limit) %}
             {% set nextOffset = (offset + limit) >= maxResult ? offset : (offset + limit) %}
