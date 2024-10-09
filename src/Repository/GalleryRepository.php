@@ -2,10 +2,11 @@
 
 namespace App\Repository;
 
-use App\DTO\GallerySearchDto;
+use App\Model\GalleryModel;
 use App\Entity\Gallery;
 use DateTimeImmutable;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Query;
 use Doctrine\ORM\QueryBuilder;
 use Doctrine\Persistence\ManagerRegistry;
@@ -23,21 +24,21 @@ class GalleryRepository extends ServiceEntityRepository
     /**
      * @return Gallery[]
      */
-    public function findByVisibleAndSearch(?GallerySearchDto $searchDto=null):array
+    public function findByVisibleAndSearch(?GalleryModel $galleryModel=null):array
     {
-        $qb = $this->buildQb($searchDto);
-        if ($searchDto && $searchDto->getStartDatetime()){
-            $qb->setMaxResults($searchDto->getLimit());
-            $qb->setFirstResult($searchDto->getOffset());
+        $qb = $this->buildQb($galleryModel);
+        if ($galleryModel && $galleryModel->getStartDatetime()){
+            $qb->setMaxResults($galleryModel->getLimit());
+            $qb->setFirstResult($galleryModel->getOffset());
         }
 
         return $qb->getQuery()->getResult();
     }
 
-    public function countByVisibleAndSearch(?GallerySearchDto $searchDto=null):int
+    public function countByVisibleAndSearch(?GalleryModel $galleryModel=null):int
     {
-        $qb = $this->buildQb($searchDto);
-        if ($searchDto && $searchDto->getStartDatetime()){
+        $qb = $this->buildQb($galleryModel);
+        if ($galleryModel && $galleryModel->getStartDatetime()){
             $qb->select('count(g.id)');
             $qb->setMaxResults(1);
             $qb->setFirstResult(0);
@@ -55,21 +56,33 @@ class GalleryRepository extends ServiceEntityRepository
             ->getQuery()
             ->getOneOrNullResult();
     }
-    
-    private function buildQb(?GallerySearchDto $searchDto=null):QueryBuilder
+
+    private function buildQb(?GalleryModel $galleryModel=null):QueryBuilder
     {
         $qb = $this->createQueryBuilder('g')
             ->where('g.isVisible = true')
             ->orderBy('g.happenedAt', 'ASC');
-        if ($searchDto && $searchDto->getStartDatetime()){
+        if ($galleryModel && $galleryModel->getStartDatetime()){
             $qb->andWhere('g.happenedAt >= :startDate');
-            $qb->setParameter('startDate', $searchDto->getStartDatetime());
+            $qb->setParameter('startDate', $galleryModel->getStartDatetime());
             $qb->andWhere('g.happenedAt < :endDate');
-            $qb->setParameter('endDate', $searchDto->getEndDatetime());
-            $qb->setMaxResults($searchDto->getLimit());
-            $qb->setFirstResult($searchDto->getOffset());
+            $qb->setParameter('endDate', $galleryModel->getEndDatetime());
         }
         return $qb;
+    }
+
+    public function findNonEmptyMonths(GalleryModel $galleryModel):array
+    {
+
+        $result = $this->buildQb(new GalleryModel(startYear: $galleryModel->getStartYear()))
+            ->getQuery()
+            ->getResult()
+        ;
+        $result = (new ArrayCollection($result))
+            ->map(fn(Gallery $gallery):int => (int)$gallery->getHappenedAt()
+            ->format('m'));
+
+        return array_unique($result->toArray());
     }
 
 //    /**
