@@ -8,7 +8,7 @@
                 <div class="col-12 d-flex justify-content-center mb-3 flex-wrap">
                     {% set startYear = gallery.galleryStartDate|date('m') > 6 ? gallery.galleryStartDate|date('Y') : gallery.galleryStartDate|date('Y')-1 %}
                     {% for year in range(startYear, date()|date('Y')) %}
-                        <a href="{{ path('gallery', {'startYear': year}) }}"
+                        <a href="{{ path('gallery', {'startYear': year, 'month': gallery.month}) }}"
                            class="btn mx-1 my-1 rounded-pill {{ gallery.startYear == year ? 'active btn-warning' : 'btn-secondary' }}">
                             {{ '%s/%s'|format(year, year + 1) }}
                         </a>

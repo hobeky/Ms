@@ -16,10 +16,10 @@ class GalleryService
     public function process(GalleryModel $galleryModel): GalleryModel
     {
         $galleryModel
+            ->setNonEmptyMonths($this->galleryRepository->findNonEmptyMonths($galleryModel))
             ->setGallery($this->galleryRepository->findByVisibleAndSearch($galleryModel))
             ->setGalleryStartDate($this->galleryRepository->getOldestRecord()?->getHappenedAt())
             ->setMaxResult($this->galleryRepository->countByVisibleAndSearch($galleryModel))
-            ->setNonEmptyMonths($this->galleryRepository->findNonEmptyMonths($galleryModel))
         ;
         return $galleryModel;
     }
