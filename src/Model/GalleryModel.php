@@ -81,6 +81,9 @@ class  GalleryModel
 
     public function setGallery(array $gallery): GalleryModel
     {
+        if (!$this->month && $this->getNonEmptyMonths()) {
+            $this->month = max($this->getNonEmptyMonths());
+        }
         $this->gallery = $gallery;
         return $this;
     }
