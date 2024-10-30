@@ -61,7 +61,7 @@ class GalleryRepository extends ServiceEntityRepository
     {
         $qb = $this->createQueryBuilder('g')
             ->where('g.isVisible = true')
-            ->orderBy('g.happenedAt', 'ASC');
+            ->orderBy('g.happenedAt', 'DESC');
         if ($galleryModel && $galleryModel->getStartDatetime()){
             $qb->andWhere('g.happenedAt >= :startDate');
             $qb->setParameter('startDate', $galleryModel->getStartDatetime());
