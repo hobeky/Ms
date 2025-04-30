@@ -3,18 +3,149 @@
 {% block body %}
     <section id="gallery">
         <div class="container padding-medium">
-            {% for galleryItem in gallery %}
-                <h1 class="display-4 text-center mb-5">{{ galleryItem.title }}</h1>
+            <h1 class="display-4 text-center mb-5">{{ 'gallery.search'|trans }}</h1>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center mb-3 flex-wrap">
+                    {% set startYear = gallery.galleryStartDate|date('m') > 6 ? gallery.galleryStartDate|date('Y') : gallery.galleryStartDate|date('Y')-1 %}
+                    {% for year in range(startYear, date()|date('Y')) %}
+                        <a href="{{ path('gallery', {'startYear': year, 'month': gallery.month}) }}"
+                           class="btn mx-1 my-1 rounded-pill {{ gallery.startYear == year ? 'active btn-warning' : 'btn-secondary' }}">
+                            {{ '%s/%s'|format(year, year + 1) }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center flex-column flex-md-row align-items-center">
+                    <div class="d-flex flex-column align-items-center">
+                        <h3 class="text-secondary mb-0 lh-sm">{{ gallery.startYear }}</h3>
+                        <div class="d-flex justify-content-center flex-wrap">
+                            {% for month in range(7, 12) %}
+                                <a href="{{ path('gallery', {'startYear': app.request.get('startYear') ?: date()|date('Y'), 'month': month}) }}"
+                                   class="btn mx-1 my-1 rounded-pill {{ gallery.month == month ? 'active btn-warning' : 'btn-secondary' }}
+                                        {{ not gallery.monthEmpty(month)? 'disabled' }}">
+                                    {{ month }}
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="diagonal-line bg-secondary d-none d-md-block"></div>
+                    <hr class="d-md-none my-3 w-100">
+
+                    <div class="d-flex flex-column align-items-center">
+                        <h3 class="text-secondary mb-0 lh-sm">{{ gallery.startYear + 1 }}</h3>
+                        <div class="d-flex justify-content-center flex-wrap">
+                            {% for month in range(1, 6) %}
+                                <a href="{{ path('gallery', {'startYear': app.request.get('startYear') ?: date()|date('Y'), 'month': month}) }}"
+                                   class="btn mx-1 my-1 rounded-pill {{ gallery.month == month ? 'active btn-warning' : 'btn-secondary' }}
+                                        {{ not gallery.monthEmpty(month)? 'disabled' }}">
+                                    {{ month }}
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            {% for galleryItem in gallery.gallery %}
+                <h1 class="display-4 text-center my-5">{{ galleryItem.title }}</h1>
+                <h3>{{ galleryItem.happenedAt|date('d. m. Y') }}</h3>
+                {% if galleryItem.youtubeUrl %}
+                    <div class="row mb-5 mx-md-5">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/{{ galleryItem.youtubeId }}"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                {% endif %}
                 <div class="row entry-container mb-5">
                     {% for image in galleryItem.images %}
                         <div class="entry-item col-md-4 my-3">
-                            <a href="{{ path('image_upload', {'size':'original', 'imageName': image})}}" title="{{ galleryItem.title }}" class="image-link">
-                                <img src="{{ path('image_upload', {'size':'medium', 'imageName': image})}}" class="post-image img-fluid rounded-4" alt="{{ galleryItem.title }} Image">
+                            <a href="{{ path('image_upload', {'size':'original', 'imageName': image}) }}"
+                               title="{{ galleryItem.title }}" class="image-link">
+                                <img src="{{ path('image_upload', {'size':'medium', 'imageName': image}) }}"
+                                     class="post-image img-fluid rounded-4" alt="{{ galleryItem.title }} Image">
                             </a>
                         </div>
                     {% endfor %}
                 </div>
+            {% else %}
+                <h1 class="display-4 text-center mt-5">{{ 'gallery.noImages'|trans }}</h1>
             {% endfor %}
+
+            {% set limit = gallery.limit %}
+            {% set offset = gallery.offset %}
+            {% set totalPages = (gallery.maxResult / limit)|round(0, 'ceil') %}
+            {% set currentPage = (offset / limit) + 1 %}
+            {% set prevOffset = (offset - limit) < 0 ? 0 : (offset - limit) %}
+            {% set nextOffset = (offset + limit) >= gallery.maxResult ? offset : (offset + limit) %}
+
+            {% if totalPages > 1 %}
+                <nav class="navigation paging-navigation text-center mt-5" role="navigation">
+                    <div class="pagination loop-pagination d-flex justify-content-center align-items-center flex-wrap">
+                        <!-- Previous Arrow -->
+                        <a href="{{ path('gallery', {'startYear': gallery.startYear, 'month': gallery.month, 'offset': prevOffset, 'limit': gallery.limit}) }}"
+                           class="pagination-arrow d-flex align-items-center fw-normal mx-1 {{ currentPage == 1 ? 'disabled' : '' }}">
+                            <iconify-icon icon="ic:baseline-keyboard-arrow-left"
+                                          class="pagination-arrow fs-1"></iconify-icon>
+                        </a>
+
+                        <!-- Pagination Number Links -->
+                        <div class="pagination-scroll d-flex align-items-center justify-content-center">
+                            {% if totalPages > 5 %}
+                                <!-- Mobile view: show only first, current, last, and ellipsis -->
+                                <a class="page-numbers fs-4 fw-normal mx-1 {{ currentPage == 1 ? 'current' : '' }}"
+                                   href="{{ path('gallery', {'startYear': gallery.startYear, 'month': gallery.month, 'offset': 0, 'limit': gallery.limit}) }}">
+                                    1
+                                </a>
+
+                                {% if currentPage > 3 %}
+                                    <span class="mx-2">...</span>
+                                {% endif %}
+
+                                <!-- Show current page and two surrounding pages on mobile -->
+                                {% for page in max(2, currentPage - 1)..min(totalPages - 1, currentPage + 1) %}
+                                    {% set pageOffset = (page - 1) * limit %}
+                                    <a class="page-numbers fs-4 fw-normal mx-1 {{ currentPage == page ? 'current' : '' }}"
+                                       href="{{ path('gallery', {'startYear': gallery.startYear, 'month': gallery.month, 'offset': pageOffset, 'limit': gallery.limit}) }}">
+                                        {{ page }}
+                                    </a>
+                                {% endfor %}
+
+                                {% if currentPage < totalPages - 2 %}
+                                    <span class="mx-2">...</span>
+                                {% endif %}
+
+                                <a class="page-numbers fs-4 fw-normal mx-1 {{ currentPage == totalPages ? 'current' : '' }}"
+                                   href="{{ path('gallery', {'startYear': gallery.startYear, 'month': gallery.month, 'offset': (totalPages - 1) * limit, 'limit': gallery.limit}) }}">
+                                    {{ totalPages }}
+                                </a>
+                            {% else %}
+                                <!-- Show all pages if totalPages is less than or equal to 5 -->
+                                {% for page in 1..totalPages %}
+                                    {% set pageOffset = (page - 1) * limit %}
+                                    <a class="page-numbers fs-4 fw-normal mx-1 {{ currentPage == page ? 'current' : '' }}"
+                                       href="{{ path('gallery', {'startYear': gallery.startYear, 'month': gallery.month, 'offset': pageOffset, 'limit': gallery.limit}) }}">
+                                        {{ page }}
+                                    </a>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+
+                        <!-- Next Arrow -->
+                        <a href="{{ path('gallery', {'startYear': gallery.startYear, 'month': gallery.month, 'offset': nextOffset, 'limit': gallery.limit}) }}"
+                           class="pagination-arrow d-flex align-items-center fw-normal mx-1 {{ currentPage == totalPages ? 'disabled' : '' }}">
+                            <iconify-icon icon="ic:baseline-keyboard-arrow-right"
+                                          class="pagination-arrow fs-1"></iconify-icon>
+                        </a>
+                    </div>
+                </nav>
+
+            {% endif %}
         </div>
     </section>
     <h2 class="text-center mb-5">{{ 'gallery.message'|trans }}</h2>

@@ -42,8 +42,10 @@ class GalleryCrudController extends AbstractCrudController
                 ->setBasePath('/image/medium/')
                 ->setUploadDir($this->parameterBag->get('img_dir') . '/original')
                 ->setFormTypeOptions(['multiple' => true])
-                ->setColumns(12)
-            ,
+                ->setColumns(12),
+            TextField::new('youtubeUrl')
+                ->setLabel('Youtube Link')
+                ->setColumns(12),
         ];
     }
 }

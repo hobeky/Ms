@@ -2,29 +2,32 @@
 
 namespace App\Controller;
 
+use App\Model\GalleryModel;
 use App\Entity\Contact;
-use App\Entity\Hero;
 use App\Entity\Review;
 use App\Entity\Teacher;
-use App\Entity\User;
 use App\Form\ContactType;
 use App\Form\ReviewType;
 use App\Repository\EventRepository;
 use App\Repository\FoodWeekRepository;
 use App\Repository\GalleryRepository;
 use App\Repository\ReviewRepository;
+use App\Service\GalleryService;
 use Doctrine\ORM\EntityManagerInterface;
 use Karser\Recaptcha3Bundle\Validator\Constraints\Recaptcha3Validator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpKernel\Attribute\MapQueryString;
+use Symfony\Component\Routing\Attribute\Route;
 
 class DefaultController extends AbstractController
 {
     public function __construct(
         private readonly EntityManagerInterface $entityManager,
-    ) {}
+    )
+    {
+    }
 
     #[Route('/', name: 'index')]
     public function index(): Response
@@ -50,8 +53,8 @@ class DefaultController extends AbstractController
 
     #[Route('/recenzie', name: 'reviews')]
     public function reviews(
-        Request $request,
-        ReviewRepository $reviewRepository,
+        Request             $request,
+        ReviewRepository    $reviewRepository,
         Recaptcha3Validator $recaptcha3Validator
     ): Response
     {
@@ -136,14 +139,15 @@ class DefaultController extends AbstractController
     }
 
     #[Route('/galeria', name: 'gallery')]
-    public function gallery(GalleryRepository $galleryRepository): Response
+    public function gallery(GalleryService $galleryService, #[MapQueryString]GalleryModel $galleryModel = new GalleryModel()): Response
     {
+        $galleryModel = $galleryService->process($galleryModel);
         return $this->render('template/gallery.html.twig', [
             'heroName' => 'main.gallery',
-            'gallery' => $galleryRepository->findByVisible(),
+            'gallery' => $galleryModel,
             'page_title' => 'page.title.gallery',
             'page_description' => 'page.description.gallery',
-            'page_keywords' => 'page.keywords.gallery'
+            'page_keywords' => 'page.keywords.gallery',
         ]);
     }
 
@@ -156,7 +160,7 @@ class DefaultController extends AbstractController
         // Filter the most recent FoodWeek
         $recentFoodWeek = null;
         if (!empty($foodWeeks)) {
-            usort($foodWeeks, function($a, $b) {
+            usort($foodWeeks, function ($a, $b) {
                 return $b->getCreatedAt() <=> $a->getCreatedAt();
             });
             $recentFoodWeek = $foodWeeks[0];
@@ -180,7 +184,7 @@ class DefaultController extends AbstractController
         // Filter the most recent FoodWeek
         $recentFoodWeek = null;
         if (!empty($foodWeeks)) {
-            usort($foodWeeks, function($a, $b) {
+            usort($foodWeeks, function ($a, $b) {
                 return $b->getCreatedAt() <=> $a->getCreatedAt();
             });
             $recentFoodWeek = $foodWeeks[0];
