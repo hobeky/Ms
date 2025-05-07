@@ -31,3 +31,7 @@ services:
             $logger: '@logger'
         tags:
             - { name: 'kernel.event_subscriber' }
+                
+    App\EventListener\ExceptionListener:
+        arguments:
+            $logger: '@monolog.logger.app_errors'
