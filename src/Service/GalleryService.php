@@ -4,6 +4,7 @@ namespace App\Service;
 
 use App\Model\GalleryModel;
 use App\Repository\GalleryRepository;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class GalleryService
 {
@@ -15,6 +16,10 @@ class GalleryService
 
     public function process(GalleryModel $galleryModel): GalleryModel
     {
+        if ($this->galleryRepository->getOldestRecord() == null) {
+            throw new NotFoundHttpException('No Gallery found');
+        }
+
         $galleryModel
             ->setNonEmptyMonths($this->galleryRepository->findNonEmptyMonths($galleryModel))
             ->setGallery($this->galleryRepository->findByVisibleAndSearch($galleryModel))
