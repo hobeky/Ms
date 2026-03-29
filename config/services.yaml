@@ -26,12 +26,3 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
-    App\EventSubscriber\ExceptionSubscriber:
-        arguments:
-            $logger: '@logger'
-        tags:
-            - { name: 'kernel.event_subscriber' }
-                
-    App\EventListener\ExceptionListener:
-        arguments:
-            $logger: '@monolog.logger.app_errors'
