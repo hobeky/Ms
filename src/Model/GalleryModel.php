@@ -43,7 +43,11 @@ class  GalleryModel
 
     public function getStartYear(): int
     {
-        return $this->startYear ?? (new DateTimeImmutable())->format('Y');
+        if ($this->startYear === null) {
+            $this->startYear = (new DateTimeImmutable())->format('m') > 6 ? (new DateTimeImmutable())->format('Y') : (new DateTimeImmutable())->format('Y') - 1;
+        }
+
+        return $this->startYear;
     }
 
     public function getMonth(): ?int
