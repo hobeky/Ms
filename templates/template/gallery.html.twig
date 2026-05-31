@@ -7,7 +7,9 @@
             <div class="row">
                 <div class="col-12 d-flex justify-content-center mb-3 flex-wrap">
                     {% set startYear = gallery.galleryStartDate|date('m') > 6 ? gallery.galleryStartDate|date('Y') : gallery.galleryStartDate|date('Y')-1 %}
-                    {% for year in range(startYear, date()|date('Y')) %}
+                    {% set currentYear = date()|date('m') > 6 ? date()|date('Y') : date()|date('Y') - 1 %}
+
+                    {% for year in range(startYear, currentYear ) %}
                         <a href="{{ path('gallery', {'startYear': year, 'month': gallery.month}) }}"
                            class="btn mx-1 my-1 rounded-pill {{ gallery.startYear == year ? 'active btn-warning' : 'btn-secondary' }}">
                             {{ '%s/%s'|format(year, year + 1) }}
@@ -21,7 +23,7 @@
                         <h3 class="text-secondary mb-0 lh-sm">{{ gallery.startYear }}</h3>
                         <div class="d-flex justify-content-center flex-wrap">
                             {% for month in range(7, 12) %}
-                                <a href="{{ path('gallery', {'startYear': app.request.get('startYear') ?: date()|date('Y'), 'month': month}) }}"
+                                <a href="{{ path('gallery', {'startYear': app.request.get('startYear') ?: currentYear, 'month': month}) }}"
                                    class="btn mx-1 my-1 rounded-pill {{ gallery.month == month ? 'active btn-warning' : 'btn-secondary' }}
                                         {{ not gallery.monthEmpty(month)? 'disabled' }}">
                                     {{ month }}
@@ -37,7 +39,7 @@
                         <h3 class="text-secondary mb-0 lh-sm">{{ gallery.startYear + 1 }}</h3>
                         <div class="d-flex justify-content-center flex-wrap">
                             {% for month in range(1, 6) %}
-                                <a href="{{ path('gallery', {'startYear': app.request.get('startYear') ?: date()|date('Y'), 'month': month}) }}"
+                                <a href="{{ path('gallery', {'startYear': app.request.get('startYear') ?: currentYear, 'month': month}) }}"
                                    class="btn mx-1 my-1 rounded-pill {{ gallery.month == month ? 'active btn-warning' : 'btn-secondary' }}
                                         {{ not gallery.monthEmpty(month)? 'disabled' }}">
                                     {{ month }}
