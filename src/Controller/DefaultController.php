@@ -2,15 +2,14 @@
 
 namespace App\Controller;
 
-use App\Model\GalleryModel;
 use App\Entity\Contact;
 use App\Entity\Review;
 use App\Entity\Teacher;
 use App\Form\ContactType;
 use App\Form\ReviewType;
+use App\Model\GalleryModel;
 use App\Repository\EventRepository;
 use App\Repository\FoodWeekRepository;
-use App\Repository\GalleryRepository;
 use App\Repository\ReviewRepository;
 use App\Service\GalleryService;
 use Doctrine\ORM\EntityManagerInterface;
