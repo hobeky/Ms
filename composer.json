@@ -21,20 +21,20 @@
         "karser/karser-recaptcha3-bundle": "^0.1.27",
         "runtime/frankenphp-symfony": "^0.2.0",
         "stof/doctrine-extensions-bundle": "^1.10",
-        "symfony/asset": "7.0.*",
-        "symfony/console": "7.0.*",
-        "symfony/dotenv": "7.0.*",
+        "symfony/asset": "7.2.*",
+        "symfony/console": "7.2.*",
+        "symfony/dotenv": "7.2.*",
         "symfony/flex": "^2",
-        "symfony/form": "7.0.*",
-        "symfony/framework-bundle": "7.0.*",
-        "symfony/mime": "7.0.*",
+        "symfony/form": "7.2.*",
+        "symfony/framework-bundle": "7.2.*",
+        "symfony/mime": "7.2.*",
         "symfony/monolog-bundle": "^3.10",
-        "symfony/password-hasher": "7.0.*",
-        "symfony/runtime": "7.0.*",
-        "symfony/security-csrf": "7.0.*",
-        "symfony/twig-bundle": "7.0.*",
-        "symfony/validator": "7.0.*",
-        "symfony/yaml": "7.0.*"
+        "symfony/password-hasher": "7.2.*",
+        "symfony/runtime": "7.2.*",
+        "symfony/security-csrf": "7.2.*",
+        "symfony/twig-bundle": "7.2.*",
+        "symfony/validator": "7.2.*",
+        "symfony/yaml": "7.2.*"
     },
     "config": {
         "allow-plugins": {
@@ -82,14 +82,14 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "7.0.*",
+            "require": "7.2.*",
             "docker": true
         }
     },
     "require-dev": {
-        "symfony/debug-bundle": "7.0.*",
+        "symfony/debug-bundle": "7.2.*",
         "symfony/maker-bundle": "^1.58",
-        "symfony/stopwatch": "7.0.*",
-        "symfony/web-profiler-bundle": "7.0.*"
+        "symfony/stopwatch": "7.2.*",
+        "symfony/web-profiler-bundle": "7.2.*"
     }
 }
