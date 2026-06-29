@@ -108,10 +108,13 @@ forParents:
     dHeading1: 'Na stiahnutie'
     fHeading1: 'Dôležité dokumenty'
     gHeading1: 'Rozhodnutie o prijatí / neprijatí'
+    hHeading1: 'Rada školy'
 document:
     health_kid: 'Potvrdenie o zdravotnej spôsobilosti dieťaťa'
     application_kid: 'Prihláška do materskej školy nová 2026'
     acceptance_notice: 'Výveska prijatie - neprijatie detí'
+    school_council_statute: 'Štatút rady školy pri súkromnej materskej škole Créme de la créme 2026'
+    school_council_minutes: 'Zápisnica zo zasadnutia - noví členovia rady'
 teachers:
     heading1: 'Vážení rodičia'
     paragraph1: 'radi by sme Vám predstavili pani učiteľky, ktoré sa s láskou starajú o všetky potreby našich detičiek.'

@@ -111,10 +111,13 @@ forParents:
     eParagraf2: 'Good mood 🙂'
     dHeading1: Download
     gHeading1: 'Acceptance / non-acceptance decision'
+    hHeading1: 'School Council'
 document:
     health_kid: 'Confirmation of child`s health status new'
     application_kid: 'Application for child admission to nursery school'
     acceptance_notice: 'Notice of acceptance - non-acceptance of children'
+    school_council_statute: 'School Council Statute of Private Kindergarten Créme de la créme 2026'
+    school_council_minutes: 'Minutes from the meeting - new School Council members'
 review:
     reviewsFromParents: 'Reviews from parents'
     formHeading: 'What is your experience with us?'
