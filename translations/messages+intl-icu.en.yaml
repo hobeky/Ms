@@ -118,6 +118,8 @@ document:
     acceptance_notice: 'Notice of acceptance - non-acceptance of children'
     school_council_statute: 'School Council Statute of Private Kindergarten Créme de la créme 2026'
     school_council_minutes: 'Minutes from the meeting - new School Council members'
+    school_council_minutes_founding: 'Minutes from the founding School Council meeting 29-06-2026'
+    school_council_minutes_2026_06_15: 'Minutes from the School Council meeting 15-06-2026'
 review:
     reviewsFromParents: 'Reviews from parents'
     formHeading: 'What is your experience with us?'

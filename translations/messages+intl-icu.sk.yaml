@@ -115,6 +115,8 @@ document:
     acceptance_notice: 'Výveska prijatie - neprijatie detí'
     school_council_statute: 'Štatút rady školy pri súkromnej materskej škole Créme de la créme 2026'
     school_council_minutes: 'Zápisnica zo zasadnutia - noví členovia rady'
+    school_council_minutes_founding: 'Zápisnica z ustanovujúceho zasadnutia rady školy 29-06-2026'
+    school_council_minutes_2026_06_15: 'Zápisnica zo zasadnutia rady školy 15-06-2026'
 teachers:
     heading1: 'Vážení rodičia'
     paragraph1: 'radi by sme Vám predstavili pani učiteľky, ktoré sa s láskou starajú o všetky potreby našich detičiek.'
