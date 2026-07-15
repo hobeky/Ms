@@ -219,9 +219,9 @@ pricing:
     gymnastic: 'gymnastika s trénerkou'
     title_pay_lunch: 'Okrem tohto príspevku je rodič povinný uhradit príspevok na stravovanie dieťaťa'
     food_money: Stravné
-    food_money_classic: '2,9€/deň (desiata, obed, olovrant)'
+    food_money_classic: '3,40€/deň (desiata, obed, olovrant)'
     or: alebo
-    food_money_gluten_free: '3,95€/deň (desiata, obed, olovrant) - bezlepková diéta'
+    food_money_gluten_free: '4,90€/deň (desiata, obed, olovrant) - bezlepková diéta'
     info_payment_day: 'Školné a stravné sa uhrádza za aktuálny mesiac, do 10. dňa v mesiaci na účet:'
     iban: 'IBAN: SK57 7500 0000 0040 2560 0967'
     extra_club_money: 'Plavecký, lyžiarsky a korčuliarsky výcvik si hradí rodič, podľa aktuálneho cenníka'

@@ -219,9 +219,9 @@ pricing:
     gymnastic: 'gymnastics with a trainer'
     title_pay_lunch: 'In addition to this contribution, the parent is obliged to pay the contribution for the child`s meals'
     food_money: 'Meal cost'
-    food_money_classic: '2.9€/day (morning snack, lunch, afternoon snack)'
+    food_money_classic: '3.40€/day (morning snack, lunch, afternoon snack)'
     or: or
-    food_money_gluten_free: '3.95€/day (morning snack, lunch, afternoon snack) - gluten-free diet'
+    food_money_gluten_free: '4.90€/day (morning snack, lunch, afternoon snack) - gluten-free diet'
     info_payment_day: 'Tuition and meals are paid for the current month, by the 10th day of the month to the account:'
     iban: 'IBAN: SK57 7500 0000 0040 2560 0967'
     extra_club_money: 'Swimming, skiing, and skating lessons are paid by the parent, according to the current price list'
