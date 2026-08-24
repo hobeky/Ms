@@ -115,6 +115,7 @@ forParents:
 document:
     health_kid: 'Confirmation of child`s health status new'
     application_kid: 'Application for child admission to nursery school'
+    application_transfer: 'Application for admission with transfer'
     acceptance_notice: 'Notice of acceptance - non-acceptance of children'
     school_council_statute: 'School Council Statute of Private Kindergarten Créme de la créme 2026'
     school_council_minutes: 'Minutes from the meeting - new School Council members'

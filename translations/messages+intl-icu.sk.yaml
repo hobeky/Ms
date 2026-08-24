@@ -112,6 +112,7 @@ forParents:
 document:
     health_kid: 'Potvrdenie o zdravotnej spôsobilosti dieťaťa'
     application_kid: 'Prihláška do materskej školy nová 2026'
+    application_transfer: 'Žiadosť o prijatie s prestupom'
     acceptance_notice: 'Výveska prijatie - neprijatie detí'
     school_council_statute: 'Štatút rady školy pri súkromnej materskej škole Créme de la créme 2026'
     school_council_minutes: 'Zápisnica zo zasadnutia - noví členovia rady'
