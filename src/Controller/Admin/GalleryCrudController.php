@@ -7,10 +7,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
@@ -39,7 +36,7 @@ class GalleryCrudController extends AbstractCrudController
             BooleanField::new('isVisible')
                 ->setColumns(6),
             ImageField::new('images')
-                ->setBasePath('/image/medium/')
+                ->setBasePath('/image/small/')
                 ->setUploadDir($this->parameterBag->get('img_dir') . '/original')
                 ->setFormTypeOptions(['multiple' => true])
                 ->setColumns(12),

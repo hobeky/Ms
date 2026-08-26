@@ -7,6 +7,7 @@ parameters:
     img_dir: '%env(string:IMAGE_PATH)%'
     locales: sk, en
     medium_image_width: 560
+    small_image_width: 250
     captchaKey: '%env(string:RECAPTCHA3_KEY)%'
 
 services:
